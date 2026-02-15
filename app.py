@@ -60,17 +60,27 @@ MEAL_ICONS = {
 }
 
 MEAL_LABELS = {
-    "breakfast": "Breakfast",
-    "lunch": "Lunch",
-    "snack1": "Snack 1",
-    "snack2": "Snack 2",
-    "dinner": "Dinner",
+    "breakfast": "Desayuno",
+    "lunch": "Almuerzo",
+    "snack1": "Merienda 1",
+    "snack2": "Merienda 2",
+    "dinner": "Cena",
 }
 
 SOURCE_LABELS = {
-    "factor": "\U0001f4e6 Factor Meal",
-    "free": "\U0001f389 Free / Social",
-    "homemade": "\U0001f373 Homemade",
+    "factor": "\U0001f4e6 Factor",
+    "free": "\U0001f389 Libre / Social",
+    "homemade": "\U0001f373 Casero",
+}
+
+WEEKDAY_ES = {
+    "Monday": "Lunes",
+    "Tuesday": "Martes",
+    "Wednesday": "Mi\u00e9rcoles",
+    "Thursday": "Jueves",
+    "Friday": "Viernes",
+    "Saturday": "S\u00e1bado",
+    "Sunday": "Domingo",
 }
 
 OFFICE_DAYS = {"Friday"}
@@ -95,18 +105,31 @@ def calorie_indicator(actual: int, target: int) -> str:
     return "\U0001f534"
 
 
-def _dinner_name(day: dict) -> str:
-    """Extract the dinner name from a day object."""
+def _dinner_display_name(day: dict) -> str:
+    """Extract the dinner display name from a day object."""
     dinner = day.get("meals", {}).get("dinner", {})
-    items = dinner.get("items", [])
-    if items:
-        name = items[0].get("name", "\u2014")
-        return name[:35] + "..." if len(name) > 35 else name
-    return "\u2014"
+    name = dinner.get("name", "")
+    if not name:
+        items = dinner.get("items", [])
+        name = items[0].get("name", "\u2014") if items else "\u2014"
+    return name[:35] + "..." if len(name) > 35 else name
+
+
+def _meal_display_name(meal: dict) -> str:
+    """Get the display name: explicit name field, or first item name as fallback."""
+    name = meal.get("name", "")
+    if not name:
+        items = meal.get("items", [])
+        name = items[0].get("name", "") if items else ""
+    return name
 
 
 def _is_office_day(day: dict) -> bool:
     return day.get("office_day", day.get("weekday") in OFFICE_DAYS)
+
+
+def _weekday_es(weekday: str) -> str:
+    return WEEKDAY_ES.get(weekday, weekday)
 
 
 # ---------------------------------------------------------------------------
@@ -117,7 +140,7 @@ def render_menu_tab():
     manifest = load_manifest()
 
     if not manifest or not manifest.get("plans"):
-        st.info("No meal plans available yet.")
+        st.info("No hay planes disponibles.")
         return
 
     plans = sorted(manifest["plans"], key=lambda p: (p["year"], p["week"]))
@@ -133,13 +156,13 @@ def render_menu_tab():
             "\u25c0",
             disabled=st.session_state.week_idx <= 0,
             use_container_width=True,
-            help="Previous week",
+            help="Semana anterior",
         ):
             st.session_state.week_idx -= 1
             st.rerun()
     with col_select:
         selected = st.selectbox(
-            "Week",
+            "Semana",
             options=range(len(plans)),
             index=st.session_state.week_idx,
             format_func=lambda i: plan_labels[i],
@@ -153,7 +176,7 @@ def render_menu_tab():
             "\u25b6",
             disabled=st.session_state.week_idx >= len(plans) - 1,
             use_container_width=True,
-            help="Next week",
+            help="Semana siguiente",
         ):
             st.session_state.week_idx += 1
             st.rerun()
@@ -162,7 +185,7 @@ def render_menu_tab():
     entry = plans[st.session_state.week_idx]
     plan = load_plan(entry["file"])
     if not plan:
-        st.error(f"Could not load plan file: {entry['file']}")
+        st.error(f"No se pudo cargar el plan: {entry['file']}")
         return
 
     target = profile["daily_target_kcal"] if profile else 1800
@@ -186,7 +209,7 @@ def _render_week_summary(plan: dict, target: int):
         dinner = day["meals"].get("dinner", {})
         indicator = calorie_indicator(day["total_kcal"], target)
         is_today = day["date"] == date.today().isoformat()
-        weekday = day["weekday"][:3]
+        weekday = _weekday_es(day["weekday"])[:3]
         if is_today:
             weekday = f"**{weekday}**"
 
@@ -202,36 +225,38 @@ def _render_week_summary(plan: dict, target: int):
             flags.append("\U0001f373")
 
         rows.append(
-            f"| {weekday} | {_dinner_name(day)} "
+            f"| {weekday} | {_dinner_display_name(day)} "
             f"| {''.join(flags)} "
             f"| {indicator} {day['total_kcal']} |"
         )
 
-    table = "| Day | Dinner | | Kcal |\n|-----|--------|---|------|\n" + "\n".join(rows)
+    header = "| D\u00eda | Cena | | Kcal |\n|-----|--------|---|------|\n"
+    table = header + "\n".join(rows)
     st.markdown(table)
     st.caption(
-        "\U0001f3e2 Office  \u00b7  "
+        "\U0001f3e2 Oficina  \u00b7  "
         "\U0001f4e6 Factor  \u00b7  "
-        "\U0001f389 Free  \u00b7  "
-        "\U0001f373 Homemade"
+        "\U0001f389 Libre  \u00b7  "
+        "\U0001f373 Casero"
     )
 
 
 def _render_day_card(day: dict, target: int):
     indicator = calorie_indicator(day["total_kcal"], target)
     is_today = day["date"] == date.today().isoformat()
-    today_tag = " \u2014 **Today**" if is_today else ""
+    today_tag = " \u2014 **Hoy**" if is_today else ""
+    weekday_es = _weekday_es(day["weekday"])
 
     flags = []
     if _is_office_day(day):
-        flags.append("\U0001f3e2 Office")
+        flags.append("\U0001f3e2 Oficina")
     if day.get("notes"):
         flags.append(f"\U0001f4dd {day['notes']}")
     sep = "  \u00b7  "
     flag_str = f"  \u00b7  {sep.join(flags)}" if flags else ""
 
     header = (
-        f"{day['weekday']}  \u00b7  {day['date']}{today_tag}"
+        f"{weekday_es}  \u00b7  {day['date']}{today_tag}"
         f"  \u00b7  {indicator} {day['total_kcal']} kcal{flag_str}"
     )
 
@@ -243,7 +268,7 @@ def _render_day_card(day: dict, target: int):
 
         st.divider()
 
-        # Other meals — compact, items collapsed
+        # Other meals — show name, ingredients collapsible
         for slot_id in ["breakfast", "lunch", "snack1", "snack2"]:
             meal = day["meals"].get(slot_id)
             if meal:
@@ -252,8 +277,9 @@ def _render_day_card(day: dict, target: int):
 
 def _render_dinner_hero(meal: dict):
     """Render dinner prominently — it drives the rest of the day's calories."""
-    items = meal.get("items", [])
-    name = items[0]["name"] if items else "Dinner"
+    name = _meal_display_name(meal)
+    if not name:
+        name = "Cena"
     source = meal.get("source", "")
     badge = SOURCE_LABELS.get(source, "")
 
@@ -269,8 +295,9 @@ def _render_dinner_hero(meal: dict):
         st.caption("kcal")
 
     # Show ingredients only for non-Factor meals with multiple items
+    items = meal.get("items", [])
     if source != "factor" and len(items) > 1:
-        with st.expander("Ingredients", expanded=False):
+        with st.expander("Ingredientes", expanded=False):
             for item in items:
                 st.caption(
                     f"\u2022 {item['name']}  \u00b7  "
@@ -280,22 +307,33 @@ def _render_dinner_hero(meal: dict):
 
 
 def _render_meal_compact(slot_id: str, meal: dict):
-    """Render breakfast/lunch/snacks: one-line header, items collapsed."""
+    """Render breakfast/lunch/snacks: meal name visible, ingredients expandable."""
     icon = MEAL_ICONS.get(slot_id, "")
     label = MEAL_LABELS.get(slot_id, slot_id)
     portable = "  \U0001f4bc" if meal.get("portable") else ""
+    meal_name = _meal_display_name(meal)
 
     col_meal, col_kcal = st.columns([5, 1])
     with col_meal:
-        st.markdown(f"{icon} **{label}**{portable}  \u2014  {meal['time']}")
+        if meal_name:
+            st.markdown(f"{icon} **{label}**  \u2014  {meal_name}{portable}")
+        else:
+            st.markdown(f"{icon} **{label}**{portable}")
     with col_kcal:
         st.markdown(f"**{meal['total_kcal']}** kcal")
 
-    with st.expander("Items", expanded=False):
-        for item in meal["items"]:
-            st.caption(
-                f"\u2022 {item['name']}  \u00b7  {item['quantity']}  \u00b7  {item['kcal']} kcal"
-            )
+    # Only show ingredients expander if there are 2+ items
+    items = meal.get("items", [])
+    if len(items) > 1:
+        with st.expander("Ingredientes", expanded=False):
+            for item in items:
+                st.caption(
+                    f"\u2022 {item['name']}  \u00b7  "
+                    f"{item['quantity']}  \u00b7  "
+                    f"{item['kcal']} kcal"
+                )
+    elif len(items) == 1:
+        st.caption(f"  {items[0]['quantity']}  \u00b7  {items[0]['kcal']} kcal")
 
 
 # ---------------------------------------------------------------------------
@@ -306,11 +344,11 @@ def render_weight_tab():
     weight_data = load_weight()
 
     if not weight_data:
-        st.info("No weight data yet.")
+        st.info("No hay datos de peso.")
         return
 
     if not profile:
-        st.warning("Profile not found.")
+        st.warning("Perfil no encontrado.")
         return
 
     _render_weight_stats(weight_data, profile)
@@ -339,13 +377,13 @@ def _render_weight_stats(weight_data: list, profile: dict):
         eta_text = "N/A"
 
     col1, col2, col3, col4 = st.columns(4)
-    col1.metric("Start", f"{start_w:.1f} kg")
-    col2.metric("Current", f"{current_w:.1f} kg", f"{-lost:.1f} kg")
-    col3.metric("Goal", f"{goal} kg")
-    col4.metric("Remaining", f"{remaining:.1f} kg")
+    col1.metric("Inicio", f"{start_w:.1f} kg")
+    col2.metric("Actual", f"{current_w:.1f} kg", f"{-lost:.1f} kg")
+    col3.metric("Meta", f"{goal} kg")
+    col4.metric("Restante", f"{remaining:.1f} kg")
 
-    st.progress(min(pct / 100, 1.0), text=f"{pct:.0f}% complete")
-    st.caption(f"Avg loss: **{weekly_rate:.2f} kg/week**  \u00b7  Est. goal: **{eta_text}**")
+    st.progress(min(pct / 100, 1.0), text=f"{pct:.0f}% completado")
+    st.caption(f"Promedio: **{weekly_rate:.2f} kg/semana**  \u00b7  Meta estimada: **{eta_text}**")
 
 
 def _render_weight_chart(weight_data: list, profile: dict):
@@ -359,7 +397,7 @@ def _render_weight_chart(weight_data: list, profile: dict):
             x=dates,
             y=weights,
             mode="lines+markers",
-            name="Weight",
+            name="Peso",
             line={"color": "#818cf8", "width": 2.5},
             marker={"size": 7},
             fill="tozeroy",
@@ -370,7 +408,7 @@ def _render_weight_chart(weight_data: list, profile: dict):
         y=goal,
         line_dash="dash",
         line_color="#10b981",
-        annotation_text=f"Goal: {goal} kg",
+        annotation_text=f"Meta: {goal} kg",
         annotation_position="top left",
     )
     fig.update_layout(
@@ -403,10 +441,10 @@ def _render_weight_chart(weight_data: list, profile: dict):
 # Main
 # ---------------------------------------------------------------------------
 def main():
-    st.markdown("## \U0001f37d\ufe0f Meal Planner")
-    st.caption("1,800 kcal  \u00b7  5 meals/day")
+    st.markdown("## \U0001f37d\ufe0f Planificador de Comidas")
+    st.caption("1,800 kcal  \u00b7  5 comidas/d\u00eda")
 
-    tab_menu, tab_weight = st.tabs(["\U0001f4cb This Week", "\u2696\ufe0f Weight"])
+    tab_menu, tab_weight = st.tabs(["\U0001f4cb Esta Semana", "\u2696\ufe0f Peso"])
 
     with tab_menu:
         render_menu_tab()

@@ -96,6 +96,13 @@ Thursday I have a dinner event, skip Factor.
 - Set `"portable": true` on any portable meal
 - Set `"office_day": true` on the day object for non-default office days
 
+### Language
+- **Meal names and item names in Spanish** (wife uses the dashboard for shopping/planning)
+- Each meal has a `"name"` field: short Spanish description (e.g., "Sándwich de pavo")
+- Item names in Spanish (e.g., "Pan integral", "Pechuga de pavo", "Mantequilla de maní")
+- Factor dinner names stay in **Dutch** (branded product names from the label)
+- Quantities use metric: g, ml, cdta (cucharadita), cda (cucharada), mediano/a, rebanada
+
 ### Meal Rotation
 - **Reference the previous week's plan** when generating a new one
 - Keep ~60% of breakfasts/lunches similar (low overhead for shopping/prep)
@@ -126,6 +133,7 @@ Create `data/plans/{YEAR}/W{WEEK}.json`:
       "meals": {
         "breakfast": {
           "time": "09:00",
+          "name": "Skyr con avena y plátano",
           "total_kcal": 400,
           "items": [
             { "name": "Skyr natural", "quantity": "250g", "kcal": 165 }

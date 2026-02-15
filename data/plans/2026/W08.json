@@ -12,41 +12,45 @@
       "meals": {
         "breakfast": {
           "time": "09:00",
+          "name": "Skyr con avena y pl\u00e1tano",
           "total_kcal": 418,
           "items": [
             { "name": "Skyr natural", "quantity": "250g", "kcal": 165 },
-            { "name": "Oats", "quantity": "40g", "kcal": 148 },
-            { "name": "Banana", "quantity": "1 medium", "kcal": 105 }
+            { "name": "Avena", "quantity": "40g", "kcal": 148 },
+            { "name": "Pl\u00e1tano", "quantity": "1 mediano", "kcal": 105 }
           ]
         },
         "lunch": {
           "time": "12:00",
+          "name": "S\u00e1ndwich de pavo",
           "total_kcal": 450,
           "portable": true,
           "items": [
-            { "name": "Whole wheat bread", "quantity": "2 slices", "kcal": 200 },
-            { "name": "Turkey breast", "quantity": "100g", "kcal": 110 },
-            { "name": "Light cheese", "quantity": "30g", "kcal": 75 },
-            { "name": "Butter", "quantity": "5g", "kcal": 37 },
-            { "name": "Lettuce & tomato", "quantity": "50g", "kcal": 15 },
-            { "name": "Mustard", "quantity": "1 tsp", "kcal": 13 }
+            { "name": "Pan integral", "quantity": "2 rebanadas", "kcal": 200 },
+            { "name": "Pechuga de pavo", "quantity": "100g", "kcal": 110 },
+            { "name": "Queso light", "quantity": "30g", "kcal": 75 },
+            { "name": "Mantequilla", "quantity": "5g", "kcal": 37 },
+            { "name": "Lechuga y tomate", "quantity": "50g", "kcal": 15 },
+            { "name": "Mostaza", "quantity": "1 cdta", "kcal": 13 }
           ]
         },
         "snack1": {
           "time": "14:30",
+          "name": "Yogur proteico",
           "total_kcal": 150,
           "items": [
-            { "name": "Protein yogurt", "quantity": "1 pot", "kcal": 150 }
+            { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 }
           ]
         },
         "snack2": {
           "time": "17:30",
+          "name": "Pl\u00e1tano con almendras y tortitas",
           "total_kcal": 340,
           "items": [
-            { "name": "Banana", "quantity": "1 medium", "kcal": 105 },
-            { "name": "Almonds", "quantity": "20g", "kcal": 120 },
-            { "name": "Rice cakes", "quantity": "2", "kcal": 70 },
-            { "name": "Peanut butter", "quantity": "7g", "kcal": 45 }
+            { "name": "Pl\u00e1tano", "quantity": "1 mediano", "kcal": 105 },
+            { "name": "Almendras", "quantity": "20g", "kcal": 120 },
+            { "name": "Tortitas de arroz", "quantity": "2", "kcal": 70 },
+            { "name": "Mantequilla de man\u00ed", "quantity": "7g", "kcal": 45 }
           ]
         },
         "dinner": {
@@ -55,7 +59,7 @@
           "source": "factor",
           "factor_meal_id": "kipfilet-a-la-florentine",
           "items": [
-            { "name": "Kipfilet à la Florentine", "quantity": "1 meal", "kcal": 442 }
+            { "name": "Kipfilet \u00e0 la Florentine", "quantity": "1 meal", "kcal": 442 }
           ]
         }
       }
@@ -64,58 +68,63 @@
       "date": "2026-02-17",
       "weekday": "Tuesday",
       "office_day": true,
-      "notes": "XKE day — dinner at office",
+      "notes": "XKE day \u2014 cena en oficina",
       "total_kcal": 1800,
       "meals": {
         "breakfast": {
           "time": "09:00",
+          "name": "Huevos revueltos con tostada",
           "total_kcal": 370,
           "items": [
-            { "name": "Scrambled eggs", "quantity": "2 large", "kcal": 182 },
-            { "name": "Whole wheat bread", "quantity": "1 slice", "kcal": 100 },
-            { "name": "Butter", "quantity": "5g", "kcal": 37 },
-            { "name": "Tomato", "quantity": "1 medium", "kcal": 22 },
-            { "name": "Coffee with milk", "quantity": "1 cup", "kcal": 29 }
+            { "name": "Huevos revueltos", "quantity": "2 grandes", "kcal": 182 },
+            { "name": "Pan integral", "quantity": "1 rebanada", "kcal": 100 },
+            { "name": "Mantequilla", "quantity": "5g", "kcal": 37 },
+            { "name": "Tomate", "quantity": "1 mediano", "kcal": 22 },
+            { "name": "Caf\u00e9 con leche", "quantity": "1 taza", "kcal": 29 }
           ]
         },
         "lunch": {
           "time": "12:00",
+          "name": "Wrap de pollo con verduras",
           "total_kcal": 450,
           "portable": true,
           "items": [
-            { "name": "Whole wheat wrap", "quantity": "1 large", "kcal": 180 },
-            { "name": "Grilled chicken", "quantity": "100g", "kcal": 165 },
-            { "name": "Mixed vegetables", "quantity": "80g", "kcal": 35 },
-            { "name": "Yogurt sauce", "quantity": "2 tbsp", "kcal": 40 },
-            { "name": "Mixed greens", "quantity": "30g", "kcal": 8 },
-            { "name": "Feta cheese", "quantity": "15g", "kcal": 22 }
+            { "name": "Wrap integral", "quantity": "1 grande", "kcal": 180 },
+            { "name": "Pollo a la plancha", "quantity": "100g", "kcal": 165 },
+            { "name": "Verduras mixtas", "quantity": "80g", "kcal": 35 },
+            { "name": "Salsa de yogur", "quantity": "2 cdas", "kcal": 40 },
+            { "name": "Mix de hojas verdes", "quantity": "30g", "kcal": 8 },
+            { "name": "Queso feta", "quantity": "15g", "kcal": 22 }
           ]
         },
         "snack1": {
           "time": "14:30",
+          "name": "Barra de prote\u00edna",
           "total_kcal": 190,
           "portable": true,
           "items": [
-            { "name": "Protein bar", "quantity": "1", "kcal": 190 }
+            { "name": "Barra de prote\u00edna", "quantity": "1", "kcal": 190 }
           ]
         },
         "snack2": {
           "time": "17:30",
+          "name": "Manzana con nueces y tortita",
           "total_kcal": 190,
           "portable": true,
           "items": [
-            { "name": "Apple", "quantity": "1 medium", "kcal": 87 },
-            { "name": "Walnuts", "quantity": "10g", "kcal": 63 },
-            { "name": "Rice cake", "quantity": "1", "kcal": 35 },
-            { "name": "Tea", "quantity": "1 cup", "kcal": 5 }
+            { "name": "Manzana", "quantity": "1 mediana", "kcal": 87 },
+            { "name": "Nueces", "quantity": "10g", "kcal": 63 },
+            { "name": "Tortita de arroz", "quantity": "1", "kcal": 35 },
+            { "name": "T\u00e9", "quantity": "1 taza", "kcal": 5 }
           ]
         },
         "dinner": {
           "time": "20:00",
+          "name": "Cena XKE en oficina",
           "total_kcal": 600,
           "source": "free",
           "items": [
-            { "name": "XKE dinner at office", "quantity": "1 meal", "kcal": 600 }
+            { "name": "Cena XKE en oficina", "quantity": "1 comida", "kcal": 600 }
           ]
         }
       }
@@ -127,43 +136,47 @@
       "meals": {
         "breakfast": {
           "time": "09:00",
+          "name": "Skyr con frutos rojos y granola",
           "total_kcal": 380,
           "items": [
             { "name": "Skyr", "quantity": "200g", "kcal": 132 },
-            { "name": "Mixed berries", "quantity": "100g", "kcal": 48 },
-            { "name": "Honey", "quantity": "1 tsp", "kcal": 25 },
+            { "name": "Frutos rojos", "quantity": "100g", "kcal": 48 },
+            { "name": "Miel", "quantity": "1 cdta", "kcal": 25 },
             { "name": "Granola", "quantity": "35g", "kcal": 175 }
           ]
         },
         "lunch": {
           "time": "12:00",
+          "name": "S\u00e1ndwich de at\u00fan",
           "total_kcal": 440,
           "portable": true,
           "items": [
-            { "name": "Whole wheat bread", "quantity": "2 slices", "kcal": 200 },
-            { "name": "Tuna in water", "quantity": "1 can (120g)", "kcal": 130 },
-            { "name": "Light mayo", "quantity": "1 tbsp", "kcal": 35 },
-            { "name": "Lettuce", "quantity": "30g", "kcal": 5 },
-            { "name": "Greek yogurt light", "quantity": "100g", "kcal": 70 }
+            { "name": "Pan integral", "quantity": "2 rebanadas", "kcal": 200 },
+            { "name": "At\u00fan en agua", "quantity": "1 lata (120g)", "kcal": 130 },
+            { "name": "Mayonesa light", "quantity": "1 cda", "kcal": 35 },
+            { "name": "Lechuga", "quantity": "30g", "kcal": 5 },
+            { "name": "Yogur griego light", "quantity": "100g", "kcal": 70 }
           ]
         },
         "snack1": {
           "time": "14:30",
+          "name": "Zanahorias con hummus",
           "total_kcal": 190,
           "items": [
-            { "name": "Carrots", "quantity": "120g", "kcal": 48 },
+            { "name": "Zanahorias", "quantity": "120g", "kcal": 48 },
             { "name": "Hummus", "quantity": "50g", "kcal": 142 }
           ]
         },
         "snack2": {
           "time": "17:30",
+          "name": "Reques\u00f3n con ar\u00e1ndanos",
           "total_kcal": 331,
           "items": [
-            { "name": "Cottage cheese", "quantity": "200g", "kcal": 150 },
-            { "name": "Rice cakes", "quantity": "2", "kcal": 70 },
-            { "name": "Blueberries", "quantity": "80g", "kcal": 45 },
-            { "name": "Honey", "quantity": "1 tsp", "kcal": 25 },
-            { "name": "Peanut butter", "quantity": "7g", "kcal": 41 }
+            { "name": "Reques\u00f3n", "quantity": "200g", "kcal": 150 },
+            { "name": "Tortitas de arroz", "quantity": "2", "kcal": 70 },
+            { "name": "Ar\u00e1ndanos", "quantity": "80g", "kcal": 45 },
+            { "name": "Miel", "quantity": "1 cdta", "kcal": 25 },
+            { "name": "Mantequilla de man\u00ed", "quantity": "7g", "kcal": 41 }
           ]
         },
         "dinner": {
@@ -180,62 +193,67 @@
     {
       "date": "2026-02-19",
       "weekday": "Thursday",
-      "notes": "Offsite training — no Factor",
+      "notes": "Capacitaci\u00f3n fuera de oficina \u2014 sin Factor",
       "total_kcal": 1800,
       "meals": {
         "breakfast": {
           "time": "09:00",
+          "name": "Avena con prote\u00edna",
           "total_kcal": 355,
           "items": [
-            { "name": "Oats", "quantity": "50g", "kcal": 185 },
-            { "name": "Protein powder", "quantity": "25g", "kcal": 100 },
-            { "name": "Milk (semi-skimmed)", "quantity": "150ml", "kcal": 70 }
+            { "name": "Avena", "quantity": "50g", "kcal": 185 },
+            { "name": "Prote\u00edna en polvo", "quantity": "25g", "kcal": 100 },
+            { "name": "Leche semidesnatada", "quantity": "150ml", "kcal": 70 }
           ]
         },
         "lunch": {
           "time": "12:00",
+          "name": "Ensalada de pollo con quinoa",
           "total_kcal": 445,
           "portable": true,
           "items": [
-            { "name": "Mixed greens", "quantity": "100g", "kcal": 20 },
-            { "name": "Grilled chicken", "quantity": "130g", "kcal": 215 },
-            { "name": "Cherry tomatoes", "quantity": "80g", "kcal": 14 },
-            { "name": "Cucumber", "quantity": "80g", "kcal": 12 },
-            { "name": "Quinoa (cooked)", "quantity": "80g", "kcal": 96 },
-            { "name": "Olive oil dressing", "quantity": "1 tbsp", "kcal": 88 }
+            { "name": "Mix de hojas verdes", "quantity": "100g", "kcal": 20 },
+            { "name": "Pollo a la plancha", "quantity": "130g", "kcal": 215 },
+            { "name": "Tomates cherry", "quantity": "80g", "kcal": 14 },
+            { "name": "Pepino", "quantity": "80g", "kcal": 12 },
+            { "name": "Quinoa cocida", "quantity": "80g", "kcal": 96 },
+            { "name": "Aderezo de aceite de oliva", "quantity": "1 cda", "kcal": 88 }
           ]
         },
         "snack1": {
           "time": "14:30",
+          "name": "Manzana con nueces",
           "total_kcal": 150,
           "portable": true,
           "items": [
-            { "name": "Apple", "quantity": "1 medium", "kcal": 87 },
-            { "name": "Walnuts", "quantity": "10g", "kcal": 63 }
+            { "name": "Manzana", "quantity": "1 mediana", "kcal": 87 },
+            { "name": "Nueces", "quantity": "10g", "kcal": 63 }
           ]
         },
         "snack2": {
           "time": "17:30",
+          "name": "Yogur proteico con pl\u00e1tano y almendras",
           "total_kcal": 350,
           "portable": true,
           "items": [
-            { "name": "Protein yogurt", "quantity": "1 pot", "kcal": 150 },
-            { "name": "Banana", "quantity": "1 medium", "kcal": 105 },
-            { "name": "Almonds", "quantity": "15g", "kcal": 90 },
-            { "name": "Honey", "quantity": "½ tsp", "kcal": 5 }
+            { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 },
+            { "name": "Pl\u00e1tano", "quantity": "1 mediano", "kcal": 105 },
+            { "name": "Almendras", "quantity": "15g", "kcal": 90 },
+            { "name": "Miel", "quantity": "\u00bd cdta", "kcal": 5 }
           ]
         },
         "dinner": {
           "time": "20:00",
+          "name": "Pollo a la plancha con arroz y br\u00f3coli",
           "total_kcal": 500,
           "source": "homemade",
           "items": [
-            { "name": "Grilled chicken breast", "quantity": "150g", "kcal": 248 },
-            { "name": "Brown rice (cooked)", "quantity": "100g", "kcal": 130 },
-            { "name": "Steamed broccoli", "quantity": "150g", "kcal": 52 },
-            { "name": "Olive oil", "quantity": "1 tsp", "kcal": 40 },
-            { "name": "Soy sauce", "quantity": "1 tbsp", "kcal": 10 },
-            { "name": "Sesame seeds", "quantity": "5g", "kcal": 20 }
+            { "name": "Pechuga de pollo a la plancha", "quantity": "150g", "kcal": 248 },
+            { "name": "Arroz integral cocido", "quantity": "100g", "kcal": 130 },
+            { "name": "Br\u00f3coli al vapor", "quantity": "150g", "kcal": 52 },
+            { "name": "Aceite de oliva", "quantity": "1 cdta", "kcal": 40 },
+            { "name": "Salsa de soja", "quantity": "1 cda", "kcal": 10 },
+            { "name": "Semillas de s\u00e9samo", "quantity": "5g", "kcal": 20 }
           ]
         }
       }
@@ -243,60 +261,65 @@
     {
       "date": "2026-02-20",
       "weekday": "Friday",
-      "notes": "Offsite training — no Factor",
+      "notes": "Capacitaci\u00f3n fuera de oficina \u2014 sin Factor",
       "total_kcal": 1800,
       "meals": {
         "breakfast": {
           "time": "09:00",
+          "name": "Skyr con granola y ar\u00e1ndanos",
           "total_kcal": 365,
           "items": [
             { "name": "Skyr", "quantity": "200g", "kcal": 132 },
             { "name": "Granola", "quantity": "35g", "kcal": 175 },
-            { "name": "Blueberries", "quantity": "80g", "kcal": 46 },
-            { "name": "Honey drizzle", "quantity": "½ tsp", "kcal": 12 }
+            { "name": "Ar\u00e1ndanos", "quantity": "80g", "kcal": 46 },
+            { "name": "Miel", "quantity": "\u00bd cdta", "kcal": 12 }
           ]
         },
         "lunch": {
           "time": "12:00",
+          "name": "S\u00e1ndwich de pavo",
           "total_kcal": 450,
           "portable": true,
           "items": [
-            { "name": "Whole wheat bread", "quantity": "2 slices", "kcal": 200 },
-            { "name": "Turkey breast", "quantity": "100g", "kcal": 110 },
-            { "name": "Light cheese", "quantity": "30g", "kcal": 75 },
-            { "name": "Butter", "quantity": "5g", "kcal": 37 },
-            { "name": "Lettuce & tomato", "quantity": "50g", "kcal": 15 },
-            { "name": "Mustard", "quantity": "1 tsp", "kcal": 13 }
+            { "name": "Pan integral", "quantity": "2 rebanadas", "kcal": 200 },
+            { "name": "Pechuga de pavo", "quantity": "100g", "kcal": 110 },
+            { "name": "Queso light", "quantity": "30g", "kcal": 75 },
+            { "name": "Mantequilla", "quantity": "5g", "kcal": 37 },
+            { "name": "Lechuga y tomate", "quantity": "50g", "kcal": 15 },
+            { "name": "Mostaza", "quantity": "1 cdta", "kcal": 13 }
           ]
         },
         "snack1": {
           "time": "14:30",
+          "name": "Barra de prote\u00edna",
           "total_kcal": 190,
           "portable": true,
           "items": [
-            { "name": "Protein bar", "quantity": "1", "kcal": 190 }
+            { "name": "Barra de prote\u00edna", "quantity": "1", "kcal": 190 }
           ]
         },
         "snack2": {
           "time": "17:30",
+          "name": "Mandarinas con almendras y tortitas",
           "total_kcal": 315,
           "portable": true,
           "items": [
-            { "name": "Tangerine", "quantity": "2", "kcal": 94 },
-            { "name": "Almonds", "quantity": "20g", "kcal": 120 },
-            { "name": "Rice cakes", "quantity": "2", "kcal": 70 },
-            { "name": "Peanut butter", "quantity": "5g", "kcal": 31 }
+            { "name": "Mandarinas", "quantity": "2", "kcal": 94 },
+            { "name": "Almendras", "quantity": "20g", "kcal": 120 },
+            { "name": "Tortitas de arroz", "quantity": "2", "kcal": 70 },
+            { "name": "Mantequilla de man\u00ed", "quantity": "5g", "kcal": 31 }
           ]
         },
         "dinner": {
           "time": "20:00",
+          "name": "Pasta con pavo molido y tomate",
           "total_kcal": 480,
           "source": "homemade",
           "items": [
-            { "name": "Whole wheat pasta", "quantity": "70g dry", "kcal": 245 },
-            { "name": "Tomato sauce", "quantity": "100g", "kcal": 40 },
-            { "name": "Ground turkey", "quantity": "100g", "kcal": 150 },
-            { "name": "Parmesan", "quantity": "10g", "kcal": 45 }
+            { "name": "Pasta integral", "quantity": "70g seca", "kcal": 245 },
+            { "name": "Salsa de tomate", "quantity": "100g", "kcal": 40 },
+            { "name": "Pavo molido", "quantity": "100g", "kcal": 150 },
+            { "name": "Parmesano", "quantity": "10g", "kcal": 45 }
           ]
         }
       }
@@ -308,41 +331,45 @@
       "meals": {
         "breakfast": {
           "time": "09:00",
+          "name": "Huevos revueltos con tostada",
           "total_kcal": 360,
           "items": [
-            { "name": "Scrambled eggs", "quantity": "2 large", "kcal": 182 },
-            { "name": "Whole wheat bread", "quantity": "1 slice", "kcal": 100 },
-            { "name": "Butter", "quantity": "5g", "kcal": 37 },
-            { "name": "Tomato", "quantity": "½ medium", "kcal": 11 },
-            { "name": "Coffee with milk", "quantity": "1 cup", "kcal": 30 }
+            { "name": "Huevos revueltos", "quantity": "2 grandes", "kcal": 182 },
+            { "name": "Pan integral", "quantity": "1 rebanada", "kcal": 100 },
+            { "name": "Mantequilla", "quantity": "5g", "kcal": 37 },
+            { "name": "Tomate", "quantity": "\u00bd mediano", "kcal": 11 },
+            { "name": "Caf\u00e9 con leche", "quantity": "1 taza", "kcal": 30 }
           ]
         },
         "lunch": {
           "time": "12:00",
+          "name": "Bowl de yogur con frutas y granola",
           "total_kcal": 400,
           "items": [
-            { "name": "Greek yogurt light", "quantity": "200g", "kcal": 110 },
-            { "name": "Mixed fruit", "quantity": "150g", "kcal": 80 },
+            { "name": "Yogur griego light", "quantity": "200g", "kcal": 110 },
+            { "name": "Frutas mixtas", "quantity": "150g", "kcal": 80 },
             { "name": "Granola", "quantity": "35g", "kcal": 175 },
-            { "name": "Honey", "quantity": "1 tsp", "kcal": 35 }
+            { "name": "Miel", "quantity": "1 cdta", "kcal": 35 }
           ]
         },
         "snack1": {
           "time": "14:30",
+          "name": "Palomitas caseras",
           "total_kcal": 130,
           "items": [
-            { "name": "Homemade popcorn", "quantity": "30g kernels", "kcal": 130 }
+            { "name": "Palomitas caseras", "quantity": "30g granos", "kcal": 130 }
           ]
         },
         "snack2": {
           "time": "17:30",
+          "name": "Yogur proteico con pl\u00e1tano y almendras",
           "total_kcal": 426,
           "items": [
-            { "name": "Protein yogurt", "quantity": "1 pot", "kcal": 150 },
-            { "name": "Banana", "quantity": "1 medium", "kcal": 105 },
-            { "name": "Almonds", "quantity": "20g", "kcal": 120 },
-            { "name": "Rice cake", "quantity": "1", "kcal": 35 },
-            { "name": "Dark chocolate", "quantity": "5g", "kcal": 16 }
+            { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 },
+            { "name": "Pl\u00e1tano", "quantity": "1 mediano", "kcal": 105 },
+            { "name": "Almendras", "quantity": "20g", "kcal": 120 },
+            { "name": "Tortita de arroz", "quantity": "1", "kcal": 35 },
+            { "name": "Chocolate negro", "quantity": "5g", "kcal": 16 }
           ]
         },
         "dinner": {
@@ -363,42 +390,46 @@
       "meals": {
         "breakfast": {
           "time": "09:00",
+          "name": "Skyr con frutas y avena",
           "total_kcal": 310,
           "items": [
             { "name": "Skyr", "quantity": "200g", "kcal": 132 },
-            { "name": "Mixed fruit", "quantity": "150g", "kcal": 80 },
-            { "name": "Honey", "quantity": "1 tsp", "kcal": 25 },
-            { "name": "Oats", "quantity": "20g", "kcal": 73 }
+            { "name": "Frutas mixtas", "quantity": "150g", "kcal": 80 },
+            { "name": "Miel", "quantity": "1 cdta", "kcal": 25 },
+            { "name": "Avena", "quantity": "20g", "kcal": 73 }
           ]
         },
         "lunch": {
           "time": "12:00",
+          "name": "Ensalada de pollo con aguacate",
           "total_kcal": 430,
           "items": [
-            { "name": "Mixed greens", "quantity": "100g", "kcal": 20 },
-            { "name": "Grilled chicken", "quantity": "130g", "kcal": 215 },
-            { "name": "Avocado", "quantity": "¼ medium", "kcal": 80 },
-            { "name": "Cherry tomatoes", "quantity": "80g", "kcal": 14 },
-            { "name": "Olive oil dressing", "quantity": "1 tbsp", "kcal": 93 },
-            { "name": "Feta cheese", "quantity": "10g", "kcal": 8 }
+            { "name": "Mix de hojas verdes", "quantity": "100g", "kcal": 20 },
+            { "name": "Pollo a la plancha", "quantity": "130g", "kcal": 215 },
+            { "name": "Aguacate", "quantity": "\u00bc mediano", "kcal": 80 },
+            { "name": "Tomates cherry", "quantity": "80g", "kcal": 14 },
+            { "name": "Aderezo de aceite de oliva", "quantity": "1 cda", "kcal": 93 },
+            { "name": "Queso feta", "quantity": "10g", "kcal": 8 }
           ]
         },
         "snack1": {
           "time": "14:30",
+          "name": "Manzana con mantequilla de man\u00ed",
           "total_kcal": 150,
           "items": [
-            { "name": "Apple", "quantity": "1 medium", "kcal": 87 },
-            { "name": "Peanut butter", "quantity": "10g", "kcal": 63 }
+            { "name": "Manzana", "quantity": "1 mediana", "kcal": 87 },
+            { "name": "Mantequilla de man\u00ed", "quantity": "10g", "kcal": 63 }
           ]
         },
         "snack2": {
           "time": "17:30",
+          "name": "Yogur proteico con tortitas y pl\u00e1tano",
           "total_kcal": 384,
           "items": [
-            { "name": "Protein yogurt", "quantity": "1 pot", "kcal": 150 },
-            { "name": "Rice cakes", "quantity": "2", "kcal": 70 },
-            { "name": "Banana", "quantity": "1 medium", "kcal": 105 },
-            { "name": "Peanut butter", "quantity": "10g", "kcal": 59 }
+            { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 },
+            { "name": "Tortitas de arroz", "quantity": "2", "kcal": 70 },
+            { "name": "Pl\u00e1tano", "quantity": "1 mediano", "kcal": 105 },
+            { "name": "Mantequilla de man\u00ed", "quantity": "10g", "kcal": 59 }
           ]
         },
         "dinner": {
