@@ -32,7 +32,31 @@
   {
     "id": "kipfilet-a-la-florentine",
     "name": "Kipfilet à la Florentine",
-    "kcal": 479,
+    "kcal": 442,
     "first_seen": "2026-02-03"
+  },
+  {
+    "id": "kip-zure-room-bieslook",
+    "name": "Kip met zure room en bieslook",
+    "kcal": 459,
+    "first_seen": "2026-02-16"
+  },
+  {
+    "id": "cajun-kip-tomatenjus-aardappelpuree",
+    "name": "Cajun kip, tomatenjus en aardappelpuree",
+    "kcal": 484,
+    "first_seen": "2026-02-16"
+  },
+  {
+    "id": "rode-chili-pulled-pork",
+    "name": "Rode chili & pulled pork",
+    "kcal": 526,
+    "first_seen": "2026-02-16"
+  },
+  {
+    "id": "varkenshaas-romige-prei",
+    "name": "Varkenshaas & romige prei",
+    "kcal": 550,
+    "first_seen": "2026-02-16"
   }
 ]

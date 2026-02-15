@@ -87,6 +87,9 @@ Thursday I have a dinner event, skip Factor.
 - Remaining dinner days: free/social (Sun, budget 600–700 kcal) or homemade
 - If the user has leftovers or events, they'll specify which days to skip Factor
 
+### Recurring Events
+- **XKE day**: Every 2 weeks on Tuesday — dinner is provided at the office (free, ~600 kcal). Skip Factor that day and redistribute.
+
 ### Portability
 - **Lunches are always portable** (sandwiches, wraps, salads in containers)
 - **Office days** (default: Friday, user may specify others): snacks must also be portable
@@ -175,7 +178,7 @@ Days with events or non-default office days:
 
 ## Adding a Weight Entry
 
-Append to `data/weight.json`:
+Ricardo weighs himself **every Monday**. Append to `data/weight.json`:
 
 ```json
 { "date": "YYYY-MM-DD", "weight_kg": XX.X }
