@@ -24,7 +24,7 @@ st.set_page_config(
 # ---------------------------------------------------------------------------
 
 
-@st.cache_data
+@st.cache_data(ttl=60)
 def load_json(path: Path) -> dict | list | None:
     try:
         return json.loads(path.read_text())
