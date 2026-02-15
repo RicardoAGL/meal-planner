@@ -46,11 +46,6 @@ Claude Code follows the rules in `CLAUDE.md` to generate the JSON plan file.
 
 ## Deployment
 
-Hosted on [Streamlit Community Cloud](https://streamlit.io/cloud):
+Live at **https://meal-planner-ragl.streamlit.app/**
 
-1. Push this repo to GitHub
-2. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub
-3. Click **New app** → select this repo → branch `main` → file `app.py`
-4. Deploy — the app gets a public URL (e.g. `https://meal-planner.streamlit.app`)
-
-Auto-redeploys on every push to `main`.
+Hosted on [Streamlit Community Cloud](https://streamlit.io/cloud). Auto-redeploys on every push to `main`.

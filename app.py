@@ -360,10 +360,10 @@ def _render_weight_chart(weight_data: list, profile: dict):
             y=weights,
             mode="lines+markers",
             name="Weight",
-            line={"color": "#2563eb", "width": 2.5},
+            line={"color": "#818cf8", "width": 2.5},
             marker={"size": 7},
             fill="tozeroy",
-            fillcolor="rgba(37, 99, 235, 0.08)",
+            fillcolor="rgba(129, 140, 248, 0.12)",
         )
     )
     fig.add_hline(
@@ -378,9 +378,22 @@ def _render_weight_chart(weight_data: list, profile: dict):
         xaxis_title="",
         height=350,
         margin={"t": 20, "b": 40, "l": 50, "r": 20},
-        yaxis={"range": [goal - 3, max(weights) + 2]},
-        legend={"orientation": "h", "yanchor": "bottom", "y": 1.02},
+        yaxis={
+            "range": [goal - 3, max(weights) + 2],
+            "gridcolor": "#334155",
+            "color": "#94a3b8",
+        },
+        xaxis={"gridcolor": "#334155", "color": "#94a3b8"},
+        legend={
+            "orientation": "h",
+            "yanchor": "bottom",
+            "y": 1.02,
+            "font": {"color": "#94a3b8"},
+        },
         hovermode="x unified",
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font={"color": "#e2e8f0"},
     )
 
     st.plotly_chart(fig, use_container_width=True)
