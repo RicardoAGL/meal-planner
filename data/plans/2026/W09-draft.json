@@ -1,8 +1,9 @@
 {
   "year": 2026,
-  "week": 8,
-  "start_date": "2026-02-16",
-  "end_date": "2026-02-22",
+  "week": 9,
+  "start_date": "2026-02-23",
+  "end_date": "2026-03-01",
+  "draft": true,
   "daily_target_kcal": 1800,
   "days": [
     {
@@ -45,21 +46,21 @@
         "snack2": {
           "time": "17:30",
           "name": "Pl\u00e1tano con almendras y tortitas",
-          "total_kcal": 343,
+          "total_kcal": 340,
           "items": [
             { "name": "Pl\u00e1tano", "quantity": "1 mediano", "kcal": 105 },
             { "name": "Almendras", "quantity": "20g", "kcal": 120 },
             { "name": "Tortitas de arroz", "quantity": "2", "kcal": 70 },
-            { "name": "Mantequilla de man\u00ed", "quantity": "8g", "kcal": 48 }
+            { "name": "Mantequilla de man\u00ed", "quantity": "7g", "kcal": 45 }
           ]
         },
         "dinner": {
           "time": "20:00",
-          "total_kcal": 439,
+          "total_kcal": 442,
           "source": "factor",
-          "factor_meal_id": "gegrilde-kipfilet-ratatouille",
+          "factor_meal_id": "kipfilet-a-la-florentine",
           "items": [
-            { "name": "Gegrilde kipfilet en ratatouille", "quantity": "1 meal", "kcal": 439 }
+            { "name": "Kipfilet \u00e0 la Florentine", "quantity": "1 meal", "kcal": 442 }
           ]
         }
       }
@@ -170,21 +171,22 @@
         "snack2": {
           "time": "17:30",
           "name": "Reques\u00f3n con ar\u00e1ndanos",
-          "total_kcal": 277,
+          "total_kcal": 331,
           "items": [
             { "name": "Reques\u00f3n", "quantity": "200g", "kcal": 150 },
             { "name": "Tortitas de arroz", "quantity": "2", "kcal": 70 },
             { "name": "Ar\u00e1ndanos", "quantity": "80g", "kcal": 45 },
-            { "name": "Miel", "quantity": "\u00bd cdta", "kcal": 12 }
+            { "name": "Miel", "quantity": "1 cdta", "kcal": 25 },
+            { "name": "Mantequilla de man\u00ed", "quantity": "7g", "kcal": 41 }
           ]
         },
         "dinner": {
           "time": "20:00",
-          "total_kcal": 513,
+          "total_kcal": 459,
           "source": "factor",
-          "factor_meal_id": "varkenshaas-rode-paprikasaus",
+          "factor_meal_id": "kip-zure-room-bieslook",
           "items": [
-            { "name": "Varkenshaas in rode paprikasaus", "quantity": "1 meal", "kcal": 513 }
+            { "name": "Kip met zure room en bieslook", "quantity": "1 meal", "kcal": 459 }
           ]
         }
       }
@@ -362,21 +364,22 @@
         "snack2": {
           "time": "17:30",
           "name": "Yogur proteico con pl\u00e1tano y almendras",
-          "total_kcal": 391,
+          "total_kcal": 426,
           "items": [
             { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 },
             { "name": "Pl\u00e1tano", "quantity": "1 mediano", "kcal": 105 },
             { "name": "Almendras", "quantity": "20g", "kcal": 120 },
+            { "name": "Tortita de arroz", "quantity": "1", "kcal": 35 },
             { "name": "Chocolate negro", "quantity": "5g", "kcal": 16 }
           ]
         },
         "dinner": {
           "time": "20:00",
-          "total_kcal": 519,
+          "total_kcal": 484,
           "source": "factor",
-          "factor_meal_id": "kip-bieslook-knoflook",
+          "factor_meal_id": "cajun-kip-tomatenjus-aardappelpuree",
           "items": [
-            { "name": "Kip met bieslook en knoflook", "quantity": "1 meal", "kcal": 519 }
+            { "name": "Cajun kip, tomatenjus en aardappelpuree", "quantity": "1 meal", "kcal": 484 }
           ]
         }
       }
@@ -422,21 +425,21 @@
         "snack2": {
           "time": "17:30",
           "name": "Yogur proteico con tortitas y pl\u00e1tano",
-          "total_kcal": 366,
+          "total_kcal": 384,
           "items": [
             { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 },
             { "name": "Tortitas de arroz", "quantity": "2", "kcal": 70 },
             { "name": "Pl\u00e1tano", "quantity": "1 mediano", "kcal": 105 },
-            { "name": "Mantequilla de man\u00ed", "quantity": "7g", "kcal": 41 }
+            { "name": "Mantequilla de man\u00ed", "quantity": "10g", "kcal": 59 }
           ]
         },
         "dinner": {
           "time": "20:00",
-          "total_kcal": 544,
+          "total_kcal": 526,
           "source": "factor",
-          "factor_meal_id": "romige-basilicum-risotto-kipfilet",
+          "factor_meal_id": "rode-chili-pulled-pork",
           "items": [
-            { "name": "Romige basilicum-risotto met kipfilet", "quantity": "1 meal", "kcal": 544 }
+            { "name": "Rode chili & pulled pork", "quantity": "1 meal", "kcal": 526 }
           ]
         }
       }

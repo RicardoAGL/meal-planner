@@ -58,5 +58,35 @@
     "name": "Varkenshaas & romige prei",
     "kcal": 550,
     "first_seen": "2026-02-16"
+  },
+  {
+    "id": "gegrilde-kipfilet-ratatouille",
+    "name": "Gegrilde kipfilet en ratatouille",
+    "kcal": 439,
+    "first_seen": "2026-02-16"
+  },
+  {
+    "id": "kip-bieslook-knoflook",
+    "name": "Kip met bieslook en knoflook",
+    "kcal": 519,
+    "first_seen": "2026-02-16"
+  },
+  {
+    "id": "varkenshaas-rode-paprikasaus",
+    "name": "Varkenshaas in rode paprikasaus",
+    "kcal": 513,
+    "first_seen": "2026-02-16"
+  },
+  {
+    "id": "moussaka-gehakt-aubergine",
+    "name": "Moussaka-stijl gehakt met aubergine & bechamelsaus",
+    "kcal": 565,
+    "first_seen": "2026-02-16"
+  },
+  {
+    "id": "gegrilde-kip-kruiden",
+    "name": "Gegrilde kip met kruiden",
+    "kcal": 546,
+    "first_seen": "2026-02-16"
   }
 ]
