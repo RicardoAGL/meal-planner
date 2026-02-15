@@ -1,0 +1,26 @@
+{
+  "name": "Ricardo",
+  "age": 39,
+  "height_cm": 178,
+  "start_weight_kg": 110,
+  "goal_weight_kg": 82,
+  "daily_target_kcal": 1800,
+  "target_range_kcal": [1730, 1800],
+  "location": "Netherlands",
+  "supermarket": "Albert Heijn",
+  "meal_slots": [
+    { "id": "breakfast", "label": "Breakfast", "time": "09:00" },
+    { "id": "lunch", "label": "Lunch", "time": "12:00" },
+    { "id": "snack1", "label": "Snack 1", "time": "14:30" },
+    { "id": "snack2", "label": "Snack 2", "time": "17:30" },
+    { "id": "dinner", "label": "Dinner", "time": "20:00" }
+  ],
+  "rules": {
+    "lunch_portable": true,
+    "friday_office_day": true,
+    "friday_snacks_portable": true,
+    "sunday_dinner_free": true,
+    "sunday_dinner_budget_kcal": 650,
+    "calorie_adjustment": "Adjust breakfast/snacks based on dinner calories to keep daily total within target range"
+  }
+}

@@ -1,0 +1,402 @@
+{
+  "year": 2026,
+  "week": 7,
+  "start_date": "2026-02-09",
+  "end_date": "2026-02-15",
+  "daily_target_kcal": 1800,
+  "days": [
+    {
+      "date": "2026-02-09",
+      "weekday": "Monday",
+      "total_kcal": 1789,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "total_kcal": 400,
+          "items": [
+            { "name": "Skyr natural", "quantity": "250g", "kcal": 165 },
+            { "name": "Oats", "quantity": "40g", "kcal": 148 },
+            { "name": "Apple", "quantity": "1 medium", "kcal": 87 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "total_kcal": 450,
+          "portable": true,
+          "items": [
+            { "name": "Whole wheat bread", "quantity": "2 slices", "kcal": 200 },
+            { "name": "Turkey breast", "quantity": "100g", "kcal": 110 },
+            { "name": "Light cheese", "quantity": "30g", "kcal": 75 },
+            { "name": "Butter", "quantity": "5g", "kcal": 37 },
+            { "name": "Lettuce & tomato", "quantity": "50g", "kcal": 15 },
+            { "name": "Mustard", "quantity": "1 tsp", "kcal": 13 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "total_kcal": 150,
+          "items": [
+            { "name": "Protein yogurt", "quantity": "1 pot", "kcal": 150 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "total_kcal": 365,
+          "items": [
+            { "name": "Banana", "quantity": "1 medium", "kcal": 105 },
+            { "name": "Almonds", "quantity": "20g", "kcal": 120 },
+            { "name": "Rice cake", "quantity": "2", "kcal": 70 },
+            { "name": "Peanut butter", "quantity": "10g", "kcal": 60 },
+            { "name": "Tea with honey", "quantity": "1 cup", "kcal": 10 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "total_kcal": 424,
+          "source": "factor",
+          "factor_meal_id": "kip-aubergine-mozzarella",
+          "items": [
+            { "name": "Kip & aubergine in mozzarella-pomodorosaus", "quantity": "1 meal", "kcal": 424 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-02-10",
+      "weekday": "Tuesday",
+      "total_kcal": 1789,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "total_kcal": 370,
+          "items": [
+            { "name": "Scrambled eggs", "quantity": "2 large", "kcal": 182 },
+            { "name": "Whole wheat bread", "quantity": "1 slice", "kcal": 100 },
+            { "name": "Butter", "quantity": "5g", "kcal": 37 },
+            { "name": "Tomato", "quantity": "1 medium", "kcal": 22 },
+            { "name": "Coffee with milk", "quantity": "1 cup", "kcal": 29 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "total_kcal": 450,
+          "portable": true,
+          "items": [
+            { "name": "Whole wheat wrap", "quantity": "1 large", "kcal": 180 },
+            { "name": "Grilled chicken", "quantity": "100g", "kcal": 165 },
+            { "name": "Mixed vegetables", "quantity": "80g", "kcal": 35 },
+            { "name": "Yogurt sauce", "quantity": "2 tbsp", "kcal": 40 },
+            { "name": "Mixed greens", "quantity": "30g", "kcal": 8 },
+            { "name": "Feta cheese", "quantity": "15g", "kcal": 22 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "total_kcal": 150,
+          "items": [
+            { "name": "Apple", "quantity": "1 medium", "kcal": 87 },
+            { "name": "Walnuts", "quantity": "10g", "kcal": 63 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "total_kcal": 330,
+          "items": [
+            { "name": "Cottage cheese", "quantity": "200g", "kcal": 150 },
+            { "name": "Rice cakes", "quantity": "2", "kcal": 70 },
+            { "name": "Honey", "quantity": "1 tsp", "kcal": 25 },
+            { "name": "Blueberries", "quantity": "80g", "kcal": 45 },
+            { "name": "Dark chocolate", "quantity": "10g", "kcal": 40 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "total_kcal": 489,
+          "source": "factor",
+          "factor_meal_id": "varkenshaas-mediterrane-stamppot",
+          "items": [
+            { "name": "Varkenshaas & Mediterrane stamppot", "quantity": "1 meal", "kcal": 489 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-02-11",
+      "weekday": "Wednesday",
+      "total_kcal": 1783,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "total_kcal": 380,
+          "items": [
+            { "name": "Skyr", "quantity": "200g", "kcal": 132 },
+            { "name": "Mixed berries", "quantity": "100g", "kcal": 48 },
+            { "name": "Honey", "quantity": "1 tsp", "kcal": 25 },
+            { "name": "Granola", "quantity": "35g", "kcal": 175 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "total_kcal": 440,
+          "portable": true,
+          "items": [
+            { "name": "Whole wheat bread", "quantity": "2 slices", "kcal": 200 },
+            { "name": "Tuna in water", "quantity": "1 can (120g)", "kcal": 130 },
+            { "name": "Light mayo", "quantity": "1 tbsp", "kcal": 35 },
+            { "name": "Lettuce", "quantity": "30g", "kcal": 5 },
+            { "name": "Greek yogurt light", "quantity": "100g", "kcal": 70 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "total_kcal": 190,
+          "items": [
+            { "name": "Carrots", "quantity": "120g", "kcal": 48 },
+            { "name": "Hummus", "quantity": "50g", "kcal": 142 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "total_kcal": 310,
+          "items": [
+            { "name": "Banana", "quantity": "1 medium", "kcal": 105 },
+            { "name": "Protein yogurt", "quantity": "1 pot", "kcal": 150 },
+            { "name": "Rice cake", "quantity": "1", "kcal": 35 },
+            { "name": "Peanut butter", "quantity": "5g", "kcal": 20 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "total_kcal": 463,
+          "source": "factor",
+          "factor_meal_id": "kip-groene-chili-quinoa",
+          "items": [
+            { "name": "Kip met groene chili en quinoa", "quantity": "1 meal", "kcal": 463 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-02-12",
+      "weekday": "Thursday",
+      "total_kcal": 1779,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "total_kcal": 355,
+          "items": [
+            { "name": "Oats", "quantity": "50g", "kcal": 185 },
+            { "name": "Protein powder", "quantity": "25g", "kcal": 100 },
+            { "name": "Milk (semi-skimmed)", "quantity": "150ml", "kcal": 70 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "total_kcal": 450,
+          "portable": true,
+          "items": [
+            { "name": "Mixed greens", "quantity": "100g", "kcal": 20 },
+            { "name": "Grilled chicken", "quantity": "130g", "kcal": 215 },
+            { "name": "Quinoa (cooked)", "quantity": "80g", "kcal": 96 },
+            { "name": "Cherry tomatoes", "quantity": "80g", "kcal": 14 },
+            { "name": "Cucumber", "quantity": "80g", "kcal": 12 },
+            { "name": "Olive oil dressing", "quantity": "1 tbsp", "kcal": 93 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "total_kcal": 150,
+          "items": [
+            { "name": "Protein yogurt", "quantity": "1 pot", "kcal": 150 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "total_kcal": 280,
+          "items": [
+            { "name": "Apple", "quantity": "1 medium", "kcal": 87 },
+            { "name": "Almonds", "quantity": "15g", "kcal": 90 },
+            { "name": "Rice cakes", "quantity": "2", "kcal": 70 },
+            { "name": "Honey", "quantity": "1 tsp", "kcal": 33 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "total_kcal": 544,
+          "source": "factor",
+          "factor_meal_id": "romige-basilicum-risotto-kipfilet",
+          "items": [
+            { "name": "Romige basilicum-risotto met kipfilet", "quantity": "1 meal", "kcal": 544 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-02-13",
+      "weekday": "Friday",
+      "total_kcal": 1774,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "total_kcal": 365,
+          "items": [
+            { "name": "Skyr", "quantity": "200g", "kcal": 132 },
+            { "name": "Granola (measured)", "quantity": "35g", "kcal": 175 },
+            { "name": "Blueberries", "quantity": "80g", "kcal": 46 },
+            { "name": "Honey drizzle", "quantity": "½ tsp", "kcal": 12 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "total_kcal": 450,
+          "portable": true,
+          "items": [
+            { "name": "Whole wheat bread", "quantity": "2 slices", "kcal": 200 },
+            { "name": "Turkey breast", "quantity": "100g", "kcal": 110 },
+            { "name": "Light cheese", "quantity": "30g", "kcal": 75 },
+            { "name": "Butter", "quantity": "5g", "kcal": 37 },
+            { "name": "Lettuce & tomato", "quantity": "50g", "kcal": 15 },
+            { "name": "Mustard", "quantity": "1 tsp", "kcal": 13 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "total_kcal": 190,
+          "portable": true,
+          "items": [
+            { "name": "Protein bar", "quantity": "1", "kcal": 190 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "total_kcal": 310,
+          "portable": true,
+          "items": [
+            { "name": "Tangerine", "quantity": "2", "kcal": 94 },
+            { "name": "Walnuts", "quantity": "15g", "kcal": 98 },
+            { "name": "Rice cakes", "quantity": "2", "kcal": 70 },
+            { "name": "Dark chocolate", "quantity": "10g", "kcal": 48 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "total_kcal": 459,
+          "source": "factor",
+          "factor_meal_id": "gegrilde-kipfilet-aardappel-preipuree",
+          "items": [
+            { "name": "Gegrilde kipfilet en aardappel-preipuree", "quantity": "1 meal", "kcal": 459 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-02-14",
+      "weekday": "Saturday",
+      "total_kcal": 1784,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "total_kcal": 405,
+          "items": [
+            { "name": "Scrambled eggs", "quantity": "2 large", "kcal": 182 },
+            { "name": "Whole wheat bread", "quantity": "2 slices", "kcal": 200 },
+            { "name": "Tomato", "quantity": "½ medium", "kcal": 11 },
+            { "name": "Butter", "quantity": "3g", "kcal": 12 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "total_kcal": 400,
+          "items": [
+            { "name": "Greek yogurt light", "quantity": "200g", "kcal": 110 },
+            { "name": "Mixed fruit", "quantity": "150g", "kcal": 80 },
+            { "name": "Granola", "quantity": "35g", "kcal": 175 },
+            { "name": "Honey", "quantity": "1 tsp", "kcal": 35 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "total_kcal": 130,
+          "items": [
+            { "name": "Homemade popcorn", "quantity": "30g kernels", "kcal": 130 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "total_kcal": 370,
+          "items": [
+            { "name": "Banana", "quantity": "1 medium", "kcal": 105 },
+            { "name": "Protein yogurt", "quantity": "1 pot", "kcal": 150 },
+            { "name": "Rice cake", "quantity": "2", "kcal": 70 },
+            { "name": "Peanut butter", "quantity": "7g", "kcal": 45 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "total_kcal": 479,
+          "source": "factor",
+          "factor_meal_id": "kipfilet-a-la-florentine",
+          "items": [
+            { "name": "Kipfilet à la Florentine", "quantity": "1 meal", "kcal": 479 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-02-15",
+      "weekday": "Sunday",
+      "total_kcal": 1790,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "total_kcal": 310,
+          "items": [
+            { "name": "Skyr", "quantity": "200g", "kcal": 132 },
+            { "name": "Mixed fruit", "quantity": "150g", "kcal": 80 },
+            { "name": "Honey", "quantity": "1 tsp", "kcal": 25 },
+            { "name": "Oats", "quantity": "20g", "kcal": 73 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "total_kcal": 430,
+          "items": [
+            { "name": "Mixed greens", "quantity": "100g", "kcal": 20 },
+            { "name": "Grilled chicken", "quantity": "130g", "kcal": 215 },
+            { "name": "Avocado", "quantity": "¼ medium", "kcal": 80 },
+            { "name": "Cherry tomatoes", "quantity": "80g", "kcal": 14 },
+            { "name": "Olive oil dressing", "quantity": "1 tbsp", "kcal": 93 },
+            { "name": "Feta cheese", "quantity": "10g", "kcal": 8 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "total_kcal": 150,
+          "items": [
+            { "name": "Apple", "quantity": "1 medium", "kcal": 87 },
+            { "name": "Peanut butter", "quantity": "10g", "kcal": 63 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "total_kcal": 250,
+          "items": [
+            { "name": "Protein yogurt", "quantity": "1 pot", "kcal": 150 },
+            { "name": "Rice cakes", "quantity": "2", "kcal": 70 },
+            { "name": "Honey", "quantity": "½ tsp", "kcal": 12 },
+            { "name": "Cinnamon", "quantity": "pinch", "kcal": 3 },
+            { "name": "Dark chocolate", "quantity": "5g", "kcal": 15 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "total_kcal": 650,
+          "source": "free",
+          "items": [
+            { "name": "Free dinner (social/restaurant)", "quantity": "1 meal", "kcal": 650 }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "kip-aubergine-mozzarella",
+    "name": "Kip & aubergine in mozzarella-pomodorosaus",
+    "kcal": 424,
+    "first_seen": "2026-02-03"
+  },
+  {
+    "id": "varkenshaas-mediterrane-stamppot",
+    "name": "Varkenshaas & Mediterrane stamppot",
+    "kcal": 489,
+    "first_seen": "2026-02-03"
+  },
+  {
+    "id": "kip-groene-chili-quinoa",
+    "name": "Kip met groene chili en quinoa",
+    "kcal": 463,
+    "first_seen": "2026-02-03"
+  },
+  {
+    "id": "romige-basilicum-risotto-kipfilet",
+    "name": "Romige basilicum-risotto met kipfilet",
+    "kcal": 544,
+    "first_seen": "2026-02-03"
+  },
+  {
+    "id": "gegrilde-kipfilet-aardappel-preipuree",
+    "name": "Gegrilde kipfilet en aardappel-preipuree",
+    "kcal": 459,
+    "first_seen": "2026-02-03"
+  },
+  {
+    "id": "kipfilet-a-la-florentine",
+    "name": "Kipfilet à la Florentine",
+    "kcal": 479,
+    "first_seen": "2026-02-03"
+  }
+]

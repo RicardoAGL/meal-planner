@@ -1,0 +1,107 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint & Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/ruff-action@v3
+        with:
+          args: check
+
+      - uses: astral-sh/ruff-action@v3
+        with:
+          args: format --check
+
+  check-lockfile:
+    name: Verify lockfile
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - run: uv lock --check
+
+  validate-data:
+    name: Validate data
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate JSON syntax
+        run: |
+          for f in $(find data -name '*.json'); do
+            python3 -c "import json; json.load(open('$f'))" || exit 1
+            echo "OK  $f"
+          done
+
+      - name: Audit calorie totals
+        run: |
+          python3 -c "
+          import json, sys, pathlib
+          errors = []
+          for plan_file in pathlib.Path('data/plans').rglob('W*.json'):
+              plan = json.loads(plan_file.read_text())
+              for day in plan['days']:
+                  day_sum = 0
+                  for slot, meal in day['meals'].items():
+                      item_sum = sum(i['kcal'] for i in meal['items'])
+                      if item_sum != meal['total_kcal']:
+                          errors.append(f\"{plan_file}:{day['date']}:{slot} items={item_sum} != total={meal['total_kcal']}\")
+                      day_sum += meal['total_kcal']
+                  if day_sum != day['total_kcal']:
+                      errors.append(f\"{plan_file}:{day['date']} meals={day_sum} != day_total={day['total_kcal']}\")
+          if errors:
+              for e in errors:
+                  print(f'ERROR: {e}', file=sys.stderr)
+              sys.exit(1)
+          print('All calorie totals consistent')
+          "
+
+  smoke-test:
+    name: App smoke test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Install dependencies
+        run: uv sync --frozen
+
+      - name: Import check
+        run: |
+          uv run python -c "
+          import app
+          assert app.load_profile() is not None, 'Profile failed to load'
+          assert app.load_weight() is not None, 'Weight failed to load'
+          assert app.load_manifest() is not None, 'Manifest failed to load'
+          plan = app.load_plan('2026/W07.json')
+          assert plan is not None, 'Plan failed to load'
+          assert len(plan['days']) == 7, 'Plan missing days'
+          print('Smoke test passed')
+          "
+
+      - name: Streamlit health check
+        run: |
+          uv run streamlit run app.py --server.headless true --server.port 8501 &
+          sleep 10
+          curl --fail --retry 3 --retry-delay 2 http://localhost:8501/_stcore/health
+          echo " Streamlit health check passed"
