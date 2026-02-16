@@ -1,0 +1,155 @@
+1011
+
+AANTAL
+
+OMSCHRIJVING
+
+PRIJS BEDRAG
+
+BONUSKAART
+
+xx6763
+
+AIRMILES NR. *
+
+xx5695
+
+1
+
+ZESPRI KIWI
+
+3,99 B
+
+1
+
+MUFFIN VANIL
+
+1,19
+
+1
+
+AH KWARK
+
+1,29
+
+2
+
+COCA-C ZERO
+
+2,89
+
+5,78
+
++STATIEGELD
+
+0,50
+
+1
+
+AH ICE TEA
+
+1,39
+
+5
+
+NESCAFE D&G
+
+11
+
+SUBTOTAAL
+
+45,59
+
+BONUS
+
+bio premium
+
+-0,40
+
+BONUS
+
+NESCAFE&STAR
+
+-12,58
+
+6,29
+
+UW VOORDEEL
+
+31,45 B
+
+12,98
+
+Waarvan
+
+32
+
+BONUS BOX PREMIUM
+
+0,00
+
+SUBTOTAAL
+
+32,61
+
+KOOPZEGELS
+
+3,20
+
+TOTAAL
+
+35,81
+
+SPAARACTIES:
+24
+
+MIJN AH MILES PREMIUM
+
+BETAALD MET:
+PINNEN
+
+35,81
+
+POI: 50059013
+CLIENT TICKET
+
+Terminal
+
+Merchant
+
+3603010101
+
+Period
+
+Transaction
+
+00040583
+
+Token
+1053030349219894783
+
+BTW
+9%
+TOTAAL
+
+OVER
+29,46
+29,46
+
+1011
+17:36
+
+35
+
+Vragen over je kassabon?
+Onze collega's
+Helpen je graag.
+
+BS150803
+6027
+
+EUR
+2,65
+2,65
+255
+27-1-2026

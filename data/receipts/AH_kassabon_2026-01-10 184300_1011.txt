@@ -1,0 +1,538 @@
+1011
+
+AANTAL
+
+OMSCHRIJVING
+
+PRIJS BEDRAG
+
+BONUSKAART
+
+xx6763
+
+1
+
+SNOEPGROENTE
+
+1,49
+
+4
+
+KOMKOMMER
+
+0,99
+
+3,96
+
+2
+
+AH SPINAZIE
+
+1,69
+
+3,38
+
+1
+
+AH BANANEN
+
+1,39
+
+1
+
+GALIA MELOEN
+
+2,49 B
+
+1
+
+AH GEHAKT
+
+4,79
+
+1
+
+AH HAMBURGER
+
+5,49
+
+1
+
+AH SPARERIB
+
+8,63
+
+1
+
+ZAANS WIT HL
+
+1,75
+
+1
+
+MELK BRIOCHE
+
+2,89 BB
+
+1
+
+HAMBURGERBR
+
+1,99
+
+1
+
+DONUT DECO
+
+3,95 35%
+
+1
+
+SMELTKAAS
+
+1,49
+
+1
+
+GOUDSE KAAS
+
+5,59
+
+2
+
+SCHOUDERHAM
+
+2,35
+
+4,70
+
+2
+
+YOGHURT
+
+1,69
+
+3,38
+
+1
+
+VALENTINA
+
+3
+
+SM TORTILLA
+
+1
+
+TAGLIATELLE
+
+1,89
+
+1
+
+PENNE RIGATE
+
+0,85
+
+1
+
+BAYO BEANS
+
+2,99
+
+1
+
+KETCHUP
+
+0,89
+
+1
+
+ARLA
+
+2,19
+
+1
+
+BIO HUMMUS
+
+2,89 B
+
+1
+
+AH SNOEPGROE
+
+3,29
+
+1
+
+PAPRIKA MIX
+
+2,05
+
+1
+
+AH WORTELEN
+
+1,69
+
+1
+
+AVOCADO
+
+2,99
+
+1
+
+AVOCADO
+
+1,35
+
+1
+
+KIPDIJFILET
+
+9,49
+
+1
+
+AH KROPSLA
+
+0,85
+
+1
+
+BLAUWE BESSE
+
+6,79 B
+
+3
+
+BLIK TONIJN
+
+1
+
+CHORIZO
+
+3,49
+
+1
+
+AH DRINK
+
+1,49 B
+
+1
+
+ONTBIJTCRACK
+
+2,79
+
+1
+
+INNOCENT
+
+3,99
+
++STATIEGELD
+
+0,15
+
+1
+
+AH PASTA
+
+4,29 B
+
+2
+
+AH SMOOTHIE
+
+2,99
+2,55
+
+1,35
+
+1,99
+
+7,65 B
+
+4,05
+
+3,98 B
+
++STATIEGELD
+
+0,30
+
+AH SMOOTHIE
+
+1,99 B
+
++STATIEGELD
+
+0,15
+
+1
+
+AH GRANOLA
+
+2,79
+
+1
+
+AH HAVERMOUT
+
+0,75
+
+1
+
+SCHARRELEI
+
+6,49
+
+1
+
+AH CHIAZAAD
+
+1,99
+
+2
+
+KALKOENFILET
+
+2,99
+
+5,98
+
+3
+
+NESCAFE D&G
+
+6,29
+
+18,87 BB
+
+2
+
+PERLA HB DG
+
+4,49
+
+8,98 BB
+
+1
+
+INNOCENT
+
+3,99
+
+1
+
+DAN ACTIMEL
+
+4,99
+
+2
+
+DANOONTJE
+
+1
+
+AH ROOMBOTER
+
+3,49
+
+1
+
+COCA-C ZERO
+
+2,89
+
++STATIEGELD
+
+0,25
+
+1
+
+AMANDELEN
+
+5,49 B
+
+1
+
+FUET
+
+2,49
+
+1
+
+HERTOG IJS
+
+1,99 B
+
+1
+
+HERTOG IJS
+
+1,69 B
+
+72
+
+SUBTOTAAL
+
+BONUS
+
+MBAHVERSSAPS
+
+-0,97
+
+BONUS
+
+ALLEAHMELOEN
+
+-0,62
+
+BONUS
+
+terrapremium
+
+-0,87
+
+BONUS
+
+ALLEBJHERTOG
+
+-1,84
+
+BBOX
+
+Perla DC
+
+-1,99
+
+BBOX
+
+Broodjes
+
+-0,58
+
+BBOX
+
+Nescafe Dolc
+
+-3,88
+
+BONUS
+
+TERRANOTEN50
+
+-0,50
+
+BONUS
+
+AHBLAUWEBES3
+
+-1,00
+
+BONUS
+
+santamaria
+
+-1,53
+
+BONUS
+
+Danoon pouch
+
+-0,48
+
+35% K
+
+DONUT DECO
+
+-1,38
+
+1
+
+UW VOORDEEL
+
+0,99
+
+1,98 B
+
+209,97
+
+15,64
+
+Waarvan
+BONUS BOX PREMIUM
+
+194
+
+SUBTOTAAL
+
+194,33
+
+KOOPZEGELS
+
+19,40
+
+TOTAAL
+
+213,73
+
+SPAARACTIES:
+38
+
+8,46
+
+eSPAARZEGELS PREMIUM
+
+BETAALD MET:
+PINNEN
+
+213,73
+
+POI: 50059013
+CLIENT TICKET
+
+Terminal
+
+Merchant
+
+3603010101
+
+Period
+
+Transaction
+
+00034802
+
+Token
+1053031340592464129
+
+BTW
+9%
+TOTAAL
+
+OVER
+177,50
+177,50
+
+1011
+18:43
+
+35
+
+Fijne feestdagen
+en een gelukkig nieuw jaar!
+
+BS150803
+6010
+
+EUR
+15,98
+15,98
+303
+10-1-2026

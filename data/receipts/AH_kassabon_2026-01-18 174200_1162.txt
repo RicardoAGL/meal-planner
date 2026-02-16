@@ -1,0 +1,113 @@
+1162
+
+AANTAL
+
+OMSCHRIJVING
+
+PRIJS BEDRAG
+
+BONUSKAART
+
+xx6763
+
+AIRMILES NR. *
+
+xx5695
+
+1
+
+AH TIRAMISU
+
+3,99
+
+1
+
+CARE MAANDVB
+
+0,99
+
+1
+
+MAANDVERBAND
+
+0,79
+
+3
+
+SUBTOTAAL
+
+5,77
+
+UW VOORDEEL
+
+0,00
+
+Waarvan
+
+5
+
+BONUS BOX PREMIUM
+
+0,00
+
+KOOPZEGELS
+
+0,50
+
+TOTAAL
+
+6,27
+
+SPAARACTIES:
+4
+
+MIJN AH MILES PREMIUM
+
+BETAALD MET:
+PINNEN
+
+6,27
+
+POI: 50076490
+KLANTTICKET
+
+Terminal
+
+BS152593
+
+Merchant
+
+3603010101
+
+Periode
+
+6018
+
+Transactie
+
+00021528
+
+Token
+1053032435352815855
+
+BTW
+9%
+TOTAAL
+
+OVER
+5,29
+5,29
+
+1162
+17:42
+
+31
+
+Fijne feestdagen
+en een gelukkig nieuw jaar!
+
+EUR
+0,48
+0,48
+141
+18-1-2026

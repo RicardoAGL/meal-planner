@@ -1,0 +1,281 @@
+1011
+
+AANTAL
+
+OMSCHRIJVING
+
+PRIJS BEDRAG
+
+BONUSKAART
+
+xx6763
+
+AIRMILES NR. *
+
+xx5695
+
+1
+
+AH BANANEN
+
+1,45
+
+1
+
+AH ELSTAR
+
+2,35 B
+
+1
+
+DRUIVEN WIT
+
+2,59
+
+1
+
+AH KROPSLA
+
+0,62
+
+1
+
+KOMKOMMER
+
+0,99
+
+1
+
+SNOEPG WR BL
+
+1,99
+
+1
+
+KIPBURGER
+
+4,99
+
+1
+
+MELK BRIOCHE
+
+2,99
+
+1
+
+SCHOUDERHAM
+
+1,39
+
+1
+
+SCHOUDERHAM
+
+2,29
+
+1
+
+KALKOENFILET
+
+2,99
+
+1
+
+STARB OAT
+
+2,39 K
+
+1
+
+PUDDING PIST
+
+1,99 K
+
+3
+
+LINDAHLS
+
+1
+
+DAN ACTIMEL
+
+4,99 BB
+
+1
+
+AH MUE REEP
+
+1,55
+
+1
+
+AH MUE REEP
+
+1,39
+
+1
+
+AH MUE REEP
+
+1,55
+
+1
+
+AH THEE
+
+0,85
+
+1
+
+AH THEE
+
+1,39
+
+1
+
+CARE LIPBALM
+
+0,99 K
+
+1
+
+CARE PADS
+
+0,79
+
+1
+
+AH PAPIER
+
+5,69
+
+25
+
+SUBTOTAAL
+
+54,18
+
+KRAS
+
+STARBUCKSIJS
+
+-2,39
+
+BONUS
+
+AHELSTARAPPE
+
+-0,16
+
+KRAS
+
+CAREHYDRATIN
+
+-0,99
+
+KRAS
+
+HIPROPUDDING
+
+-1,99
+
+BBOX
+
+Actimel
+
+-1,00
+
+UW VOORDEEL
+
+1,99
+
+5,97
+
+6,53
+
+Waarvan
+
+47
+
+BONUS BOX PREMIUM
+
+6,37
+
+SUBTOTAAL
+
+47,65
+
+KOOPZEGELS
+
+4,70
+
+TOTAAL
+
+52,35
+
+SPAARACTIES:
+3
+
+KRASKAART
+
+18
+
+eSPAARZEGELS PREMIUM
+
+38
+
+MIJN AH MILES PREMIUM
+
+BETAALD MET:
+PINNEN
+
+52,35
+
+POI: 50257192
+KLANTTICKET
+
+Terminal
+
+BS150790
+
+Merchant
+
+3603010101
+
+Periode
+
+6041
+
+Transactie
+
+00023639
+
+Token
+1053030134389086489
+
+BTW
+9%
+21%
+TOTAAL
+
+OVER
+37,77
+5,36
+43,13
+
+1011
+16:25
+
+40
+
+Vragen over je kassabon?
+Onze collega's
+Helpen je graag.
+
+EUR
+3,40
+1,12
+4,52
+94
+10-2-2026

@@ -1,0 +1,203 @@
+1011
+
+AANTAL
+
+OMSCHRIJVING
+
+PRIJS BEDRAG
+
+BONUSKAART
+
+xx6763
+
+AIRMILES NR. *
+
+xx5695
+
+1
+
+SNOEPG WR BL
+
+1,99
+
+1
+
+BOREK AUBERG
+
+1,09
+
+1
+
+FRIKANDEL BR
+
+0,99
+
+1
+
+CHOCOMEL
+
+1,69
+
+3
+
+LINDAHLS
+
+1
+
+ZAANS HUISJE
+
+2
+
+POPCORN ZOUT
+
+1
+
+POPCORN ZOUT
+
+1,99
+
+1
+
+SMARTIES
+
+3,19
+
+1
+
+COCA-COLA
+
+1,79
+
++STATIEGELD
+
+0,15
+
+1
+
+TIARA PASEN
+
+4,99
+
+1
+
+VILTEN MAND
+
+5,49
+
+1
+
+OPWINDKUIKEN
+
+1,59
+
+1
+
+SERVET BLOEM
+
+3,99
+
+1
+
+MAND GEEL
+
+5,99
+
+18
+
+SUBTOTAAL
+
+44,27
+
+1,99
+
+5,97
+1,59
+
+0,89
+
+UW VOORDEEL
+
+1,78
+
+0,00
+
+Waarvan
+
+44
+
+BONUS BOX PREMIUM
+
+0,00
+
+KOOPZEGELS
+
+4,40
+
+TOTAAL
+
+48,67
+
+SPAARACTIES:
+2
+
+KRASKAART
+
+34
+
+MIJN AH MILES PREMIUM
+
+BETAALD MET:
+PINNEN
+
+48,67
+
+POI: 50257441
+KLANTTICKET
+
+Terminal
+
+BS150795
+
+Merchant
+
+3603010101
+
+Periode
+
+6037
+
+Transactie
+
+00017375
+
+Token
+1053030069488397223
+
+BTW
+9%
+21%
+
+OVER
+20,25
+18,22
+
+EUR
+1,82
+3,83
+
+TOTAAL
+
+38,47
+
+1011
+13:12
+
+45
+
+Vragen over je kassabon?
+Onze collega's
+Helpen je graag.
+
+5,65
+63
+6-2-2026

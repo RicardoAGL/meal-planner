@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "year": 2026,
+    "week": 1,
+    "factor_eur": 62.93,
+    "grocery_eur": 35.00,
+    "source": "estimate"
+  },
+  {
+    "year": 2026,
+    "week": 2,
+    "factor_eur": 62.93,
+    "grocery_eur": 36.00,
+    "source": "estimate"
+  },
+  {
+    "year": 2026,
+    "week": 3,
+    "factor_eur": 62.93,
+    "grocery_eur": 40.00,
+    "source": "estimate"
+  },
+  {
+    "year": 2026,
+    "week": 4,
+    "factor_eur": 62.93,
+    "grocery_eur": 42.00,
+    "source": "estimate"
+  },
+  {
+    "year": 2026,
+    "week": 5,
+    "factor_eur": 62.93,
+    "grocery_eur": 44.00,
+    "source": "estimate"
+  },
+  {
+    "year": 2026,
+    "week": 6,
+    "factor_eur": 62.93,
+    "grocery_eur": 46.00,
+    "source": "estimate"
+  },
+  {
+    "year": 2026,
+    "week": 7,
+    "factor_eur": 62.93,
+    "grocery_eur": 53.24,
+    "source": "plan_estimate"
+  },
+  {
+    "year": 2026,
+    "week": 8,
+    "factor_eur": 62.93,
+    "grocery_eur": 59.78,
+    "source": "plan_estimate"
+  }
+]
