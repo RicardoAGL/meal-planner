@@ -184,15 +184,31 @@ Days with events or non-default office days:
 
 ---
 
-## Adding a Weight Entry
+## Weight Tracking
 
-Ricardo weighs himself **every Monday**. Append to `data/weight.json`:
+Ricardo weighs himself **every Monday**.
+
+### Primary: Google Sheet (live data)
+
+The app reads weight data from a Google Sheet via published CSV export.
+The URL is stored in Streamlit secrets (`WEIGHT_SHEET_URL`), not in the repo.
+
+**Sheet format** — two columns, any header names (parsed by position):
+
+| date | weight_kg |
+|------|-----------|
+| 2026-01-12 | 111.8 |
+
+The app caches the sheet data for 5 minutes (`ttl=300`).
+
+### Fallback: `data/weight.json`
+
+If no sheet URL is configured or the fetch fails, the app falls back to `data/weight.json`.
+This file serves as seed data and a safety net. Keep it sorted by date:
 
 ```json
 { "date": "YYYY-MM-DD", "weight_kg": XX.X }
 ```
-
-Keep entries sorted by date.
 
 ## Factor Catalog
 

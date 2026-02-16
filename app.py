@@ -1,7 +1,10 @@
 """Meal Planner — Streamlit dashboard for weekly meal plans and weight tracking."""
 
+import csv
 import json
+import urllib.request
 from datetime import date, datetime, timedelta
+from io import StringIO
 from pathlib import Path
 
 import plotly.graph_objects as go
@@ -36,7 +39,34 @@ def load_profile():
     return load_json(DATA_DIR / "profile.json")
 
 
+@st.cache_data(ttl=300)
+def _fetch_weight_from_gsheet(url: str) -> list | None:
+    """Fetch weight entries from a published Google Sheet (CSV export)."""
+    try:
+        response = urllib.request.urlopen(url, timeout=10)  # noqa: S310
+        content = response.read().decode("utf-8")
+        reader = csv.reader(StringIO(content))
+        next(reader)  # skip header row
+        entries = []
+        for row in reader:
+            if len(row) >= 2 and row[0].strip() and row[1].strip():
+                entries.append(
+                    {
+                        "date": row[0].strip(),
+                        "weight_kg": float(row[1].strip()),
+                    }
+                )
+        return sorted(entries, key=lambda e: e["date"]) if entries else None
+    except Exception:
+        return None
+
+
 def load_weight():
+    url = st.secrets.get("WEIGHT_SHEET_URL")
+    if url:
+        data = _fetch_weight_from_gsheet(url)
+        if data:
+            return data
     return load_json(DATA_DIR / "weight.json")
 
 

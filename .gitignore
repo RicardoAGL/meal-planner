@@ -11,8 +11,9 @@ __pycache__/
 *.pyc
 .venv/
 
-# Env
+# Env / Secrets
 .env
+.streamlit/secrets.toml
 
 # uv
 # uv.lock is committed for reproducibility
