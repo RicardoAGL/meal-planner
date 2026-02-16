@@ -1,0 +1,76 @@
+{
+  "start_date": "2026-01-12",
+  "goal": "110 → 82 kg via 1,800 kcal plan + Factor",
+  "entries": [
+    {
+      "date": "2026-01-12",
+      "type": "milestone",
+      "title": "Día 1 — empieza el plan",
+      "body": "Inicio del plan de pérdida de peso. Objetivo: bajar de 110 a 82 kg con un plan de 1,800 kcal/día y 5 comidas.",
+      "weight_kg": 111.8,
+      "week": 1,
+      "tags": ["start", "commitment"],
+      "photo": null
+    },
+    {
+      "date": "2026-01-12",
+      "type": "decision",
+      "title": "Factor NL como servicio de cenas",
+      "body": "Elegí Factor para las cenas porque resuelve el problema más difícil: cocinar algo saludable después del trabajo. 6 cenas/semana, porciones controladas, calorías claras en la etiqueta.",
+      "weight_kg": 111.8,
+      "week": 1,
+      "tags": ["factor", "strategy"],
+      "photo": null
+    },
+    {
+      "date": "2026-01-12",
+      "type": "decision",
+      "title": "1,800 kcal y 5 comidas al día",
+      "body": "El déficit calórico tiene que ser sostenible. 1,800 kcal repartidas en 5 comidas evita el hambre y mantiene la energía estable durante el día.",
+      "weight_kg": 111.8,
+      "week": 1,
+      "tags": ["nutrition", "strategy"],
+      "photo": null
+    },
+    {
+      "date": "2026-02-07",
+      "type": "challenge",
+      "title": "Boda — buffet de carne y pastel",
+      "body": "Me invitaron a una boda con buffet libre de carne y pastel. Logré controlarme y comer solo lo necesario sin excederme. Al pesarme la semana siguiente, había perdido peso igual. Una victoria importante de autocontrol.",
+      "weight_kg": null,
+      "week": 5,
+      "tags": ["social", "self-control", "win"],
+      "photo": null
+    },
+    {
+      "date": "2026-02-16",
+      "type": "milestone",
+      "title": "Dashboard en Streamlit Cloud",
+      "body": "El dashboard de meal planning ya está live. Mi esposa puede ver el menú semanal y la lista de compras desde su teléfono.",
+      "weight_kg": 108.1,
+      "week": 7,
+      "tags": ["tech", "tools"],
+      "photo": null
+    },
+    {
+      "date": "2026-02-16",
+      "type": "decision",
+      "title": "Tech stack: Streamlit + JSON + Google Sheets",
+      "body": "Streamlit para el dashboard, JSON para los planes semanales, Google Sheets para datos interactivos (peso, stock). Sin base de datos, sin backend — todo en un repo de GitHub con deploy automático.",
+      "weight_kg": 108.1,
+      "week": 7,
+      "tags": ["tech", "architecture"],
+      "photo": null
+    },
+    {
+      "date": "2026-02-16",
+      "type": "milestone",
+      "title": "Lista de compras y presupuesto añadidos",
+      "body": "Nuevas pestañas en el dashboard: lista de compras (auto-generada del plan semanal, agrupada por categoría) y presupuesto (Factor + supermercado, costo por kg perdido).",
+      "weight_kg": 108.1,
+      "week": 7,
+      "tags": ["tech", "grocery", "budget"],
+      "photo": null
+    }
+  ]
+}

@@ -22,5 +22,8 @@
     "sunday_dinner_free": true,
     "sunday_dinner_budget_kcal": 650,
     "calorie_adjustment": "Adjust breakfast/snacks based on dinner calories to keep daily total within target range"
-  }
+  },
+  "budget_weekly_eur": 120,
+  "budget_note": "Soft limit — health over savings",
+  "factor_weekly_eur": 62.93
 }

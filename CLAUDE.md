@@ -9,11 +9,15 @@ Live: https://meal-planner-ragl.streamlit.app/
 ## Repository Structure
 
 ```
-app.py                        # Streamlit dashboard
+app.py                        # Streamlit dashboard (4 tabs)
 data/
-  profile.json                # User config, targets, rules
+  profile.json                # User config, targets, rules, budget
   weight.json                 # Weight entries (append-only)
   factor-catalog.json         # Factor meal catalog
+  ingredient-categories.json  # Ingredient → category mapping
+  products.json               # AH product database (ingredient → product details)
+  spending.json               # Weekly spending data (Factor + grocery)
+  journey.json                # Weight loss journey milestones & decisions
   plans/
     manifest.json             # Index of all weekly plans
     2026/W07.json             # One file per week
@@ -224,6 +228,78 @@ When the user provides new Factor meals, add them to `data/factor-catalog.json`:
 ```
 
 The `id` is a URL-safe kebab-case slug of the meal name.
+
+## Grocery List & Ingredient Naming
+
+The grocery list tab aggregates ingredients from the weekly plan, skipping Factor and free dinners.
+
+### Ingredient naming conventions
+- Use the **exact same name** consistently across plans — the grocery list groups by name
+- Spanish names (e.g., "Pan integral", "Mantequilla de maní")
+- When adding a new ingredient, also add it to `data/ingredient-categories.json`
+- Categories: `lacteos`, `frutas`, `verduras`, `carnes_proteinas`, `panaderia`, `frutos_secos`, `despensa`, `suplementos`, `otros`
+- Unknown ingredients default to "otros"
+
+### Quantity format
+- Use consistent units: `g`, `ml`, `cdta`, `cda`, `mediano/a`, `rebanada/s`, `grande/s`, `vasito`, `taza`, `lata`, `unidad`
+- Prefer singular when possible with a number: `"1 mediano"`, `"2 rebanadas"`
+- The aggregation engine sums matching units across the week
+
+### Stock tracking (Google Sheet)
+- Published CSV at `STOCK_SHEET_URL` in Streamlit secrets
+- Columns: `ingrediente | en_casa` (TRUE/FALSE checkbox)
+- Wife checks off what's available; app shows what's missing
+
+### AH Products (`data/products.json`)
+```json
+{
+  "Skyr natural": {
+    "ah_product": "Arla Skyr Naturel",
+    "ah_url": "https://www.ah.nl/producten/product/...",
+    "brand": "Arla",
+    "size": "450g",
+    "price_eur": 1.99
+  }
+}
+```
+
+## Budget & Spending
+
+### Spending data (`data/spending.json` or `SPENDING_SHEET_URL`)
+```json
+[{"year": 2026, "week": 2, "factor_eur": 62.93, "grocery_eur": 45.00}]
+```
+
+### Budget settings (in `profile.json`)
+- `budget_weekly_eur`: soft weekly budget (default 120)
+- `factor_weekly_eur`: Factor subscription cost per week (62.93)
+
+## Journey Diary (`data/journey.json`)
+
+A weight loss diary that captures the human story behind the numbers. Each entry:
+
+```json
+{
+  "date": "2026-02-07",
+  "type": "challenge",
+  "title": "Boda — buffet de carne y pastel",
+  "body": "Full story in Ricardo's words...",
+  "weight_kg": null,
+  "week": 5,
+  "tags": ["social", "self-control", "win"],
+  "photo": null
+}
+```
+
+**Entry types**: `milestone`, `decision`, `challenge`, `reflection`
+
+**When to add entries**:
+- During weekly plan updates, ask Ricardo: "Anything special this week? Challenges, wins, social events?"
+- When making significant dashboard/tool changes
+- When Ricardo shares a personal story or achievement
+- Weight records that mark a new low or a plateau
+
+**Tags** are free-form but prefer reusing: `start`, `commitment`, `factor`, `strategy`, `nutrition`, `social`, `self-control`, `win`, `tech`, `tools`, `grocery`, `budget`, `plateau`, `new-low`
 
 ## Tech Notes
 

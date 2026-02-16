@@ -1,0 +1,289 @@
+{
+  "Skyr natural": {
+    "ah_product": "Arla Skyr naturel yoghurt 0% fat",
+    "ah_url": "https://www.ah.nl/producten/product/wi370580/arla-skyr-naturel-yoghurt-0-fat",
+    "brand": "Arla",
+    "size": "450g",
+    "price_eur": 1.25
+  },
+  "Skyr": {
+    "ah_product": "Arla Skyr naturel yoghurt 0% fat",
+    "ah_url": "https://www.ah.nl/producten/product/wi370580/arla-skyr-naturel-yoghurt-0-fat",
+    "brand": "Arla",
+    "size": "450g",
+    "price_eur": 1.25
+  },
+  "Yogur proteico": {
+    "ah_product": "Melkunie Breaker high protein vanille",
+    "ah_url": "https://www.ah.nl/producten/product/wi225290/melkunie-breaker-high-protein-vanille-yoghurt",
+    "brand": "Melkunie",
+    "size": "200g",
+    "price_eur": 1.59
+  },
+  "Yogur griego light": {
+    "ah_product": "AH Yoghurt Griekse stijl 0% vet",
+    "ah_url": "https://www.ah.nl/producten/product/wi228639/ah-yoghurt-griekse-stijl-0-vet",
+    "brand": "AH",
+    "size": "500g",
+    "price_eur": 1.29
+  },
+  "Requesón": {
+    "ah_product": "AH Cottage cheese",
+    "ah_url": "https://www.ah.nl/producten/product/wi400467/ah-cottage-cheese",
+    "brand": "AH",
+    "size": "400g",
+    "price_eur": 3.79
+  },
+  "Queso light": {
+    "ah_product": "AH Kaas belegen 20+ plakken",
+    "ah_url": "https://www.ah.nl/producten/product/wi168235/ah-kaas-belegen-20-plakken",
+    "brand": "AH",
+    "size": "190g",
+    "price_eur": 4.49
+  },
+  "Leche semidesnatada": {
+    "ah_product": "AH Halfvolle melk",
+    "ah_url": "https://www.ah.nl/producten/product/wi1547/ah-halfvolle-melk",
+    "brand": "AH",
+    "size": "1L",
+    "price_eur": 1.15
+  },
+  "Pan integral": {
+    "ah_product": "AH Liefde & Passie Spelt volkoren gesneden",
+    "ah_url": "https://www.ah.nl/producten/product/wi490859/ah-liefde-en-passie-spelt-volkoren-gesneden",
+    "brand": "AH",
+    "size": "400g",
+    "price_eur": 1.29
+  },
+  "Wrap integral": {
+    "ah_product": "AH Tortilla wraps volkoren large",
+    "ah_url": "https://www.ah.nl/producten/product/wi453733/ah-tortilla-wraps-volkoren-large",
+    "brand": "AH",
+    "size": "370g (6 stuks)",
+    "price_eur": 0.95
+  },
+  "Tortitas de arroz": {
+    "ah_product": "AH Rijstwafels naturel",
+    "ah_url": "https://www.ah.nl/producten/product/wi412903/ah-rijstwafels-naturel",
+    "brand": "AH",
+    "size": "130g",
+    "price_eur": 0.75
+  },
+  "Tortita de arroz": {
+    "ah_product": "AH Rijstwafels naturel",
+    "ah_url": "https://www.ah.nl/producten/product/wi412903/ah-rijstwafels-naturel",
+    "brand": "AH",
+    "size": "130g",
+    "price_eur": 0.75
+  },
+  "Pechuga de pavo": {
+    "ah_product": "AH Kalkoenfilet",
+    "ah_url": "https://www.ah.nl/producten/product/wi543384/ah-kalkoenfilet",
+    "brand": "AH",
+    "size": "125g",
+    "price_eur": 3.59
+  },
+  "Pollo a la plancha": {
+    "ah_product": "AH Scharrel kipfilet",
+    "ah_url": "https://www.ah.nl/producten/product/wi531825/ah-scharrel-kipfilet",
+    "brand": "AH",
+    "size": "300g",
+    "price_eur": 5.29
+  },
+  "Pechuga de pollo a la plancha": {
+    "ah_product": "AH Scharrel kipfilet",
+    "ah_url": "https://www.ah.nl/producten/product/wi531825/ah-scharrel-kipfilet",
+    "brand": "AH",
+    "size": "300g",
+    "price_eur": 5.29
+  },
+  "Huevos revueltos": {
+    "ah_product": "AH Scharreleieren",
+    "ah_url": "https://www.ah.nl/producten/product/wi7SEI/ah-scharreleieren",
+    "brand": "AH",
+    "size": "10 stuks",
+    "price_eur": 2.69
+  },
+  "Atún en agua": {
+    "ah_product": "Princes Tonijnstukken in water",
+    "ah_url": "https://www.ah.nl/producten/product/wi496941/princes-tonijnstukken-in-water",
+    "brand": "Princes",
+    "size": "160g",
+    "price_eur": 1.79
+  },
+  "Pavo molido": {
+    "ah_product": "AH Kalkoengehakt",
+    "ah_url": "https://www.ah.nl/producten/product/wi197210/ah-kipfilet",
+    "brand": "AH",
+    "size": "300g",
+    "price_eur": 3.49
+  },
+  "Almendras": {
+    "ah_product": "AH Amandelen ongebrand",
+    "ah_url": "https://www.ah.nl/producten/product/wi403607/ah-amandelen-ongebrand",
+    "brand": "AH",
+    "size": "200g",
+    "price_eur": 2.69
+  },
+  "Nueces": {
+    "ah_product": "AH Walnoten ongebrand",
+    "ah_url": "https://www.ah.nl/producten/product/wi403605/ah-walnoten-ongebrand",
+    "brand": "AH",
+    "size": "200g",
+    "price_eur": 2.95
+  },
+  "Mantequilla de maní": {
+    "ah_product": "AH 100% Pindakaas naturel",
+    "ah_url": "https://www.ah.nl/producten/product/wi370835/ah-100-pindakaas-naturel",
+    "brand": "AH",
+    "size": "350g",
+    "price_eur": 2.69
+  },
+  "Avena": {
+    "ah_product": "AH Volkoren havermout fijne vlokken",
+    "ah_url": "https://www.ah.nl/producten/product/wi48405/ah-volkoren-havermout-fijne-vlokken",
+    "brand": "AH",
+    "size": "500g",
+    "price_eur": 0.75
+  },
+  "Granola": {
+    "ah_product": "AH Granola noten 0% toegevoegd suiker",
+    "ah_url": "https://www.ah.nl/producten/product/wi569810/ah-granola-noten",
+    "brand": "AH",
+    "size": "400g",
+    "price_eur": 2.59
+  },
+  "Miel": {
+    "ah_product": "AH Bloemenhoning",
+    "ah_url": "https://www.ah.nl/producten/product/wi55438/ah-bloemenhoning",
+    "brand": "AH",
+    "size": "450g",
+    "price_eur": 2.25
+  },
+  "Mostaza": {
+    "ah_product": "Maille Dijonmosterd",
+    "ah_url": "https://www.ah.nl/producten/product/wi124803/maille-dijonmosterd",
+    "brand": "Maille",
+    "size": "205g",
+    "price_eur": 1.39
+  },
+  "Hummus": {
+    "ah_product": "AH Hummus naturel",
+    "ah_url": "https://www.ah.nl/producten/product/wi217309/ah-hummus",
+    "brand": "AH",
+    "size": "200g",
+    "price_eur": 1.39
+  },
+  "Chocolate negro": {
+    "ah_product": "Delicata Reep extra pure chocolade 70%",
+    "ah_url": "https://www.ah.nl/producten/product/wi1018/delicata-reep-extra-pure-chocolade-70",
+    "brand": "Delicata",
+    "size": "100g",
+    "price_eur": 1.49
+  },
+  "Barra de proteína": {
+    "ah_product": "Barebells Protein bar hazelnut & nougat",
+    "ah_url": "https://www.ah.nl/producten/product/wi451891/barebells-protein-bar-hazelnut-en-nougat",
+    "brand": "Barebells",
+    "size": "55g",
+    "price_eur": 2.99
+  },
+  "Proteína en polvo": {
+    "ah_product": "AH Whey protein shake vanillesmaak",
+    "ah_url": "https://www.ah.nl/producten/product/wi556846/ah-whey-protein-shake-vanillesmaak",
+    "brand": "AH",
+    "size": "324g",
+    "price_eur": 5.99
+  },
+  "Quinoa cocida": {
+    "ah_product": "AH Drie kleuren quinoa",
+    "ah_url": "https://www.ah.nl/producten/product/wi590099/ah-drie-kleuren-quinoa",
+    "brand": "AH",
+    "size": "400g",
+    "price_eur": 2.69
+  },
+  "Pasta integral": {
+    "ah_product": "AH Volkoren penne",
+    "ah_url": "https://www.ah.nl/producten/product/wi227544/ah-volkoren-penne",
+    "brand": "AH",
+    "size": "500g",
+    "price_eur": 0.99
+  },
+  "Arroz integral cocido": {
+    "ah_product": "AH Zilvervliesrijst",
+    "ah_url": "https://www.ah.nl/producten/product/wi174044/ah-zilvervliesrijst",
+    "brand": "AH",
+    "size": "400g",
+    "price_eur": 1.49
+  },
+  "Mantequilla": {
+    "ah_product": "AH Roomboter ongezouten",
+    "ah_url": "https://www.ah.nl/producten/product/wi227543/ah-roomboter-ongezouten",
+    "brand": "AH",
+    "size": "250g",
+    "price_eur": 2.39
+  },
+  "Aceite de oliva": {
+    "ah_product": "AH Olijfolie extra vierge",
+    "ah_url": "https://www.ah.nl/producten/product/wi168102/ah-olijfolie-extra-vierge",
+    "brand": "AH",
+    "size": "500ml",
+    "price_eur": 3.69
+  },
+  "Aderezo de aceite de oliva": {
+    "ah_product": "AH Olijfolie extra vierge",
+    "ah_url": "https://www.ah.nl/producten/product/wi168102/ah-olijfolie-extra-vierge",
+    "brand": "AH",
+    "size": "500ml",
+    "price_eur": 3.69
+  },
+  "Mayonesa light": {
+    "ah_product": "AH Mayonaise halfvol",
+    "ah_url": "https://www.ah.nl/producten/product/wi222498/ah-mayonaise-halfvol",
+    "brand": "AH",
+    "size": "500ml",
+    "price_eur": 1.59
+  },
+  "Salsa de tomate": {
+    "ah_product": "AH Passata",
+    "ah_url": "https://www.ah.nl/producten/product/wi155652/ah-passata",
+    "brand": "AH",
+    "size": "700g",
+    "price_eur": 0.99
+  },
+  "Salsa de soja": {
+    "ah_product": "Kikkoman Sojasaus",
+    "ah_url": "https://www.ah.nl/producten/product/wi160116/kikkoman-sojasaus",
+    "brand": "Kikkoman",
+    "size": "250ml",
+    "price_eur": 2.49
+  },
+  "Parmesano": {
+    "ah_product": "AH Parmigiano Reggiano geraspt",
+    "ah_url": "https://www.ah.nl/producten/product/wi229162/ah-parmigiano-reggiano-geraspt",
+    "brand": "AH",
+    "size": "80g",
+    "price_eur": 2.29
+  },
+  "Queso feta": {
+    "ah_product": "AH Feta",
+    "ah_url": "https://www.ah.nl/producten/product/wi226808/ah-feta",
+    "brand": "AH",
+    "size": "200g",
+    "price_eur": 1.99
+  },
+  "Palomitas caseras": {
+    "ah_product": "AH Popcornmaïs",
+    "ah_url": "https://www.ah.nl/producten/product/wi171805/ah-popcornmais",
+    "brand": "AH",
+    "size": "400g",
+    "price_eur": 1.29
+  },
+  "Semillas de sésamo": {
+    "ah_product": "AH Sesamzaad",
+    "ah_url": "https://www.ah.nl/producten/product/wi162136/ah-sesamzaad",
+    "brand": "AH",
+    "size": "75g",
+    "price_eur": 0.99
+  }
+}

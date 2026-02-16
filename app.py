@@ -2,7 +2,9 @@
 
 import csv
 import json
+import re
 import urllib.request
+from collections import defaultdict
 from datetime import date, datetime, timedelta
 from io import StringIO
 from pathlib import Path
@@ -61,8 +63,16 @@ def _fetch_weight_from_gsheet(url: str) -> list | None:
         return None
 
 
+def _secret(key: str) -> str | None:
+    """Safely read a Streamlit secret, returning None if missing."""
+    try:
+        return st.secrets.get(key)
+    except Exception:
+        return None
+
+
 def load_weight():
-    url = st.secrets.get("WEIGHT_SHEET_URL")
+    url = _secret("WEIGHT_SHEET_URL")
     if url:
         data = _fetch_weight_from_gsheet(url)
         if data:
@@ -76,6 +86,74 @@ def load_manifest():
 
 def load_plan(file: str):
     return load_json(DATA_DIR / "plans" / file)
+
+
+def load_ingredient_categories() -> dict:
+    return load_json(DATA_DIR / "ingredient-categories.json") or {}
+
+
+def load_products() -> dict:
+    return load_json(DATA_DIR / "products.json") or {}
+
+
+@st.cache_data(ttl=300)
+def _fetch_stock_from_gsheet(url: str) -> set | None:
+    """Fetch stocked ingredient names from a published Google Sheet (CSV)."""
+    try:
+        response = urllib.request.urlopen(url, timeout=10)  # noqa: S310
+        content = response.read().decode("utf-8")
+        reader = csv.reader(StringIO(content))
+        next(reader)  # skip header
+        stocked = set()
+        for row in reader:
+            if len(row) >= 2 and row[0].strip():
+                checked = row[1].strip().upper()
+                if checked in ("TRUE", "SI", "SÍ", "1", "X", "YES"):
+                    stocked.add(row[0].strip())
+        return stocked
+    except Exception:
+        return None
+
+
+def load_stock() -> set:
+    url = _secret("STOCK_SHEET_URL")
+    if url:
+        data = _fetch_stock_from_gsheet(url)
+        if data is not None:
+            return data
+    return set()
+
+
+def load_spending() -> list:
+    url = _secret("SPENDING_SHEET_URL")
+    if url:
+        data = _fetch_spending_from_gsheet(url)
+        if data:
+            return data
+    return load_json(DATA_DIR / "spending.json") or []
+
+
+@st.cache_data(ttl=300)
+def _fetch_spending_from_gsheet(url: str) -> list | None:
+    """Fetch spending data from a published Google Sheet (CSV)."""
+    try:
+        response = urllib.request.urlopen(url, timeout=10)  # noqa: S310
+        content = response.read().decode("utf-8")
+        reader = csv.reader(StringIO(content))
+        next(reader)  # skip header
+        entries = []
+        for row in reader:
+            if len(row) >= 4 and row[0].strip() and row[1].strip():
+                entry = {
+                    "year": int(row[0].strip()),
+                    "week": int(row[1].strip()),
+                    "factor_eur": float(row[2].strip()) if row[2].strip() else None,
+                    "grocery_eur": float(row[3].strip()) if row[3].strip() else None,
+                }
+                entries.append(entry)
+        return entries if entries else None
+    except Exception:
+        return None
 
 
 # ---------------------------------------------------------------------------
@@ -114,6 +192,30 @@ WEEKDAY_ES = {
 }
 
 OFFICE_DAYS = {"Friday"}
+
+CATEGORY_LABELS = {
+    "lacteos": "\U0001f95b L\u00e1cteos",
+    "frutas": "\U0001f34e Frutas",
+    "verduras": "\U0001f966 Verduras",
+    "carnes_proteinas": "\U0001f357 Carnes & Prote\u00ednas",
+    "panaderia": "\U0001f35e Panader\u00eda & Cereales",
+    "frutos_secos": "\U0001f95c Frutos Secos",
+    "despensa": "\U0001f3e0 Despensa",
+    "suplementos": "\U0001f4aa Suplementos",
+    "otros": "\U0001f4e6 Otros",
+}
+
+CATEGORY_ORDER = [
+    "carnes_proteinas",
+    "lacteos",
+    "frutas",
+    "verduras",
+    "panaderia",
+    "frutos_secos",
+    "despensa",
+    "suplementos",
+    "otros",
+]
 
 
 def calorie_status(actual: int, target: int) -> str:
@@ -163,23 +265,131 @@ def _weekday_es(weekday: str) -> str:
 
 
 # ---------------------------------------------------------------------------
-# Tab: Weekly Menu
+# Ingredient aggregation engine
 # ---------------------------------------------------------------------------
-def render_menu_tab():
-    profile = load_profile()
+_FRACTION_MAP = {
+    "\u00bd": 0.5,
+    "\u00bc": 0.25,
+    "\u00be": 0.75,
+    "\u2153": 0.333,
+    "\u2154": 0.667,
+}
+
+_QTY_RE = re.compile(r"^([\d\u00bc\u00bd\u00be\u2153\u2154]+(?:[.,]\d+)?)\s*(.*)$")
+
+
+def _parse_quantity(qty_str: str) -> tuple[float | None, str]:
+    """Parse a quantity string into (amount, unit).
+
+    Examples:
+        "250g"         → (250.0, "g")
+        "2 rebanadas"  → (2.0, "rebanadas")
+        "1 mediano"    → (1.0, "mediano")
+        "½ cdta"       → (0.5, "cdta")
+        "2"            → (2.0, "unidad")
+        "1 lata (120g)"→ (1.0, "lata (120g)")
+    """
+    s = qty_str.strip()
+    if not s:
+        return None, qty_str
+
+    # Handle leading fraction character (½, ¼, etc.)
+    if s[0] in _FRACTION_MAP:
+        amount = _FRACTION_MAP[s[0]]
+        rest = s[1:].strip()
+        if rest:
+            return amount, rest
+        return amount, "unidad"
+
+    m = _QTY_RE.match(s)
+    if not m:
+        return None, qty_str
+
+    num_str = m.group(1).replace(",", ".")
+    # Handle fractions embedded in the number part
+    for frac_char, frac_val in _FRACTION_MAP.items():
+        if frac_char in num_str:
+            parts = num_str.split(frac_char)
+            whole = float(parts[0]) if parts[0] else 0
+            amount = whole + frac_val
+            unit = m.group(2).strip() or "unidad"
+            return amount, unit
+
+    try:
+        amount = float(num_str)
+    except ValueError:
+        return None, qty_str
+
+    unit = m.group(2).strip() or "unidad"
+    return amount, unit
+
+
+def _aggregate_ingredients(plan: dict) -> dict[str, str]:
+    """Aggregate ingredients across a weekly plan, skipping Factor/free dinners.
+
+    Returns dict mapping ingredient name → aggregated quantity string.
+    """
+    totals: dict[str, list[tuple[float | None, str]]] = defaultdict(list)
+
+    for day in plan.get("days", []):
+        for slot_id, meal in day.get("meals", {}).items():
+            # Skip Factor and free dinners — those aren't grocery items
+            if slot_id == "dinner" and meal.get("source") in ("factor", "free"):
+                continue
+            for item in meal.get("items", []):
+                name = item["name"]
+                qty_str = item.get("quantity", "")
+                amount, unit = _parse_quantity(qty_str)
+                totals[name].append((amount, unit))
+
+    # Sum compatible quantities
+    result: dict[str, str] = {}
+    for name, entries in sorted(totals.items()):
+        by_unit: dict[str, float] = defaultdict(float)
+        raw_parts: list[str] = []
+
+        for amount, unit in entries:
+            if amount is not None:
+                by_unit[unit] += amount
+            else:
+                raw_parts.append(unit)
+
+        parts: list[str] = []
+        for unit, total in sorted(by_unit.items()):
+            # Clean up display: show integer if whole number
+            if total == int(total):
+                parts.append(f"{int(total)} {unit}")
+            else:
+                parts.append(f"{total:.1f} {unit}")
+
+        parts.extend(raw_parts)
+        result[name] = ", ".join(parts) if parts else ""
+
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Week selector (shared across tabs)
+# ---------------------------------------------------------------------------
+def _render_week_selector():
+    """Render the week navigation above tabs. Stores plan in session_state."""
     manifest = load_manifest()
 
     if not manifest or not manifest.get("plans"):
         st.info("No hay planes disponibles.")
-        return
+        return None
 
     plans = sorted(manifest["plans"], key=lambda p: (p["year"], p["week"]))
+    # Filter out drafts
+    plans = [p for p in plans if not p.get("draft")]
     plan_labels = [f"{p['year']} W{p['week']:02d}" for p in plans]
 
     if "week_idx" not in st.session_state:
         st.session_state.week_idx = len(plans) - 1
 
-    # Week navigation
+    # Clamp index
+    st.session_state.week_idx = max(0, min(st.session_state.week_idx, len(plans) - 1))
+
     col_prev, col_select, col_next = st.columns([1, 4, 1])
     with col_prev:
         if st.button(
@@ -211,23 +421,32 @@ def render_menu_tab():
             st.session_state.week_idx += 1
             st.rerun()
 
-    # Load plan
     entry = plans[st.session_state.week_idx]
     plan = load_plan(entry["file"])
     if not plan:
         st.error(f"No se pudo cargar el plan: {entry['file']}")
-        return
-
-    target = profile["daily_target_kcal"] if profile else 1800
+        return None
 
     st.markdown(f"*{entry['start_date']}  \u2192  {entry['end_date']}*")
 
-    # Week-at-a-glance
+    st.session_state.current_plan = plan
+    st.session_state.current_entry = entry
+    return plan
+
+
+# ---------------------------------------------------------------------------
+# Tab: Weekly Menu
+# ---------------------------------------------------------------------------
+def render_menu_tab():
+    plan = st.session_state.get("current_plan")
+    if not plan:
+        return
+
+    profile = load_profile()
+    target = profile["daily_target_kcal"] if profile else 1800
+
     _render_week_summary(plan, target)
-
     st.divider()
-
-    # Day cards
     for day in plan["days"]:
         _render_day_card(day, target)
 
@@ -291,14 +510,12 @@ def _render_day_card(day: dict, target: int):
     )
 
     with st.expander(header, expanded=is_today):
-        # Dinner first — it's the anchor of the day
         dinner = day["meals"].get("dinner")
         if dinner:
             _render_dinner_hero(dinner)
 
         st.divider()
 
-        # Other meals — show name, ingredients collapsible
         for slot_id in ["breakfast", "lunch", "snack1", "snack2"]:
             meal = day["meals"].get(slot_id)
             if meal:
@@ -324,7 +541,6 @@ def _render_dinner_hero(meal: dict):
         st.markdown(f"### {meal['total_kcal']}")
         st.caption("kcal")
 
-    # Show ingredients only for non-Factor meals with multiple items
     items = meal.get("items", [])
     if source != "factor" and len(items) > 1:
         with st.expander("Ingredientes", expanded=False):
@@ -352,7 +568,6 @@ def _render_meal_compact(slot_id: str, meal: dict):
     with col_kcal:
         st.markdown(f"**{meal['total_kcal']}** kcal")
 
-    # Only show ingredients expander if there are 2+ items
     items = meal.get("items", [])
     if len(items) > 1:
         with st.expander("Ingredientes", expanded=False):
@@ -364,6 +579,88 @@ def _render_meal_compact(slot_id: str, meal: dict):
                 )
     elif len(items) == 1:
         st.caption(f"  {items[0]['quantity']}  \u00b7  {items[0]['kcal']} kcal")
+
+
+# ---------------------------------------------------------------------------
+# Tab: Grocery List
+# ---------------------------------------------------------------------------
+def render_grocery_tab():
+    plan = st.session_state.get("current_plan")
+    if not plan:
+        return
+
+    ingredients = _aggregate_ingredients(plan)
+    if not ingredients:
+        st.info("No hay ingredientes para esta semana.")
+        return
+
+    categories_map = load_ingredient_categories()
+    products = load_products()
+    stock = load_stock()
+    has_stock = bool(stock)
+
+    # Group by category
+    grouped: dict[str, list[tuple[str, str]]] = defaultdict(list)
+    for name, qty in ingredients.items():
+        cat = categories_map.get(name, "otros")
+        grouped[cat].append((name, qty))
+
+    # Stock filter toggle
+    if has_stock:
+        total_items = len(ingredients)
+        in_stock_count = sum(1 for name in ingredients if name in stock)
+        missing_count = total_items - in_stock_count
+        st.markdown(
+            f"**{in_stock_count}** de **{total_items}** ingredientes en casa. "
+            f"Faltan **{missing_count}**."
+        )
+        show_all = st.toggle("Mostrar todo", value=False)
+    else:
+        show_all = True
+
+    st.markdown(f"**{len(ingredients)}** ingredientes para esta semana")
+
+    # Render by category
+    for cat in CATEGORY_ORDER:
+        items = grouped.get(cat)
+        if not items:
+            continue
+
+        # Filter out stocked items if toggle is off
+        if has_stock and not show_all:
+            items = [(n, q) for n, q in items if n not in stock]
+            if not items:
+                continue
+
+        cat_label = CATEGORY_LABELS.get(cat, cat)
+        st.markdown(f"#### {cat_label}")
+
+        for name, qty in sorted(items):
+            in_stock = has_stock and name in stock
+            product = products.get(name)
+
+            # Build display line
+            line = f"\u2705 ~~{name}~~" if in_stock else f"\u2b1c {name}"
+
+            if qty:
+                line += f"  \u00b7  {qty}"
+
+            if product:
+                ah_name = product.get("ah_product", "")
+                ah_url = product.get("ah_url", "")
+                price = product.get("price_eur")
+                extras = []
+                if ah_url and ah_name:
+                    extras.append(f"[{ah_name}]({ah_url})")
+                elif ah_name:
+                    extras.append(ah_name)
+                if price is not None:
+                    extras.append(f"\u20ac{price:.2f}")
+                if extras:
+                    sep = " \u00b7 ".join(extras)
+                    line += f"  \u00b7  {sep}"
+
+            st.markdown(line)
 
 
 # ---------------------------------------------------------------------------
@@ -468,19 +765,152 @@ def _render_weight_chart(weight_data: list, profile: dict):
 
 
 # ---------------------------------------------------------------------------
+# Tab: Budget
+# ---------------------------------------------------------------------------
+def render_budget_tab():
+    profile = load_profile()
+    spending = load_spending()
+    weight_data = load_weight()
+
+    if not spending:
+        st.info(
+            "No hay datos de gasto a\u00fan. "
+            "A\u00f1ade datos en `data/spending.json` o configura `SPENDING_SHEET_URL`."
+        )
+        return
+
+    factor_weekly = profile.get("factor_weekly_eur", 62.93) if profile else 62.93
+    budget_weekly = profile.get("budget_weekly_eur", 120) if profile else 120
+
+    # Compute totals
+    total_factor = sum(e.get("factor_eur") or 0 for e in spending)
+    total_grocery = sum(e.get("grocery_eur") or 0 for e in spending)
+    total_spent = total_factor + total_grocery
+    weeks_with_data = len(spending)
+    avg_weekly = total_spent / weeks_with_data if weeks_with_data else 0
+
+    # Cost per kg lost
+    cost_per_kg = None
+    if weight_data and len(weight_data) >= 2:
+        lost = weight_data[0]["weight_kg"] - weight_data[-1]["weight_kg"]
+        if lost > 0:
+            cost_per_kg = total_spent / lost
+
+    # Metrics row
+    col1, col2, col3, col4 = st.columns(4)
+    col1.metric("Total gastado", f"\u20ac{total_spent:.0f}")
+    col2.metric("Promedio semanal", f"\u20ac{avg_weekly:.0f}")
+
+    # Current week spending
+    current_entry = spending[-1] if spending else None
+    if current_entry:
+        week_total = (current_entry.get("factor_eur") or 0) + (
+            current_entry.get("grocery_eur") or 0
+        )
+        col3.metric("Esta semana", f"\u20ac{week_total:.0f}")
+    else:
+        col3.metric("Esta semana", "\u2014")
+
+    if cost_per_kg is not None:
+        col4.metric("Costo / kg perdido", f"\u20ac{cost_per_kg:.0f}")
+    else:
+        col4.metric("Costo / kg perdido", "\u2014")
+
+    # Stacked bar chart
+    weeks_labels = [f"W{e['week']:02d}" for e in spending]
+    factor_vals = [e.get("factor_eur") or 0 for e in spending]
+    grocery_vals = [e.get("grocery_eur") or 0 for e in spending]
+
+    fig = go.Figure()
+    fig.add_trace(
+        go.Bar(
+            x=weeks_labels,
+            y=factor_vals,
+            name="Factor",
+            marker_color="#818cf8",
+        )
+    )
+    fig.add_trace(
+        go.Bar(
+            x=weeks_labels,
+            y=grocery_vals,
+            name="Supermercado",
+            marker_color="#34d399",
+        )
+    )
+    fig.add_hline(
+        y=budget_weekly,
+        line_dash="dash",
+        line_color="#f59e0b",
+        annotation_text=f"Presupuesto: \u20ac{budget_weekly}",
+        annotation_position="top left",
+    )
+    fig.update_layout(
+        barmode="stack",
+        yaxis_title="\u20ac",
+        xaxis_title="",
+        height=350,
+        margin={"t": 20, "b": 40, "l": 50, "r": 20},
+        yaxis={"gridcolor": "#334155", "color": "#94a3b8"},
+        xaxis={"color": "#94a3b8"},
+        legend={
+            "orientation": "h",
+            "yanchor": "bottom",
+            "y": 1.02,
+            "font": {"color": "#94a3b8"},
+        },
+        hovermode="x unified",
+        paper_bgcolor="rgba(0,0,0,0)",
+        plot_bgcolor="rgba(0,0,0,0)",
+        font={"color": "#e2e8f0"},
+    )
+
+    st.plotly_chart(fig, use_container_width=True)
+
+    # Factor breakdown
+    st.markdown("#### \U0001f4e6 Factor")
+    factor_meals_week = 6
+    cost_per_meal = factor_weekly / factor_meals_week
+    st.caption(
+        f"**{factor_meals_week} comidas/semana**  \u00b7  "
+        f"\u20ac{cost_per_meal:.2f}/comida  \u00b7  "
+        f"\u20ac{factor_weekly:.2f}/semana  \u00b7  "
+        f"Total: \u20ac{total_factor:.0f}"
+    )
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 def main():
     st.markdown("## \U0001f37d\ufe0f Planificador de Comidas")
     st.caption("1,800 kcal  \u00b7  5 comidas/d\u00eda")
 
-    tab_menu, tab_weight = st.tabs(["\U0001f4cb Esta Semana", "\u2696\ufe0f Peso"])
+    # Week selector — shared across tabs
+    plan = _render_week_selector()
+    if not plan:
+        return
+
+    tab_menu, tab_grocery, tab_weight, tab_budget = st.tabs(
+        [
+            "\U0001f4cb Men\u00fa Semanal",
+            "\U0001f6d2 Lista de Compras",
+            "\u2696\ufe0f Peso",
+            "\U0001f4b0 Presupuesto",
+        ]
+    )
 
     with tab_menu:
         render_menu_tab()
 
+    with tab_grocery:
+        render_grocery_tab()
+
     with tab_weight:
         render_weight_tab()
+
+    with tab_budget:
+        render_budget_tab()
 
 
 if __name__ == "__main__":

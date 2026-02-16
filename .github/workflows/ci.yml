@@ -96,6 +96,10 @@ jobs:
           plan = app.load_plan('2026/W07.json')
           assert plan is not None, 'Plan failed to load'
           assert len(plan['days']) == 7, 'Plan missing days'
+          cats = app.load_ingredient_categories()
+          assert len(cats) > 0, 'Categories failed to load'
+          ingredients = app._aggregate_ingredients(plan)
+          assert len(ingredients) > 0, 'Ingredient aggregation failed'
           print('Smoke test passed')
           "
 
