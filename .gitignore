@@ -15,6 +15,10 @@ __pycache__/
 .env
 .streamlit/secrets.toml
 
+# Large binary receipts (data extracted to JSON)
+data/receipts/Factor/*.png
+data/receipts/Factor/*.PNG
+
 # uv
 # uv.lock is committed for reproducibility
 

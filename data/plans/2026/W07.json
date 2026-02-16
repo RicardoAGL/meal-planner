@@ -292,7 +292,7 @@
     {
       "date": "2026-02-14",
       "weekday": "Saturday",
-      "total_kcal": 1784,
+      "total_kcal": 1747,
       "meals": {
         "breakfast": {
           "time": "09:00",
@@ -333,11 +333,11 @@
         },
         "dinner": {
           "time": "20:00",
-          "total_kcal": 479,
+          "total_kcal": 442,
           "source": "factor",
           "factor_meal_id": "kipfilet-a-la-florentine",
           "items": [
-            { "name": "Kipfilet à la Florentine", "quantity": "1 meal", "kcal": 479 }
+            { "name": "Kipfilet à la Florentine", "quantity": "1 meal", "kcal": 442 }
           ]
         }
       }

@@ -3,90 +3,200 @@
     "id": "kip-aubergine-mozzarella",
     "name": "Kip & aubergine in mozzarella-pomodorosaus",
     "kcal": 424,
+    "protein_g": 33.2,
+    "carbs_g": 22.2,
+    "tags": ["Caloriebewust", "Eiwitrijk"],
+    "description": "met geroosterde broccoli & bloemkool",
     "first_seen": "2026-02-03"
   },
   {
     "id": "varkenshaas-mediterrane-stamppot",
     "name": "Varkenshaas & Mediterrane stamppot",
     "kcal": 489,
+    "protein_g": 31.9,
+    "carbs_g": 29.0,
+    "tags": ["Caloriebewust", "Eiwitrijk", "Bron van vezels"],
+    "description": "met spinazie, zongedroogde tomaat en sperziebonen met pijnboompitten",
     "first_seen": "2026-02-03"
   },
   {
     "id": "kip-groene-chili-quinoa",
-    "name": "Kip met groene chili en quinoa",
+    "name": "Kip met groene chili en quinoa met salsa",
     "kcal": 463,
+    "protein_g": 34.9,
+    "carbs_g": 38.0,
+    "tags": ["Caloriebewust", "Eiwitrijk", "Pittig"],
+    "description": "met courgette, geroosterde tomaten & mais",
     "first_seen": "2026-02-03"
   },
   {
     "id": "romige-basilicum-risotto-kipfilet",
     "name": "Romige basilicum-risotto met kipfilet",
     "kcal": 544,
+    "protein_g": 34.2,
+    "carbs_g": 44.2,
+    "tags": ["Caloriebewust", "Eiwitrijk"],
+    "description": "met courgette, doperwten en peterselie",
     "first_seen": "2026-02-03"
   },
   {
     "id": "gegrilde-kipfilet-aardappel-preipuree",
     "name": "Gegrilde kipfilet en aardappel-preipuree",
     "kcal": 459,
+    "protein_g": 31.6,
+    "carbs_g": 32.9,
+    "tags": ["Caloriebewust", "Eiwitrijk"],
+    "description": "met geroosterde mais en courgette in een boter van kruiden en Parmezaanse kaas",
     "first_seen": "2026-02-03"
   },
   {
     "id": "kipfilet-a-la-florentine",
     "name": "Kipfilet à la Florentine",
-    "kcal": 442,
+    "kcal": 479,
+    "kcal_before_w09": 442,
+    "protein_g": 41.4,
+    "carbs_g": 22.4,
+    "tags": ["Caloriebewust", "Eiwitrijk"],
+    "description": "met romige polenta, knoflookspinazie en bloemkool",
+    "notes": "Kcal changed from 442 to 479 in W09 (Factor recipe update)",
     "first_seen": "2026-02-03"
   },
   {
     "id": "kip-zure-room-bieslook",
     "name": "Kip met zure room en bieslook",
     "kcal": 459,
+    "protein_g": 30.8,
+    "carbs_g": 21.4,
+    "tags": [],
     "first_seen": "2026-02-16"
   },
   {
     "id": "cajun-kip-tomatenjus-aardappelpuree",
     "name": "Cajun kip, tomatenjus en aardappelpuree",
     "kcal": 484,
+    "tags": [],
     "first_seen": "2026-02-16"
   },
   {
     "id": "rode-chili-pulled-pork",
     "name": "Rode chili & pulled pork",
     "kcal": 526,
+    "tags": [],
     "first_seen": "2026-02-16"
   },
   {
     "id": "varkenshaas-romige-prei",
     "name": "Varkenshaas & romige prei",
     "kcal": 550,
+    "protein_g": 30.7,
+    "carbs_g": 33.5,
+    "tags": [],
     "first_seen": "2026-02-16"
   },
   {
     "id": "gegrilde-kipfilet-ratatouille",
     "name": "Gegrilde kipfilet en ratatouille",
     "kcal": 439,
+    "tags": [],
     "first_seen": "2026-02-16"
   },
   {
     "id": "kip-bieslook-knoflook",
     "name": "Kip met bieslook en knoflook",
     "kcal": 519,
+    "tags": [],
     "first_seen": "2026-02-16"
   },
   {
     "id": "varkenshaas-rode-paprikasaus",
     "name": "Varkenshaas in rode paprikasaus",
     "kcal": 513,
+    "protein_g": 30.1,
+    "carbs_g": 35.3,
+    "tags": ["Caloriebewust", "Eiwitrijk", "Bron van vezels"],
+    "description": "met aardappelpuree, sperziebonen en gekaramelliseerde uien",
     "first_seen": "2026-02-16"
   },
   {
     "id": "moussaka-gehakt-aubergine",
     "name": "Moussaka-stijl gehakt met aubergine & bechamelsaus",
     "kcal": 565,
+    "tags": [],
     "first_seen": "2026-02-16"
   },
   {
     "id": "gegrilde-kip-kruiden",
     "name": "Gegrilde kip met kruiden",
     "kcal": 546,
+    "protein_g": 31.8,
+    "carbs_g": 49.5,
+    "tags": [],
     "first_seen": "2026-02-16"
+  },
+  {
+    "id": "kip-champignons-rijst",
+    "name": "Kip met champignons & rijst",
+    "kcal": 534,
+    "protein_g": 35.5,
+    "carbs_g": 44.0,
+    "tags": [],
+    "first_seen": "2026-02-16"
+  },
+  {
+    "id": "macaroni-gestoofd-rundvlees-rode-paprika",
+    "name": "Macaroni met gestoofd rundvlees en rode paprika",
+    "kcal": 640,
+    "protein_g": 43.3,
+    "carbs_g": 40.4,
+    "tags": ["Eiwitrijk", "Bron van vezels"],
+    "first_seen": "2026-02-16"
+  },
+  {
+    "id": "gegrilde-kipfilet-pesto",
+    "name": "Gegrilde kipfilet en pesto",
+    "kcal": 466,
+    "protein_g": 30.5,
+    "carbs_g": 22.1,
+    "tags": ["Caloriebewust"],
+    "description": "met sperziebonen, cherrytomaatjes, en puree van aardappel en prei",
+    "first_seen": "2026-02-16"
+  },
+  {
+    "id": "runder-ragu-zongedroogde-tomaat-pasta",
+    "name": "Runder-ragu met zongedroogde tomaat en pasta",
+    "kcal": 607,
+    "protein_g": 30.4,
+    "carbs_g": 51.1,
+    "tags": ["Eiwitrijk", "Bron van vezels"],
+    "description": "met balsamico-sperziebonen en paprika",
+    "first_seen": "2026-02-16"
+  },
+  {
+    "id": "zalm-mosterd-dillesaus",
+    "name": "Zalm in mosterd-dillesaus",
+    "kcal": 581,
+    "protein_g": 31.2,
+    "carbs_g": 29.7,
+    "tags": ["Eiwitrijk"],
+    "description": "met aardappel-spinaziepuree, wortel en sperziebonen en mosterd-dillesaus",
+    "first_seen": "2026-02-16"
+  },
+  {
+    "id": "cheddar-paprika-pulled-beef-bowl",
+    "name": "Cheddar & paprika pulled beef bowl",
+    "kcal": 506,
+    "protein_g": 40.2,
+    "carbs_g": 37.4,
+    "tags": ["Caloriebewust", "Eiwitrijk"],
+    "description": "met basmatirijst, geroosterde mais en koriandersaus",
+    "first_seen": "2026-02-16"
+  },
+  {
+    "id": "gember-knoflook-kip",
+    "name": "Gember knoflook kip",
+    "kcal": null,
+    "tags": [],
+    "first_seen": "2026-01-19",
+    "notes": "From W02 Google Sheet. No nutrition data available."
   }
 ]

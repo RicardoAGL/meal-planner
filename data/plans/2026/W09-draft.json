@@ -56,11 +56,11 @@
         },
         "dinner": {
           "time": "20:00",
-          "total_kcal": 442,
+          "total_kcal": 479,
           "source": "factor",
           "factor_meal_id": "kipfilet-a-la-florentine",
           "items": [
-            { "name": "Kipfilet \u00e0 la Florentine", "quantity": "1 meal", "kcal": 442 }
+            { "name": "Kipfilet \u00e0 la Florentine", "quantity": "1 meal", "kcal": 479 }
           ]
         }
       }
