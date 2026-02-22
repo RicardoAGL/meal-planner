@@ -755,7 +755,7 @@ def render_grocery_tab():
 
     # Try interactive mode with Google Sheets
     worksheet = _get_stock_worksheet()
-    if worksheet is None:
+    if worksheet is None or not _check_password():
         _render_grocery_readonly(ingredients, categories_map, products)
         return
 
@@ -1070,9 +1070,6 @@ def _check_password() -> bool:
 # Main
 # ---------------------------------------------------------------------------
 def main():
-    if not _check_password():
-        return
-
     st.markdown("## \U0001f37d\ufe0f Planificador de Comidas")
     st.caption("1,800 kcal  \u00b7  5 comidas/d\u00eda")
 
