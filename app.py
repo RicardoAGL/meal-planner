@@ -124,6 +124,92 @@ def load_stock() -> set:
     return set()
 
 
+# ---------------------------------------------------------------------------
+# Google Sheets interactive stock tracking (gspread)
+# ---------------------------------------------------------------------------
+
+
+@st.cache_resource
+def _get_gsheets_client():
+    """Create an authenticated gspread client from Streamlit secrets."""
+    try:
+        import gspread
+
+        creds_dict = dict(st.secrets["gcp_service_account"])
+        return gspread.service_account_from_dict(creds_dict)
+    except Exception:
+        return None
+
+
+@st.cache_resource
+def _get_stock_worksheet():
+    """Open the stock tracking worksheet for read/write access."""
+    client = _get_gsheets_client()
+    if not client:
+        return None
+    url = _secret("STOCK_SHEET_URL")
+    if not url:
+        return None
+    try:
+        return client.open_by_url(url).sheet1
+    except Exception:
+        return None
+
+
+def _load_stock_state(worksheet, year: int, week: int, ingredients: list[str]) -> dict[str, bool]:
+    """Load stock state from the sheet, resetting if week changed."""
+    try:
+        rows = worksheet.get_all_values()
+        semana_expected = f"{year}-W{week:02d}"
+
+        if len(rows) >= 2:
+            semana_actual = rows[1][2] if len(rows[1]) > 2 else ""
+            if semana_actual == semana_expected:
+                state = {}
+                for row in rows[1:]:
+                    if row and row[0]:
+                        checked = len(row) > 1 and row[1].upper() == "TRUE"
+                        state[row[0]] = checked
+                # Include all plan ingredients (default unchecked if missing)
+                return {name: state.get(name, False) for name in ingredients}
+
+        # Week mismatch or empty — reset
+        _reset_stock_sheet(worksheet, year, week, ingredients)
+        return {name: False for name in ingredients}
+    except Exception:
+        return {name: False for name in ingredients}
+
+
+def _reset_stock_sheet(worksheet, year: int, week: int, ingredients: list[str]):
+    """Clear and populate sheet with new week's ingredients."""
+    try:
+        worksheet.clear()
+        semana = f"{year}-W{week:02d}"
+        rows = [["ingrediente", "en_casa", "semana"]]
+        for i, name in enumerate(sorted(ingredients)):
+            rows.append([name, "FALSE", semana if i == 0 else ""])
+        worksheet.update(range_name="A1", values=rows)
+    except Exception:
+        pass
+
+
+def _update_stock_cell(worksheet, name: str, checked: bool):
+    """Update the en_casa cell for a specific ingredient."""
+    try:
+        cell = worksheet.find(name, in_column=1)
+        if cell:
+            worksheet.update_cell(cell.row, 2, "TRUE" if checked else "FALSE")
+    except Exception:
+        pass
+
+
+def _on_stock_toggle(worksheet, name: str):
+    """Callback when a stock checkbox is toggled."""
+    new_val = st.session_state.get(f"cb_{name}", False)
+    st.session_state["stock_data"][name] = new_val
+    _update_stock_cell(worksheet, name, new_val)
+
+
 def load_spending() -> list:
     url = _secret("SPENDING_SHEET_URL")
     if url:
@@ -584,28 +670,16 @@ def _render_meal_compact(slot_id: str, meal: dict):
 # ---------------------------------------------------------------------------
 # Tab: Grocery List
 # ---------------------------------------------------------------------------
-def render_grocery_tab():
-    plan = st.session_state.get("current_plan")
-    if not plan:
-        return
-
-    ingredients = _aggregate_ingredients(plan)
-    if not ingredients:
-        st.info("No hay ingredientes para esta semana.")
-        return
-
-    categories_map = load_ingredient_categories()
-    products = load_products()
+def _render_grocery_readonly(ingredients, categories_map, products):
+    """Read-only grocery list fallback (no Google Sheets write access)."""
     stock = load_stock()
     has_stock = bool(stock)
 
-    # Group by category
     grouped: dict[str, list[tuple[str, str]]] = defaultdict(list)
     for name, qty in ingredients.items():
         cat = categories_map.get(name, "otros")
         grouped[cat].append((name, qty))
 
-    # Stock filter toggle
     if has_stock:
         total_items = len(ingredients)
         in_stock_count = sum(1 for name in ingredients if name in stock)
@@ -620,13 +694,11 @@ def render_grocery_tab():
 
     st.markdown(f"**{len(ingredients)}** ingredientes para esta semana")
 
-    # Render by category
     for cat in CATEGORY_ORDER:
         items = grouped.get(cat)
         if not items:
             continue
 
-        # Filter out stocked items if toggle is off
         if has_stock and not show_all:
             items = [(n, q) for n, q in items if n not in stock]
             if not items:
@@ -639,7 +711,6 @@ def render_grocery_tab():
             in_stock = has_stock and name in stock
             product = products.get(name)
 
-            # Build display line
             line = f"\u2705 ~~{name}~~" if in_stock else f"\u2b1c {name}"
 
             if qty:
@@ -661,6 +732,91 @@ def render_grocery_tab():
                     line += f"  \u00b7  {sep}"
 
             st.markdown(line)
+
+
+def render_grocery_tab():
+    plan = st.session_state.get("current_plan")
+    if not plan:
+        return
+
+    ingredients = _aggregate_ingredients(plan)
+    if not ingredients:
+        st.info("No hay ingredientes para esta semana.")
+        return
+
+    categories_map = load_ingredient_categories()
+    products = load_products()
+
+    # Try interactive mode with Google Sheets
+    worksheet = _get_stock_worksheet()
+    if worksheet is None:
+        _render_grocery_readonly(ingredients, categories_map, products)
+        return
+
+    # Interactive mode
+    year = plan.get("year", 2026)
+    week = plan.get("week", 1)
+    week_key = f"{year}-W{week:02d}"
+
+    # Load stock state on first load or week change
+    if st.session_state.get("stock_week") != week_key:
+        stock_state = _load_stock_state(worksheet, year, week, list(ingredients.keys()))
+        st.session_state["stock_data"] = stock_state
+        st.session_state["stock_week"] = week_key
+
+    stock_data = st.session_state.get("stock_data", {})
+
+    # Summary
+    total_items = len(ingredients)
+    in_stock = sum(1 for name in ingredients if stock_data.get(name, False))
+    missing = total_items - in_stock
+    st.markdown(f"**{in_stock}** de **{total_items}** en casa \u2014 faltan **{missing}**")
+
+    # Shopping mode toggle
+    shopping_mode = st.toggle("Solo lo que falta", value=in_stock > 0, key="grocery_shopping_mode")
+
+    # Group by category
+    grouped: dict[str, list[tuple[str, str]]] = defaultdict(list)
+    for name, qty in ingredients.items():
+        cat = categories_map.get(name, "otros")
+        grouped[cat].append((name, qty))
+
+    # Render by category with interactive checkboxes
+    for cat in CATEGORY_ORDER:
+        items = grouped.get(cat)
+        if not items:
+            continue
+
+        display_items = sorted(items)
+        if shopping_mode:
+            display_items = [(n, q) for n, q in display_items if not stock_data.get(n, False)]
+            if not display_items:
+                continue
+
+        cat_label = CATEGORY_LABELS.get(cat, cat)
+        st.markdown(f"#### {cat_label}")
+
+        for name, qty in display_items:
+            label_parts = [name]
+            if qty:
+                label_parts.append(qty)
+            product = products.get(name)
+            if product:
+                ah_name = product.get("ah_product", "")
+                price = product.get("price_eur")
+                if ah_name:
+                    label_parts.append(ah_name)
+                if price is not None:
+                    label_parts.append(f"\u20ac{price:.2f}")
+            label = " \u00b7 ".join(label_parts)
+
+            st.checkbox(
+                label,
+                value=stock_data.get(name, False),
+                key=f"cb_{name}",
+                on_change=_on_stock_toggle,
+                args=(worksheet, name),
+            )
 
 
 # ---------------------------------------------------------------------------
