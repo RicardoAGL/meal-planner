@@ -143,7 +143,7 @@ def _get_gsheets_client():
 
 @st.cache_resource
 def _get_stock_worksheet():
-    """Open the stock tracking worksheet for read/write access."""
+    """Open (or create) the 'Stock' tab for read/write access."""
     client = _get_gsheets_client()
     if not client:
         return None
@@ -151,7 +151,13 @@ def _get_stock_worksheet():
     if not url:
         return None
     try:
-        return client.open_by_url(url).sheet1
+        import gspread
+
+        spreadsheet = client.open_by_url(url)
+        try:
+            return spreadsheet.worksheet("Stock")
+        except gspread.exceptions.WorksheetNotFound:
+            return spreadsheet.add_worksheet(title="Stock", rows=100, cols=3)
     except Exception:
         return None
 
