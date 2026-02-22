@@ -1042,9 +1042,37 @@ def render_budget_tab():
 
 
 # ---------------------------------------------------------------------------
+# Authentication
+# ---------------------------------------------------------------------------
+def _check_password() -> bool:
+    """Simple password gate. Returns True if authenticated."""
+    password = _secret("APP_PASSWORD")
+    if not password:
+        return True  # No password configured — open access
+
+    if st.session_state.get("authenticated"):
+        return True
+
+    st.markdown("## \U0001f37d\ufe0f Planificador de Comidas")
+    entered = st.text_input(
+        "Contrase\u00f1a", type="password", placeholder="Ingresa la contrase\u00f1a"
+    )
+    if entered:
+        if entered == password:
+            st.session_state["authenticated"] = True
+            st.rerun()
+        else:
+            st.error("Contrase\u00f1a incorrecta.")
+    return False
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 def main():
+    if not _check_password():
+        return
+
     st.markdown("## \U0001f37d\ufe0f Planificador de Comidas")
     st.caption("1,800 kcal  \u00b7  5 comidas/d\u00eda")
 
