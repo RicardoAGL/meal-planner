@@ -71,6 +71,26 @@
       "week": 7,
       "tags": ["tech", "grocery", "budget"],
       "photo": null
+    },
+    {
+      "date": "2026-02-22",
+      "type": "challenge",
+      "title": "Capacitación fuera de casa — 2 días sin rutina",
+      "body": "Semana difícil: dos días de capacitación fuera de oficina y un sábado completo fuera de casa. Lo interesante fue aprender a ser social sin caer en la tentación de comer de más. Manejar las porciones de forma consciente se está volviendo más natural. El plan se adaptó sobre la marcha y funcionó.",
+      "weight_kg": null,
+      "week": 8,
+      "tags": ["social", "self-control", "win", "challenge"],
+      "photo": null
+    },
+    {
+      "date": "2026-02-22",
+      "type": "decision",
+      "title": "Cuaresma — ayuno los viernes hasta Pascua",
+      "body": "Empieza la Cuaresma. Ayuno los viernes hasta las 17:00, sin carne roja. El plan se ajusta: desayuno/almuerzo/snack1 en cero, merienda de ruptura de ayuno a las 17:30 en la oficina (~1050 kcal) y cena Factor de pollo o pescado. Target de viernes baja a ~1500 kcal. Esto aplica hasta el 5 de abril (Pascua).",
+      "weight_kg": null,
+      "week": 8,
+      "tags": ["commitment", "nutrition", "strategy"],
+      "photo": null
     }
   ]
 }
