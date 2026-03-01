@@ -104,7 +104,10 @@
     "id": "kip-bieslook-knoflook",
     "name": "Kip met bieslook en knoflook",
     "kcal": 519,
-    "tags": [],
+    "protein_g": 31.5,
+    "carbs_g": 21.8,
+    "tags": ["Eiwitrijk"],
+    "description": "met romige cheddar-aardappelpuree, sperziebonen en champignons",
     "first_seen": "2026-02-16"
   },
   {
@@ -190,6 +193,16 @@
     "tags": ["Caloriebewust", "Eiwitrijk"],
     "description": "met basmatirijst, geroosterde mais en koriandersaus",
     "first_seen": "2026-02-16"
+  },
+  {
+    "id": "kip-feta-atheense-stijl",
+    "name": "Kip met feta in Atheense stijl",
+    "kcal": 472,
+    "protein_g": 37.4,
+    "carbs_g": 26.9,
+    "tags": ["Caloriebewust", "Eiwitrijk"],
+    "description": "met polenta, courgette & cherrytomaatjes",
+    "first_seen": "2026-03-02"
   },
   {
     "id": "gember-knoflook-kip",
