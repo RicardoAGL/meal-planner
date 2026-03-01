@@ -91,6 +91,26 @@
       "week": 8,
       "tags": ["commitment", "nutrition", "strategy"],
       "photo": null
+    },
+    {
+      "date": "2026-03-01",
+      "type": "reflection",
+      "title": "Semana de estrés — ansiedad y dudas",
+      "body": "Semana estresante. Siento que la ansiedad me pudo haber hecho comer de más, aunque no estoy seguro. La semana pasada ya subí 200 gramos, así que tengo la duda de si esta semana se repite. Mañana es la báscula — veremos. Lo importante es seguir con el plan y no dejar que una o dos semanas difíciles rompan el proceso.",
+      "weight_kg": null,
+      "week": 9,
+      "tags": ["stress", "self-control", "challenge"],
+      "photo": null
+    },
+    {
+      "date": "2026-03-01",
+      "type": "decision",
+      "title": "Reducción a 4 comidas Factor por semana",
+      "body": "A partir de W10 paso de 6 a 4 comidas Factor por semana. Esto significa que sábado ahora es cena casera y martes depende del calendario (esta semana es XKE). Más flexibilidad pero también más responsabilidad en las cenas no-Factor.",
+      "weight_kg": null,
+      "week": 9,
+      "tags": ["factor", "strategy"],
+      "photo": null
     }
   ]
 }
