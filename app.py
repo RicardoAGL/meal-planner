@@ -58,9 +58,9 @@ def _fetch_weight_from_gsheet(url: str) -> list | None:
                         "weight_kg": float(row[1].strip()),
                     }
                 )
-        return sorted(entries, key=lambda e: e["date"]) if entries else None
-    except Exception:
-        return None
+        return (sorted(entries, key=lambda e: e["date"]) if entries else None), None
+    except Exception as exc:
+        return None, str(exc)
 
 
 def _secret(key: str) -> str | None:
@@ -74,10 +74,11 @@ def _secret(key: str) -> str | None:
 def load_weight():
     url = _secret("WEIGHT_SHEET_URL")
     if url:
-        data = _fetch_weight_from_gsheet(url)
+        data, error = _fetch_weight_from_gsheet(url)
         if data:
-            return data, "google_sheet"
-    return load_json(DATA_DIR / "weight.json"), "json_file"
+            return data, "google_sheet", None
+        return load_json(DATA_DIR / "weight.json"), "json_file", error or "empty response"
+    return load_json(DATA_DIR / "weight.json"), "json_file", "no WEIGHT_SHEET_URL secret"
 
 
 def load_manifest():
@@ -830,7 +831,7 @@ def render_grocery_tab():
 # ---------------------------------------------------------------------------
 def render_weight_tab():
     profile = load_profile()
-    weight_data, weight_source = load_weight()
+    weight_data, weight_source, weight_error = load_weight()
 
     if not weight_data:
         st.info("No hay datos de peso.")
@@ -841,7 +842,7 @@ def render_weight_tab():
         return
 
     if weight_source == "json_file":
-        st.caption("⚠️ Datos desde weight.json (Google Sheet no disponible)")
+        st.caption(f"⚠️ Datos desde weight.json — {weight_error}")
     else:
         st.caption(f"✓ Datos desde Google Sheet · {len(weight_data)} registros")
 
@@ -937,7 +938,7 @@ def _render_weight_chart(weight_data: list, profile: dict):
 def render_budget_tab():
     profile = load_profile()
     spending = load_spending()
-    weight_data, _ = load_weight()
+    weight_data, _, _ = load_weight()
 
     if not spending:
         st.info(
