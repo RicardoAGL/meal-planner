@@ -76,8 +76,8 @@ def load_weight():
     if url:
         data = _fetch_weight_from_gsheet(url)
         if data:
-            return data
-    return load_json(DATA_DIR / "weight.json")
+            return data, "google_sheet"
+    return load_json(DATA_DIR / "weight.json"), "json_file"
 
 
 def load_manifest():
@@ -830,7 +830,7 @@ def render_grocery_tab():
 # ---------------------------------------------------------------------------
 def render_weight_tab():
     profile = load_profile()
-    weight_data = load_weight()
+    weight_data, weight_source = load_weight()
 
     if not weight_data:
         st.info("No hay datos de peso.")
@@ -839,6 +839,11 @@ def render_weight_tab():
     if not profile:
         st.warning("Perfil no encontrado.")
         return
+
+    if weight_source == "json_file":
+        st.caption("⚠️ Datos desde weight.json (Google Sheet no disponible)")
+    else:
+        st.caption(f"✓ Datos desde Google Sheet · {len(weight_data)} registros")
 
     _render_weight_stats(weight_data, profile)
     _render_weight_chart(weight_data, profile)
@@ -932,7 +937,7 @@ def _render_weight_chart(weight_data: list, profile: dict):
 def render_budget_tab():
     profile = load_profile()
     spending = load_spending()
-    weight_data = load_weight()
+    weight_data, _ = load_weight()
 
     if not spending:
         st.info(
