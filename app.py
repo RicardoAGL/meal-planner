@@ -42,11 +42,14 @@ def load_profile():
 
 
 @st.cache_data(ttl=300)
-def _fetch_weight_from_gsheet(url: str) -> list | None:
+def _fetch_weight_from_gsheet(url: str) -> tuple:
     """Fetch weight entries from a published Google Sheet (CSV export)."""
     try:
         response = urllib.request.urlopen(url, timeout=10)  # noqa: S310
         content = response.read().decode("utf-8")
+        # DEBUG: return raw preview for diagnosis
+        lines = content.strip().split("\n")
+        preview = "\n".join(lines[:5])
         reader = csv.reader(StringIO(content))
         next(reader)  # skip header row
         entries = []
@@ -58,9 +61,9 @@ def _fetch_weight_from_gsheet(url: str) -> list | None:
                         "weight_kg": float(row[1].strip()),
                     }
                 )
-        return (sorted(entries, key=lambda e: e["date"]) if entries else None), None
+        return (sorted(entries, key=lambda e: e["date"]) if entries else None), None, preview
     except Exception as exc:
-        return None, str(exc)
+        return None, str(exc), None
 
 
 def _secret(key: str) -> str | None:
@@ -74,11 +77,11 @@ def _secret(key: str) -> str | None:
 def load_weight():
     url = _secret("WEIGHT_SHEET_URL")
     if url:
-        data, error = _fetch_weight_from_gsheet(url)
+        data, error, preview = _fetch_weight_from_gsheet(url)
         if data:
-            return data, "google_sheet", None
-        return load_json(DATA_DIR / "weight.json"), "json_file", error or "empty response"
-    return load_json(DATA_DIR / "weight.json"), "json_file", "no WEIGHT_SHEET_URL secret"
+            return data, "google_sheet", None, None
+        return load_json(DATA_DIR / "weight.json"), "json_file", error or "empty response", preview
+    return load_json(DATA_DIR / "weight.json"), "json_file", "no WEIGHT_SHEET_URL secret", None
 
 
 def load_manifest():
@@ -831,7 +834,7 @@ def render_grocery_tab():
 # ---------------------------------------------------------------------------
 def render_weight_tab():
     profile = load_profile()
-    weight_data, weight_source, weight_error = load_weight()
+    weight_data, weight_source, weight_error, csv_preview = load_weight()
 
     if not weight_data:
         st.info("No hay datos de peso.")
@@ -843,6 +846,8 @@ def render_weight_tab():
 
     if weight_source == "json_file":
         st.caption(f"⚠️ Datos desde weight.json — {weight_error}")
+        if csv_preview:
+            st.code(csv_preview, language="csv")
     else:
         st.caption(f"✓ Datos desde Google Sheet · {len(weight_data)} registros")
 
@@ -938,7 +943,7 @@ def _render_weight_chart(weight_data: list, profile: dict):
 def render_budget_tab():
     profile = load_profile()
     spending = load_spending()
-    weight_data, _, _ = load_weight()
+    weight_data, *_ = load_weight()
 
     if not spending:
         st.info(
