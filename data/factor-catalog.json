@@ -205,6 +205,24 @@
     "first_seen": "2026-03-02"
   },
   {
+    "id": "japanse-stijl-bbq-kip-kool",
+    "name": "Japanse stijl BBQ-kip & kool",
+    "kcal": 417,
+    "protein_g": 32.7,
+    "carbs_g": 34.4,
+    "tags": ["Caloriebewust", "Eiwitrijk"],
+    "first_seen": "2026-03-09"
+  },
+  {
+    "id": "citrus-miso-zalm-bowl",
+    "name": "Citrus–miso zalm bowl",
+    "kcal": 662,
+    "protein_g": 36.7,
+    "carbs_g": 44.0,
+    "tags": ["Eiwitrijk"],
+    "first_seen": "2026-03-09"
+  },
+  {
     "id": "gember-knoflook-kip",
     "name": "Gember knoflook kip",
     "kcal": null,
