@@ -205,6 +205,16 @@
     "first_seen": "2026-03-02"
   },
   {
+    "id": "pulled-beef-met-cheddar",
+    "name": "Pulled beef met cheddar",
+    "kcal": 677,
+    "protein_g": 46.4,
+    "carbs_g": 16.0,
+    "tags": ["Eiwitrijk"],
+    "description": "met paprika en smokey bloemkoolroosjes",
+    "first_seen": "2026-03-09"
+  },
+  {
     "id": "japanse-stijl-bbq-kip-kool",
     "name": "Japanse stijl BBQ-kip & kool",
     "kcal": 417,

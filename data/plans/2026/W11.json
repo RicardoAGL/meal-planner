@@ -8,7 +8,7 @@
     {
       "date": "2026-03-09",
       "weekday": "Monday",
-      "total_kcal": 1732,
+      "total_kcal": 1774,
       "meals": {
         "breakfast": {
           "time": "09:00",
@@ -56,11 +56,11 @@
         },
         "dinner": {
           "time": "20:00",
-          "total_kcal": 417,
+          "total_kcal": 459,
           "source": "factor",
-          "factor_meal_id": "japanse-stijl-bbq-kip-kool",
+          "factor_meal_id": "kip-zure-room-bieslook",
           "items": [
-            { "name": "Japanse stijl BBQ-kip & kool", "quantity": "1 meal", "kcal": 417 }
+            { "name": "Kip met zure room en bieslook", "quantity": "1 meal", "kcal": 459 }
           ]
         }
       }
@@ -68,7 +68,7 @@
     {
       "date": "2026-03-10",
       "weekday": "Tuesday",
-      "total_kcal": 1739,
+      "total_kcal": 1763,
       "meals": {
         "breakfast": {
           "time": "09:00",
@@ -114,11 +114,11 @@
         },
         "dinner": {
           "time": "20:00",
-          "total_kcal": 489,
+          "total_kcal": 513,
           "source": "factor",
-          "factor_meal_id": "varkenshaas-mediterrane-stamppot",
+          "factor_meal_id": "varkenshaas-rode-paprikasaus",
           "items": [
-            { "name": "Varkenshaas & Mediterrane stamppot", "quantity": "1 meal", "kcal": 489 }
+            { "name": "Varkenshaas in rode paprikasaus", "quantity": "1 meal", "kcal": 513 }
           ]
         }
       }
@@ -126,7 +126,7 @@
     {
       "date": "2026-03-11",
       "weekday": "Wednesday",
-      "total_kcal": 1749,
+      "total_kcal": 1789,
       "meals": {
         "breakfast": {
           "time": "09:00",
@@ -163,20 +163,20 @@
         "snack2": {
           "time": "17:30",
           "name": "Manzana con almendras y tortita",
-          "total_kcal": 242,
+          "total_kcal": 212,
           "items": [
             { "name": "Manzana", "quantity": "1 mediana", "kcal": 87 },
-            { "name": "Almendras", "quantity": "20g", "kcal": 120 },
+            { "name": "Almendras", "quantity": "15g", "kcal": 90 },
             { "name": "Tortita de arroz", "quantity": "1", "kcal": 35 }
           ]
         },
         "dinner": {
           "time": "20:00",
-          "total_kcal": 607,
+          "total_kcal": 677,
           "source": "factor",
-          "factor_meal_id": "runder-ragu-zongedroogde-tomaat-pasta",
+          "factor_meal_id": "pulled-beef-met-cheddar",
           "items": [
-            { "name": "Runder-ragù met zongedroogde tomaat en pasta", "quantity": "1 meal", "kcal": 607 }
+            { "name": "Pulled beef met cheddar", "quantity": "1 meal", "kcal": 677 }
           ]
         }
       }
@@ -251,7 +251,7 @@
       "weekday": "Friday",
       "office_day": true,
       "notes": "Viernes de Cuaresma — ayuno hasta 17:00, sin carne roja. Zalm (pescado) apto para Cuaresma.",
-      "total_kcal": 1799,
+      "total_kcal": 1718,
       "meals": {
         "breakfast": {
           "time": "09:00",
@@ -293,11 +293,11 @@
         },
         "dinner": {
           "time": "20:00",
-          "total_kcal": 662,
+          "total_kcal": 581,
           "source": "factor",
-          "factor_meal_id": "citrus-miso-zalm-bowl",
+          "factor_meal_id": "zalm-mosterd-dillesaus",
           "items": [
-            { "name": "Citrus–miso zalm bowl", "quantity": "1 meal", "kcal": 662 }
+            { "name": "Zalm in mosterd-dillesaus", "quantity": "1 meal", "kcal": 581 }
           ]
         }
       }
