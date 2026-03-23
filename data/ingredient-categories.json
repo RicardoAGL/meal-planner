@@ -68,5 +68,11 @@
   "Té": "despensa",
 
   "Proteína en polvo": "suplementos",
-  "Barra de proteína": "suplementos"
+  "Barra de proteína": "suplementos",
+
+  "Filete de salmon": "carnes_proteinas",
+  "Brocoli": "verduras",
+  "Limon": "frutas",
+  "Cafe con leche": "lacteos",
+  "Calabacin": "verduras"
 }

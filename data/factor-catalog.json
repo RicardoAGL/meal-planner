@@ -239,5 +239,35 @@
     "tags": [],
     "first_seen": "2026-01-19",
     "notes": "From W02 Google Sheet. No nutrition data available."
+  },
+  {
+    "id": "courgette-spaghetti-bolognese",
+    "name": "Courgette-spaghetti bolognese",
+    "kcal": 622,
+    "protein_g": 24.5,
+    "carbs_g": 14.2,
+    "tags": ["Keto"],
+    "description": "met rundergehakt, champignons en mozzarella",
+    "first_seen": "2026-03-23"
+  },
+  {
+    "id": "zalm-tzatziki-citroenrijst",
+    "name": "Zalm met tzatziki en citroenrijst",
+    "kcal": 571,
+    "protein_g": 32.8,
+    "carbs_g": 25.6,
+    "tags": ["Eiwitrijk"],
+    "description": "met balsamico-uien, courgette met knoflook en bloemkool",
+    "first_seen": "2026-03-23"
+  },
+  {
+    "id": "varkenshaas-pittige-ancho-chili-saus",
+    "name": "Varkenshaas in pittige ancho chili-saus",
+    "kcal": 413,
+    "protein_g": 28.4,
+    "carbs_g": 37.4,
+    "tags": ["Caloriebewust", "Zuivelvrij"],
+    "description": "met tomaten-rijst, courgette en maïs",
+    "first_seen": "2026-03-23"
   }
 ]
