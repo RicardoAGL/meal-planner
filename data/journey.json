@@ -121,6 +121,26 @@
       "week": 10,
       "tags": ["social", "self-control", "anniversary", "faith"],
       "photo": null
+    },
+    {
+      "date": "2026-03-22",
+      "type": "challenge",
+      "title": "Antojos, hamburguesa y buffet — semana difícil",
+      "body": "Caí en los antojos esta semana. El sábado comí hamburguesa y el domingo fuimos con amigos a un buffet donde comí más de lo que debía. Lo reconozco y no me voy a castigar, pero sé que tengo que recuperar terreno en las próximas semanas. También noto que mi cuerpo se está acostumbrando a las 1,800 kcal — la pérdida se está frenando. Necesito aumentar el ejercicio para seguir bajando. Hoy compré una bicicleta, voy a intentar usarla 30 minutos por las tardes.",
+      "weight_kg": null,
+      "week": 12,
+      "tags": ["cravings", "social", "self-control", "plateau"],
+      "photo": null
+    },
+    {
+      "date": "2026-03-23",
+      "type": "decision",
+      "title": "Bicicleta nueva — más ejercicio para romper la meseta",
+      "body": "El cuerpo se adaptó a las 1,800 kcal y la pérdida se está estancando. En lugar de bajar más las calorías (que no es sostenible), la estrategia es aumentar el gasto con ejercicio. Compré una bici y el plan es salir 30 minutos por las tardes/noches. Empezamos suave para crear el hábito antes de subir la intensidad.",
+      "weight_kg": null,
+      "week": 13,
+      "tags": ["strategy", "plateau", "exercise"],
+      "photo": null
     }
   ]
 }
