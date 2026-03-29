@@ -97,7 +97,10 @@
     "id": "gegrilde-kipfilet-ratatouille",
     "name": "Gegrilde kipfilet en ratatouille",
     "kcal": 439,
-    "tags": [],
+    "protein_g": 31.0,
+    "carbs_g": 33.5,
+    "tags": ["Caloriebewust", "Eiwitrijk", "Bron van vezels"],
+    "description": "met mozzarella, aardappelpartjes en knoflooksaus",
     "first_seen": "2026-02-16"
   },
   {
@@ -157,11 +160,13 @@
   {
     "id": "gegrilde-kipfilet-pesto",
     "name": "Gegrilde kipfilet en pesto",
-    "kcal": 466,
+    "kcal": 479,
+    "kcal_before_w14": 466,
     "protein_g": 30.5,
     "carbs_g": 22.1,
-    "tags": ["Caloriebewust"],
+    "tags": ["Caloriebewust", "Zuivelvrij", "Eiwitrijk"],
     "description": "met sperziebonen, cherrytomaatjes, en puree van aardappel en prei",
+    "notes": "Kcal changed from 466 to 479 in W14 (Factor recipe update)",
     "first_seen": "2026-02-16"
   },
   {
@@ -241,6 +246,35 @@
     "notes": "From W02 Google Sheet. No nutrition data available."
   },
   {
+    "id": "west-afrikaanse-kip-pindacurry",
+    "name": "West-Afrikaanse stijl kip-pindacurry",
+    "kcal": 454,
+    "tags": ["Caloriebewust", "Zuivelvrij", "Eiwitrijk"],
+    "description": "met basmatirijst, broccoli, paprika en pompoen",
+    "first_seen": "2026-03-30"
+  },
+  {
+    "id": "kip-champignonjus",
+    "name": "Kip met champignonjus",
+    "kcal": 509,
+    "protein_g": 30.3,
+    "carbs_g": 31.3,
+    "tags": ["Eiwitrijk"],
+    "description": "met aardappelpuree en geroosterde groenten",
+    "notes": "NIEUW in W15",
+    "first_seen": "2026-04-05"
+  },
+  {
+    "id": "varkenshaas-appel-mosterdsaus",
+    "name": "Varkenshaas met appel-mosterdsaus",
+    "kcal": 549,
+    "protein_g": 30.3,
+    "carbs_g": 44.4,
+    "tags": ["Eiwitrijk"],
+    "description": "met zoete aardappelpuree en sperziebonen",
+    "first_seen": "2026-04-05"
+  },
+  {
     "id": "courgette-spaghetti-bolognese",
     "name": "Courgette-spaghetti bolognese",
     "kcal": 622,
@@ -261,6 +295,16 @@
     "first_seen": "2026-03-23"
   },
   {
+    "id": "rundvlees-bbq-saus",
+    "name": "Rundvlees & BBQ saus",
+    "kcal": 533,
+    "protein_g": 33.0,
+    "carbs_g": 43.3,
+    "tags": [],
+    "description": "met aardappel-preipuree, kruidige courgette en mais",
+    "first_seen": "2026-04-05"
+  },
+  {
     "id": "varkenshaas-pittige-ancho-chili-saus",
     "name": "Varkenshaas in pittige ancho chili-saus",
     "kcal": 413,
@@ -269,5 +313,14 @@
     "tags": ["Caloriebewust", "Zuivelvrij"],
     "description": "met tomaten-rijst, courgette en maïs",
     "first_seen": "2026-03-23"
+  },
+  {
+    "id": "zalm-dijonnaise",
+    "name": "Zalm Dijonnaise",
+    "kcal": 709,
+    "protein_g": 35.9,
+    "carbs_g": 9.7,
+    "tags": [],
+    "first_seen": "2026-04-12"
   }
 ]

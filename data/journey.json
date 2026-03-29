@@ -141,6 +141,26 @@
       "week": 13,
       "tags": ["strategy", "plateau", "exercise"],
       "photo": null
+    },
+    {
+      "date": "2026-03-29",
+      "type": "challenge",
+      "title": "Semana caótica pero con resultados",
+      "body": "Semana agitada. Caí en la tentación el sábado y comí hamburguesas de pollo fuera del plan. Pero al pesarme el resultado fue positivo: 107.0 kg, el peso más bajo hasta ahora y -1.3 kg respecto a la semana pasada. Eso demuestra que una caída puntual no destruye el proceso si el resto de la semana se mantiene bien. La próxima semana es Semana Santa: el viernes será la última comida grande antes del ayuno pascual hasta el domingo de Pascua. Después de eso, se acaba la Cuaresma y volvemos al plan completo sin ayunos de viernes.",
+      "weight_kg": 107.0,
+      "week": 11,
+      "tags": ["self-control", "new-low", "challenge", "faith"],
+      "photo": null
+    },
+    {
+      "date": "2026-03-29",
+      "type": "decision",
+      "title": "Posible apoyo de nutricionista",
+      "body": "La oficina ofrece algún tipo de apoyo para consultar con un nutricionista. Todavía no he investigado cómo acceder al beneficio, pero la idea es que un profesional revise el plan y dé recomendaciones. Sería un buen complemento al enfoque actual de calorías y Factor.",
+      "weight_kg": null,
+      "week": 11,
+      "tags": ["nutrition", "strategy"],
+      "photo": null
     }
   ]
 }
