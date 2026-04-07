@@ -161,6 +161,26 @@
       "week": 11,
       "tags": ["nutrition", "strategy"],
       "photo": null
+    },
+    {
+      "date": "2026-04-05",
+      "type": "challenge",
+      "title": "Domingo de Pascua — gran desayuno buffet comunitario",
+      "body": "La comunidad de la iglesia celebró la Pascua con un gran desayuno buffet. Un evento lleno de alegría, comida y comunidad. Comí más de lo habitual, pero era Pascua — hay celebraciones que valen la pena sin culpa. Después del ayuno del sábado, fue un regreso especial.",
+      "weight_kg": null,
+      "week": 12,
+      "tags": ["social", "faith", "celebration"],
+      "photo": null
+    },
+    {
+      "date": "2026-04-06",
+      "type": "milestone",
+      "title": "Nuevo mínimo — 106.8 kg y Lunes de Pascua con Vera",
+      "body": "Sorpresa al pesarme: 106.8 kg, nuevo mínimo histórico del plan. A pesar del banquete de Pascua, el proceso sigue funcionando. Total acumulado: -5.0 kg desde el inicio. Esta tarde fuimos con Vera a comer hamburguesas para celebrar el Lunes de Pascua — una cena fuera del plan bien ganada. Esta semana retomamos la rutina completa con Factor.",
+      "weight_kg": 106.8,
+      "week": 13,
+      "tags": ["new-low", "social", "celebration", "milestone"],
+      "photo": null
     }
   ]
 }
