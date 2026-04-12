@@ -25,7 +25,7 @@
     "kcal": 463,
     "protein_g": 34.9,
     "carbs_g": 38.0,
-    "tags": ["Caloriebewust", "Eiwitrijk", "Pittig"],
+    "tags": ["Keto", "Eiwitrijk"],
     "description": "met courgette, geroosterde tomaten & mais",
     "first_seen": "2026-02-03"
   },
@@ -300,7 +300,7 @@
     "kcal": 533,
     "protein_g": 33.0,
     "carbs_g": 43.3,
-    "tags": [],
+    "tags": ["Caloriebewust", "Eiwitrijk"],
     "description": "met aardappel-preipuree, kruidige courgette en mais",
     "first_seen": "2026-04-05"
   },
@@ -320,7 +320,8 @@
     "kcal": 709,
     "protein_g": 35.9,
     "carbs_g": 9.7,
-    "tags": [],
+    "tags": ["Caloriebewust", "Zuivelvrij"],
+    "description": "met bloemkoolgratin, geroosterde kool & sperziebonen",
     "first_seen": "2026-04-12"
   }
 ]

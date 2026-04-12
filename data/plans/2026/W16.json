@@ -1,0 +1,414 @@
+{
+  "year": 2026,
+  "week": 16,
+  "start_date": "2026-04-13",
+  "end_date": "2026-04-19",
+  "daily_target_kcal": 1800,
+  "days": [
+    {
+      "date": "2026-04-13",
+      "weekday": "Monday",
+      "total_kcal": 1783,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "name": "Avena con proteina",
+          "total_kcal": 355,
+          "items": [
+            { "name": "Avena", "quantity": "50g", "kcal": 185 },
+            { "name": "Proteina en polvo", "quantity": "25g", "kcal": 100 },
+            { "name": "Leche semidesnatada", "quantity": "150ml", "kcal": 70 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "name": "Sandwich de pavo",
+          "total_kcal": 450,
+          "portable": true,
+          "items": [
+            { "name": "Pan integral", "quantity": "2 rebanadas", "kcal": 200 },
+            { "name": "Pechuga de pavo", "quantity": "100g", "kcal": 110 },
+            { "name": "Queso light", "quantity": "30g", "kcal": 75 },
+            { "name": "Mantequilla", "quantity": "5g", "kcal": 37 },
+            { "name": "Lechuga y tomate", "quantity": "50g", "kcal": 15 },
+            { "name": "Mostaza", "quantity": "1 cdta", "kcal": 13 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "name": "Yogur proteico",
+          "total_kcal": 150,
+          "items": [
+            { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "name": "Platano con almendras y tortitas",
+          "total_kcal": 295,
+          "items": [
+            { "name": "Platano", "quantity": "1 mediano", "kcal": 105 },
+            { "name": "Almendras", "quantity": "20g", "kcal": 120 },
+            { "name": "Tortitas de arroz", "quantity": "2", "kcal": 70 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "total_kcal": 533,
+          "source": "factor",
+          "factor_meal_id": "rundvlees-bbq-saus",
+          "items": [
+            { "name": "Rundvlees & BBQ saus", "quantity": "1 meal", "kcal": 533 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-04-14",
+      "weekday": "Tuesday",
+      "office_day": true,
+      "notes": "XKE — cena proporcionada en la oficina",
+      "total_kcal": 1792,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "name": "Skyr con frutos rojos y granola",
+          "total_kcal": 380,
+          "items": [
+            { "name": "Skyr", "quantity": "200g", "kcal": 132 },
+            { "name": "Frutos rojos", "quantity": "100g", "kcal": 48 },
+            { "name": "Miel", "quantity": "1 cdta", "kcal": 25 },
+            { "name": "Granola", "quantity": "35g", "kcal": 175 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "name": "Wrap de pollo con verduras",
+          "total_kcal": 450,
+          "portable": true,
+          "items": [
+            { "name": "Wrap integral", "quantity": "1 grande", "kcal": 180 },
+            { "name": "Pollo a la plancha", "quantity": "100g", "kcal": 165 },
+            { "name": "Verduras mixtas", "quantity": "80g", "kcal": 35 },
+            { "name": "Salsa de yogur", "quantity": "2 cdas", "kcal": 40 },
+            { "name": "Mix de hojas verdes", "quantity": "30g", "kcal": 8 },
+            { "name": "Queso feta", "quantity": "15g", "kcal": 22 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "name": "Yogur proteico",
+          "total_kcal": 150,
+          "portable": true,
+          "items": [
+            { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "name": "Manzana con almendras y tortita",
+          "total_kcal": 212,
+          "portable": true,
+          "items": [
+            { "name": "Manzana", "quantity": "1 mediana", "kcal": 87 },
+            { "name": "Almendras", "quantity": "15g", "kcal": 90 },
+            { "name": "Tortita de arroz", "quantity": "1", "kcal": 35 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "name": "Cena XKE",
+          "total_kcal": 600,
+          "source": "free",
+          "items": [
+            { "name": "Cena XKE", "quantity": "1 comida", "kcal": 600 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-04-15",
+      "weekday": "Wednesday",
+      "total_kcal": 1768,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "name": "Skyr con frutos rojos y granola",
+          "total_kcal": 380,
+          "items": [
+            { "name": "Skyr", "quantity": "200g", "kcal": 132 },
+            { "name": "Frutos rojos", "quantity": "100g", "kcal": 48 },
+            { "name": "Miel", "quantity": "1 cdta", "kcal": 25 },
+            { "name": "Granola", "quantity": "35g", "kcal": 175 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "name": "Wrap de atun con verduras",
+          "total_kcal": 440,
+          "portable": true,
+          "items": [
+            { "name": "Wrap integral", "quantity": "1 grande", "kcal": 180 },
+            { "name": "Atun en agua", "quantity": "1 lata (120g)", "kcal": 130 },
+            { "name": "Mayonesa light", "quantity": "1 cda", "kcal": 35 },
+            { "name": "Verduras mixtas", "quantity": "60g", "kcal": 25 },
+            { "name": "Mix de hojas verdes", "quantity": "30g", "kcal": 8 },
+            { "name": "Yogur griego light", "quantity": "100g", "kcal": 62 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "name": "Zanahorias con hummus",
+          "total_kcal": 190,
+          "items": [
+            { "name": "Zanahorias", "quantity": "120g", "kcal": 48 },
+            { "name": "Hummus", "quantity": "50g", "kcal": 142 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "name": "Platano con almendras y tortitas",
+          "total_kcal": 295,
+          "items": [
+            { "name": "Platano", "quantity": "1 mediano", "kcal": 105 },
+            { "name": "Almendras", "quantity": "20g", "kcal": 120 },
+            { "name": "Tortitas de arroz", "quantity": "2", "kcal": 70 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "total_kcal": 463,
+          "source": "factor",
+          "factor_meal_id": "kip-groene-chili-quinoa",
+          "items": [
+            { "name": "Kip met groene chili en quinoa met salsa", "quantity": "1 meal", "kcal": 463 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-04-16",
+      "weekday": "Thursday",
+      "total_kcal": 1733,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "name": "Avena con proteina",
+          "total_kcal": 355,
+          "items": [
+            { "name": "Avena", "quantity": "50g", "kcal": 185 },
+            { "name": "Proteina en polvo", "quantity": "25g", "kcal": 100 },
+            { "name": "Leche semidesnatada", "quantity": "150ml", "kcal": 70 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "name": "Sandwich de pavo",
+          "total_kcal": 450,
+          "portable": true,
+          "items": [
+            { "name": "Pan integral", "quantity": "2 rebanadas", "kcal": 200 },
+            { "name": "Pechuga de pavo", "quantity": "100g", "kcal": 110 },
+            { "name": "Queso light", "quantity": "30g", "kcal": 75 },
+            { "name": "Mantequilla", "quantity": "5g", "kcal": 37 },
+            { "name": "Lechuga y tomate", "quantity": "50g", "kcal": 15 },
+            { "name": "Mostaza", "quantity": "1 cdta", "kcal": 13 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "name": "Zanahorias con hummus",
+          "total_kcal": 190,
+          "items": [
+            { "name": "Zanahorias", "quantity": "120g", "kcal": 48 },
+            { "name": "Hummus", "quantity": "50g", "kcal": 142 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "name": "Platano con almendras y tortitas",
+          "total_kcal": 325,
+          "items": [
+            { "name": "Platano", "quantity": "1 mediano", "kcal": 105 },
+            { "name": "Almendras", "quantity": "25g", "kcal": 150 },
+            { "name": "Tortitas de arroz", "quantity": "2", "kcal": 70 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "total_kcal": 413,
+          "source": "factor",
+          "factor_meal_id": "varkenshaas-pittige-ancho-chili-saus",
+          "items": [
+            { "name": "Varkenshaas in pittige ancho chili-saus", "quantity": "1 meal", "kcal": 413 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-04-17",
+      "weekday": "Friday",
+      "office_day": true,
+      "notes": "Inicio convivencia comunitaria — cena con la comunidad",
+      "total_kcal": 1800,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "name": "Avena con proteina",
+          "total_kcal": 355,
+          "items": [
+            { "name": "Avena", "quantity": "50g", "kcal": 185 },
+            { "name": "Proteina en polvo", "quantity": "25g", "kcal": 100 },
+            { "name": "Leche semidesnatada", "quantity": "150ml", "kcal": 70 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "name": "Sandwich de pavo",
+          "total_kcal": 450,
+          "portable": true,
+          "items": [
+            { "name": "Pan integral", "quantity": "2 rebanadas", "kcal": 200 },
+            { "name": "Pechuga de pavo", "quantity": "100g", "kcal": 110 },
+            { "name": "Queso light", "quantity": "30g", "kcal": 75 },
+            { "name": "Mantequilla", "quantity": "5g", "kcal": 37 },
+            { "name": "Lechuga y tomate", "quantity": "50g", "kcal": 15 },
+            { "name": "Mostaza", "quantity": "1 cdta", "kcal": 13 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "name": "Yogur proteico",
+          "total_kcal": 150,
+          "portable": true,
+          "items": [
+            { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "name": "Manzana con almendras",
+          "total_kcal": 145,
+          "portable": true,
+          "items": [
+            { "name": "Manzana", "quantity": "1 mediana", "kcal": 87 },
+            { "name": "Almendras", "quantity": "10g", "kcal": 58 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "name": "Cena comunitaria",
+          "total_kcal": 700,
+          "source": "free",
+          "items": [
+            { "name": "Cena comunitaria convivencia", "quantity": "1 comida", "kcal": 700 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-04-18",
+      "weekday": "Saturday",
+      "notes": "Convivencia comunitaria — día completo con la comunidad",
+      "total_kcal": 1800,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "name": "Desayuno comunitario",
+          "total_kcal": 400,
+          "source": "free",
+          "items": [
+            { "name": "Desayuno comunitario", "quantity": "1 comida", "kcal": 400 }
+          ]
+        },
+        "lunch": {
+          "time": "13:00",
+          "name": "Almuerzo comunitario",
+          "total_kcal": 550,
+          "source": "free",
+          "items": [
+            { "name": "Almuerzo comunitario", "quantity": "1 comida", "kcal": 550 }
+          ]
+        },
+        "snack1": {
+          "time": "15:30",
+          "name": "Merienda comunitaria",
+          "total_kcal": 150,
+          "source": "free",
+          "items": [
+            { "name": "Merienda comunitaria", "quantity": "1 ración", "kcal": 150 }
+          ]
+        },
+        "snack2": {
+          "time": "18:00",
+          "name": "Merienda comunitaria",
+          "total_kcal": 100,
+          "source": "free",
+          "items": [
+            { "name": "Merienda comunitaria", "quantity": "1 ración", "kcal": 100 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "name": "Cena comunitaria",
+          "total_kcal": 600,
+          "source": "free",
+          "items": [
+            { "name": "Cena comunitaria", "quantity": "1 comida", "kcal": 600 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-04-19",
+      "weekday": "Sunday",
+      "notes": "Fin convivencia — desayuno y almuerzo con comunidad, cena Factor en casa",
+      "total_kcal": 1764,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "name": "Desayuno comunitario",
+          "total_kcal": 400,
+          "source": "free",
+          "items": [
+            { "name": "Desayuno comunitario", "quantity": "1 comida", "kcal": 400 }
+          ]
+        },
+        "lunch": {
+          "time": "13:00",
+          "name": "Almuerzo comunitario",
+          "total_kcal": 500,
+          "source": "free",
+          "items": [
+            { "name": "Almuerzo comunitario", "quantity": "1 comida", "kcal": 500 }
+          ]
+        },
+        "snack1": {
+          "time": "16:00",
+          "name": "Fruta (camino a casa)",
+          "total_kcal": 87,
+          "items": [
+            { "name": "Manzana", "quantity": "1 mediana", "kcal": 87 }
+          ]
+        },
+        "snack2": {
+          "time": "18:00",
+          "name": "Yogur griego",
+          "total_kcal": 68,
+          "items": [
+            { "name": "Yogur griego light", "quantity": "100g", "kcal": 68 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "total_kcal": 709,
+          "source": "factor",
+          "factor_meal_id": "zalm-dijonnaise",
+          "items": [
+            { "name": "Zalm Dijonnaise", "quantity": "1 meal", "kcal": 709 }
+          ]
+        }
+      }
+    }
+  ]
+}

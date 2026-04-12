@@ -181,6 +181,16 @@
       "week": 13,
       "tags": ["new-low", "social", "celebration", "milestone"],
       "photo": null
+    },
+    {
+      "date": "2026-04-12",
+      "type": "milestone",
+      "title": "Nuevo mínimo — 106.2 kg y la bici empieza a sumar",
+      "body": "Otro nuevo mínimo: 106.2 kg. Van -5.6 kg desde el inicio. Esta semana empecé a salir en bici durante los días de entre semana, algo que planifiqué hace unas semanas para complementar el déficit calórico sin bajar más las calorías. No sé cuánto contribuyó exactamente, pero la tendencia es clara y el cuerpo responde bien. El plan sigue siendo sostenible. El fin de semana que viene hay convivencia comunitaria — viernes por la noche, sábado completo y medio domingo comiendo con la comunidad. Lo tomo con calma y sin presión, son parte de la vida.",
+      "weight_kg": 106.2,
+      "week": 13,
+      "tags": ["new-low", "milestone", "exercise", "strategy"],
+      "photo": null
     }
   ]
 }
