@@ -116,7 +116,7 @@
           "time": "20:00",
           "name": "Pollo a la plancha con arroz y verduras",
           "total_kcal": 500,
-          "source": "home",
+          "source": "homemade",
           "items": [
             { "name": "Pechuga de pollo", "quantity": "150g", "kcal": 248 },
             { "name": "Arroz blanco cocido", "quantity": "100g", "kcal": 130 },
@@ -358,7 +358,7 @@
           "time": "20:00",
           "name": "Salmon a la plancha con patatas y ensalada",
           "total_kcal": 489,
-          "source": "home",
+          "source": "homemade",
           "items": [
             { "name": "Salmon a la plancha", "quantity": "150g", "kcal": 280 },
             { "name": "Patatas asadas", "quantity": "130g", "kcal": 117 },
