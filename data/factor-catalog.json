@@ -67,7 +67,8 @@
     "kcal": 459,
     "protein_g": 30.8,
     "carbs_g": 21.4,
-    "tags": [],
+    "tags": ["Caloriebewust", "Eiwitrijk"],
+    "description": "Met geroosterde broccoli en sperziebonen",
     "first_seen": "2026-02-16"
   },
   {
@@ -323,5 +324,15 @@
     "tags": ["Caloriebewust", "Zuivelvrij"],
     "description": "met bloemkoolgratin, geroosterde kool & sperziebonen",
     "first_seen": "2026-04-12"
+  },
+  {
+    "id": "kip-puttanesca-stijl",
+    "name": "Kip met saus in Puttanesca-stijl",
+    "kcal": 401,
+    "protein_g": 30.8,
+    "carbs_g": 25.9,
+    "tags": ["Caloriebewust", "Eiwitrijk"],
+    "description": "met polenta en courgette",
+    "first_seen": "2026-04-20"
   }
 ]

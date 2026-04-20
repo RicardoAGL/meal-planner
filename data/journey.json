@@ -191,6 +191,16 @@
       "week": 13,
       "tags": ["new-low", "milestone", "exercise", "strategy"],
       "photo": null
+    },
+    {
+      "date": "2026-04-20",
+      "type": "challenge",
+      "title": "Repunte post-convivencia — 107.8 kg",
+      "body": "La convivencia comunitaria del fin de semana fue increíble, pero comí de más. Al pesarme hoy: 107.8 kg, 1.6 kg por encima del mínimo anterior. Era de esperarse — tres días de comidas libres con la comunidad siempre pasan factura. No me castigo, esas experiencias valen la pena. Esta semana retomamos el plan con calma y volvemos a bajar.",
+      "weight_kg": 107.8,
+      "week": 15,
+      "tags": ["challenge", "social", "weight-up"],
+      "photo": null
     }
   ]
 }
