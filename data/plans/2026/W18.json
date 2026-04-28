@@ -127,17 +127,16 @@
     {
       "date": "2026-04-29",
       "weekday": "Wednesday",
-      "total_kcal": 1775,
+      "total_kcal": 1783,
       "meals": {
         "breakfast": {
           "time": "09:00",
-          "name": "Skyr con frutos rojos y granola",
-          "total_kcal": 380,
+          "name": "Avena con proteina",
+          "total_kcal": 355,
           "items": [
-            { "name": "Skyr", "quantity": "200g", "kcal": 132 },
-            { "name": "Frutos rojos", "quantity": "100g", "kcal": 48 },
-            { "name": "Miel", "quantity": "1 cdta", "kcal": 25 },
-            { "name": "Granola", "quantity": "35g", "kcal": 175 }
+            { "name": "Avena", "quantity": "50g", "kcal": 185 },
+            { "name": "Proteina en polvo", "quantity": "25g", "kcal": 100 },
+            { "name": "Leche semidesnatada", "quantity": "150ml", "kcal": 70 }
           ]
         },
         "lunch": {
@@ -156,31 +155,28 @@
         },
         "snack1": {
           "time": "14:30",
-          "name": "Zanahorias con hummus",
-          "total_kcal": 190,
+          "name": "Yogur proteico",
+          "total_kcal": 150,
           "items": [
-            { "name": "Zanahorias", "quantity": "120g", "kcal": 48 },
-            { "name": "Hummus", "quantity": "50g", "kcal": 142 }
+            { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 }
           ]
         },
         "snack2": {
           "time": "17:30",
-          "name": "Platano con almendras y tortitas",
-          "total_kcal": 295,
+          "name": "Manzana con tortita",
+          "total_kcal": 122,
           "items": [
-            { "name": "Platano", "quantity": "1 mediano", "kcal": 105 },
-            { "name": "Almendras", "quantity": "20g", "kcal": 120 },
-            { "name": "Tortitas de arroz", "quantity": "2", "kcal": 70 }
+            { "name": "Manzana", "quantity": "1 mediana", "kcal": 87 },
+            { "name": "Tortita de arroz", "quantity": "1", "kcal": 35 }
           ]
         },
         "dinner": {
           "time": "20:00",
-          "total_kcal": 460,
+          "total_kcal": 706,
           "source": "factor",
           "factor_meal_id": "rundergehakt-champignons",
-          "notes": "Kcal estimado (~460) — verificar en la app de Factor",
           "items": [
-            { "name": "Rundergehakt met champignons", "quantity": "1 meal", "kcal": 460 }
+            { "name": "Rundergehakt met champignons", "quantity": "1 meal", "kcal": 706 }
           ]
         }
       }
