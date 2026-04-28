@@ -338,9 +338,17 @@
   {
     "id": "rundergehakt-champignons",
     "name": "Rundergehakt met champignons",
+    "kcal": null,
+    "tags": [],
+    "description": "met aardappelen en paprika-fondue",
+    "notes": "Kcal originally estimated as 706 — that figure was for the kaassauce variant. Actual kcal unknown.",
+    "first_seen": "2026-04-27"
+  },
+  {
+    "id": "rundergehakt-kaassauce",
+    "name": "Rundergehakt met kaassauce",
     "kcal": 706,
     "tags": ["Eiwitrijk"],
-    "description": "met aardappelen en paprika-fondue",
-    "first_seen": "2026-04-27"
+    "first_seen": "2026-04-28"
   }
 ]
