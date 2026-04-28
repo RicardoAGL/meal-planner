@@ -334,5 +334,14 @@
     "tags": ["Caloriebewust", "Eiwitrijk"],
     "description": "met polenta en courgette",
     "first_seen": "2026-04-20"
+  },
+  {
+    "id": "rundergehakt-champignons",
+    "name": "Rundergehakt met champignons",
+    "kcal": 460,
+    "tags": ["Caloriebewust", "Eiwitrijk", "Bron van vezels"],
+    "description": "met aardappelen en paprika-fondue",
+    "notes": "Kcal estimado (~460) — verificar en la app de Factor",
+    "first_seen": "2026-04-27"
   }
 ]
