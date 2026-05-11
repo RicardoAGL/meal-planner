@@ -52,13 +52,14 @@
   {
     "id": "kipfilet-a-la-florentine",
     "name": "Kipfilet à la Florentine",
-    "kcal": 479,
+    "kcal": 442,
     "kcal_before_w09": 442,
-    "protein_g": 41.4,
-    "carbs_g": 22.4,
+    "kcal_w09_to_w19": 479,
+    "protein_g": 35.9,
+    "carbs_g": 24.9,
     "tags": ["Caloriebewust", "Eiwitrijk"],
     "description": "met romige polenta, knoflookspinazie en bloemkool",
-    "notes": "Kcal changed from 442 to 479 in W09 (Factor recipe update)",
+    "notes": "Kcal 442→479 in W09, reverted to 442 in W20 per box label (protein 35.9g, carbs 24.9g — possible seasonal recipe variation)",
     "first_seen": "2026-02-03"
   },
   {
@@ -82,7 +83,8 @@
     "id": "rode-chili-pulled-pork",
     "name": "Rode chili & pulled pork",
     "kcal": 526,
-    "tags": [],
+    "tags": ["Caloriebewust", "Zuivelvrij"],
+    "description": "met maiscake, paprika en courgette",
     "first_seen": "2026-02-16"
   },
   {
@@ -97,11 +99,14 @@
   {
     "id": "gegrilde-kipfilet-ratatouille",
     "name": "Gegrilde kipfilet en ratatouille",
-    "kcal": 439,
+    "kcal": 459,
+    "kcal_before_w20": 439,
     "protein_g": 31.0,
-    "carbs_g": 33.5,
+    "carbs_g": 53.5,
+    "carbs_g_before_w20": 33.5,
     "tags": ["Caloriebewust", "Eiwitrijk", "Bron van vezels"],
     "description": "met mozzarella, aardappelpartjes en knoflooksaus",
+    "notes": "Kcal 439→459 in W20, carbs 33.5→53.5g per box label (recipe update, protein unchanged at 31.0g)",
     "first_seen": "2026-02-16"
   },
   {
@@ -186,7 +191,7 @@
     "kcal": 581,
     "protein_g": 31.2,
     "carbs_g": 29.7,
-    "tags": ["Eiwitrijk"],
+    "tags": ["Caloriebewust", "Zuivelvrij", "Eiwitrijk"],
     "description": "met aardappel-spinaziepuree, wortel en sperziebonen en mosterd-dillesaus",
     "first_seen": "2026-02-16"
   },
@@ -350,5 +355,15 @@
     "kcal": 706,
     "tags": ["Eiwitrijk"],
     "first_seen": "2026-04-28"
+  },
+  {
+    "id": "gegrilde-zalm-dille-yoghurtsaus",
+    "name": "Gegrilde zalm met dille-yoghurtsaus",
+    "kcal": 602,
+    "protein_g": 32.4,
+    "carbs_g": 30.2,
+    "tags": ["Eiwitrijk", "VIS / POISSON"],
+    "description": "met rijst, groenten en dille-yoghurtsaus",
+    "first_seen": "2026-05-11"
   }
 ]

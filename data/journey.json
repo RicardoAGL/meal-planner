@@ -211,6 +211,26 @@
       "week": 16,
       "tags": ["social", "weight-up", "strategy", "exercise"],
       "photo": null
+    },
+    {
+      "date": "2026-05-10",
+      "type": "challenge",
+      "title": "Día de las Madres — dos hamburguesas y un buffet",
+      "body": "Semana del Día de las Madres. Celebré varios días con mi esposa: dos cenas con hamburguesas y una cena buffet. Comí de más y decidí no pesarme para no obsesionarme con el número. El cuerpo necesita celebrar de vez en cuando. La semana que viene retomo el plan con determinación.",
+      "weight_kg": null,
+      "week": 17,
+      "tags": ["social", "celebration", "self-control"],
+      "photo": null
+    },
+    {
+      "date": "2026-05-11",
+      "type": "challenge",
+      "title": "Regreso al plan — 108.5 kg tras el Día de las Madres",
+      "body": "Me peso hoy después de la semana del Día de las Madres: 108.5 kg, aproximadamente 1.2 kg por encima del peso del 27 de abril. Era de esperarse tras días de celebración. Esta semana es XKE con cena en la oficina el martes, pero el plan está claro: retomar el déficit calórico, salir más en bici, y el sábado haré ayuno voluntario. La tendencia es clara a largo plazo y una semana especial no rompe el proceso.",
+      "weight_kg": 108.5,
+      "week": 18,
+      "tags": ["challenge", "social", "weight-up", "strategy", "exercise"],
+      "photo": null
     }
   ]
 }
