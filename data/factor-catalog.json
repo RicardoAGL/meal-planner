@@ -32,11 +32,15 @@
   {
     "id": "romige-basilicum-risotto-kipfilet",
     "name": "Romige basilicum-risotto met kipfilet",
-    "kcal": 544,
-    "protein_g": 34.2,
-    "carbs_g": 44.2,
+    "kcal": 530,
+    "kcal_before_w21": 544,
+    "protein_g": 32.7,
+    "protein_g_before_w21": 34.2,
+    "carbs_g": 43.5,
+    "carbs_g_before_w21": 44.2,
     "tags": ["Caloriebewust", "Eiwitrijk"],
     "description": "met courgette, doperwten en peterselie",
+    "notes": "Kcal 544→530 in W21 per box label (protein 34.2→32.7g, carbs 44.2→43.5g — recipe update)",
     "first_seen": "2026-02-03"
   },
   {
@@ -365,5 +369,35 @@
     "tags": ["Eiwitrijk", "VIS / POISSON"],
     "description": "met rijst, groenten en dille-yoghurtsaus",
     "first_seen": "2026-05-11"
+  },
+  {
+    "id": "citroen-knoflookgarnalen-spanakopita-rijst",
+    "name": "Citroen-knoflookgarnalen met spanakopita-rijst",
+    "kcal": 425,
+    "protein_g": 33.0,
+    "carbs_g": 29.0,
+    "tags": ["VIS / POISSON"],
+    "description": "met bloemkool, courgette en balsamico-tomaten",
+    "first_seen": "2026-05-18"
+  },
+  {
+    "id": "romige-parmezaan-knoflook-pulled-beef",
+    "name": "Romige parmezaan-knoflook pulled beef",
+    "kcal": 558,
+    "protein_g": 39.2,
+    "carbs_g": 21.3,
+    "tags": ["Eiwitrijk"],
+    "description": "met broccoli en aardappelpartjes met paprika",
+    "first_seen": "2026-05-18"
+  },
+  {
+    "id": "mozzarella-burger-rostkartoffeln",
+    "name": "Mozzarella-burger & röstkartoffeln",
+    "kcal": 650,
+    "protein_g": 46.0,
+    "carbs_g": 45.0,
+    "tags": ["Eiwitrijk"],
+    "description": "met aardappelpartjes, ui, radijs, maïskorrels & avocado-ketchup",
+    "first_seen": "2026-05-18"
   }
 ]
