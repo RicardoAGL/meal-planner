@@ -73,7 +73,6 @@
     "kcal_before_w23": 459,
     "protein_g": 30.8,
     "carbs_g": 21.4,
-<<<<<<< HEAD
     "tags": ["Caloriebewust", "Eiwitrijk"],
     "description": "Met geroosterde broccoli en sperziebonen",
     "notes": "Kcal changed from 459 to 533 in W23 (Factor recipe update — confirmed from box label)",
@@ -338,7 +337,6 @@
     "first_seen": "2026-04-12"
   },
   {
-<<<<<<< HEAD
     "id": "kip-puttanesca-stijl",
     "name": "Kip met saus in Puttanesca-stijl",
     "kcal": 401,
@@ -403,12 +401,12 @@
     "tags": ["Eiwitrijk"],
     "description": "met aardappelpartjes, ui, radijs, maïskorrels & avocado-ketchup",
     "first_seen": "2026-05-18"
-=======
+  },
+  {
     "id": "zalm-aji-verde",
     "name": "Zalm met aji verde",
     "kcal": 628,
     "tags": ["Eiwitrijk"],
     "first_seen": "2026-06-02"
->>>>>>> e55ff74 (feat(plans): add W23 meal plan, weight entry, and catalog updates)
   }
 ]
