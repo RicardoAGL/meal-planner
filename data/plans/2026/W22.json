@@ -1,0 +1,423 @@
+{
+  "year": 2026,
+  "week": 22,
+  "start_date": "2026-05-25",
+  "end_date": "2026-05-31",
+  "daily_target_kcal": 1800,
+  "notes": "Semana caótica — sin Factor, todas las cenas fuera",
+  "days": [
+    {
+      "date": "2026-05-25",
+      "weekday": "Monday",
+      "notes": "Sin Factor — cena fuera",
+      "total_kcal": 1780,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "name": "Avena con proteina",
+          "total_kcal": 355,
+          "items": [
+            { "name": "Avena", "quantity": "50g", "kcal": 185 },
+            { "name": "Proteina en polvo", "quantity": "25g", "kcal": 100 },
+            { "name": "Leche semidesnatada", "quantity": "150ml", "kcal": 70 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "name": "Sandwich de pavo",
+          "total_kcal": 450,
+          "portable": true,
+          "items": [
+            { "name": "Pan integral", "quantity": "2 rebanadas", "kcal": 200 },
+            { "name": "Pechuga de pavo", "quantity": "100g", "kcal": 110 },
+            { "name": "Queso light", "quantity": "30g", "kcal": 75 },
+            { "name": "Mantequilla", "quantity": "5g", "kcal": 37 },
+            { "name": "Lechuga y tomate", "quantity": "50g", "kcal": 15 },
+            { "name": "Mostaza", "quantity": "1 cdta", "kcal": 13 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "name": "Yogur proteico",
+          "total_kcal": 150,
+          "items": [
+            { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "name": "Platano con almendras",
+          "total_kcal": 225,
+          "items": [
+            { "name": "Platano", "quantity": "1 mediano", "kcal": 105 },
+            { "name": "Almendras", "quantity": "20g", "kcal": 120 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "name": "Cena fuera",
+          "total_kcal": 600,
+          "source": "free",
+          "items": [
+            { "name": "Cena fuera", "quantity": "1 comida", "kcal": 600 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-05-26",
+      "weekday": "Tuesday",
+      "notes": "Sin Factor — cena fuera",
+      "total_kcal": 1780,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "name": "Avena con proteina",
+          "total_kcal": 355,
+          "items": [
+            { "name": "Avena", "quantity": "50g", "kcal": 185 },
+            { "name": "Proteina en polvo", "quantity": "25g", "kcal": 100 },
+            { "name": "Leche semidesnatada", "quantity": "150ml", "kcal": 70 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "name": "Wrap de pollo con verduras",
+          "total_kcal": 450,
+          "portable": true,
+          "items": [
+            { "name": "Wrap integral", "quantity": "1 grande", "kcal": 180 },
+            { "name": "Pollo a la plancha", "quantity": "100g", "kcal": 165 },
+            { "name": "Verduras mixtas", "quantity": "80g", "kcal": 35 },
+            { "name": "Salsa de yogur", "quantity": "2 cdas", "kcal": 40 },
+            { "name": "Mix de hojas verdes", "quantity": "30g", "kcal": 8 },
+            { "name": "Queso feta", "quantity": "15g", "kcal": 22 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "name": "Yogur proteico",
+          "total_kcal": 150,
+          "items": [
+            { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "name": "Platano con almendras",
+          "total_kcal": 225,
+          "items": [
+            { "name": "Platano", "quantity": "1 mediano", "kcal": 105 },
+            { "name": "Almendras", "quantity": "20g", "kcal": 120 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "name": "Cena fuera",
+          "total_kcal": 600,
+          "source": "free",
+          "items": [
+            { "name": "Cena fuera", "quantity": "1 comida", "kcal": 600 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-05-27",
+      "weekday": "Wednesday",
+      "notes": "Sin Factor — cena fuera",
+      "total_kcal": 1792,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "name": "Skyr con frutos rojos y granola",
+          "total_kcal": 380,
+          "items": [
+            { "name": "Skyr", "quantity": "200g", "kcal": 132 },
+            { "name": "Frutos rojos", "quantity": "100g", "kcal": 48 },
+            { "name": "Miel", "quantity": "1 cdta", "kcal": 25 },
+            { "name": "Granola", "quantity": "35g", "kcal": 175 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "name": "Sandwich de pavo",
+          "total_kcal": 450,
+          "portable": true,
+          "items": [
+            { "name": "Pan integral", "quantity": "2 rebanadas", "kcal": 200 },
+            { "name": "Pechuga de pavo", "quantity": "100g", "kcal": 110 },
+            { "name": "Queso light", "quantity": "30g", "kcal": 75 },
+            { "name": "Mantequilla", "quantity": "5g", "kcal": 37 },
+            { "name": "Lechuga y tomate", "quantity": "50g", "kcal": 15 },
+            { "name": "Mostaza", "quantity": "1 cdta", "kcal": 13 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "name": "Yogur proteico",
+          "total_kcal": 150,
+          "items": [
+            { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "name": "Manzana con almendras y tortita",
+          "total_kcal": 212,
+          "items": [
+            { "name": "Manzana", "quantity": "1 mediana", "kcal": 87 },
+            { "name": "Almendras", "quantity": "15g", "kcal": 90 },
+            { "name": "Tortita de arroz", "quantity": "1", "kcal": 35 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "name": "Cena fuera",
+          "total_kcal": 600,
+          "source": "free",
+          "items": [
+            { "name": "Cena fuera", "quantity": "1 comida", "kcal": 600 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-05-28",
+      "weekday": "Thursday",
+      "notes": "Sin Factor — cena fuera",
+      "total_kcal": 1780,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "name": "Avena con proteina",
+          "total_kcal": 355,
+          "items": [
+            { "name": "Avena", "quantity": "50g", "kcal": 185 },
+            { "name": "Proteina en polvo", "quantity": "25g", "kcal": 100 },
+            { "name": "Leche semidesnatada", "quantity": "150ml", "kcal": 70 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "name": "Wrap de atun con verduras",
+          "total_kcal": 440,
+          "portable": true,
+          "items": [
+            { "name": "Wrap integral", "quantity": "1 grande", "kcal": 180 },
+            { "name": "Atun en agua", "quantity": "1 lata (120g)", "kcal": 130 },
+            { "name": "Mayonesa light", "quantity": "1 cda", "kcal": 35 },
+            { "name": "Verduras mixtas", "quantity": "60g", "kcal": 25 },
+            { "name": "Mix de hojas verdes", "quantity": "30g", "kcal": 8 },
+            { "name": "Yogur griego light", "quantity": "100g", "kcal": 62 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "name": "Zanahorias con hummus",
+          "total_kcal": 190,
+          "items": [
+            { "name": "Zanahorias", "quantity": "120g", "kcal": 48 },
+            { "name": "Hummus", "quantity": "50g", "kcal": 142 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "name": "Platano con almendras",
+          "total_kcal": 195,
+          "items": [
+            { "name": "Platano", "quantity": "1 mediano", "kcal": 105 },
+            { "name": "Almendras", "quantity": "15g", "kcal": 90 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "name": "Cena fuera",
+          "total_kcal": 600,
+          "source": "free",
+          "items": [
+            { "name": "Cena fuera", "quantity": "1 comida", "kcal": 600 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-05-29",
+      "weekday": "Friday",
+      "office_day": true,
+      "notes": "Día de oficina — sin Factor, cena fuera",
+      "total_kcal": 1787,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "name": "Avena con proteina",
+          "total_kcal": 355,
+          "items": [
+            { "name": "Avena", "quantity": "50g", "kcal": 185 },
+            { "name": "Proteina en polvo", "quantity": "25g", "kcal": 100 },
+            { "name": "Leche semidesnatada", "quantity": "150ml", "kcal": 70 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "name": "Wrap de atun con verduras",
+          "total_kcal": 440,
+          "portable": true,
+          "items": [
+            { "name": "Wrap integral", "quantity": "1 grande", "kcal": 180 },
+            { "name": "Atun en agua", "quantity": "1 lata (120g)", "kcal": 130 },
+            { "name": "Mayonesa light", "quantity": "1 cda", "kcal": 35 },
+            { "name": "Verduras mixtas", "quantity": "60g", "kcal": 25 },
+            { "name": "Mix de hojas verdes", "quantity": "30g", "kcal": 8 },
+            { "name": "Yogur griego light", "quantity": "100g", "kcal": 62 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "name": "Yogur proteico",
+          "total_kcal": 150,
+          "portable": true,
+          "items": [
+            { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "name": "Manzana con almendras y tortita",
+          "total_kcal": 242,
+          "portable": true,
+          "items": [
+            { "name": "Manzana", "quantity": "1 mediana", "kcal": 87 },
+            { "name": "Almendras", "quantity": "20g", "kcal": 120 },
+            { "name": "Tortita de arroz", "quantity": "1", "kcal": 35 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "name": "Cena fuera",
+          "total_kcal": 600,
+          "source": "free",
+          "items": [
+            { "name": "Cena fuera", "quantity": "1 comida", "kcal": 600 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-05-30",
+      "weekday": "Saturday",
+      "notes": "Sin Factor — cena fuera",
+      "total_kcal": 1780,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "name": "Avena con proteina",
+          "total_kcal": 355,
+          "items": [
+            { "name": "Avena", "quantity": "50g", "kcal": 185 },
+            { "name": "Proteina en polvo", "quantity": "25g", "kcal": 100 },
+            { "name": "Leche semidesnatada", "quantity": "150ml", "kcal": 70 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "name": "Sandwich de pavo",
+          "total_kcal": 450,
+          "portable": true,
+          "items": [
+            { "name": "Pan integral", "quantity": "2 rebanadas", "kcal": 200 },
+            { "name": "Pechuga de pavo", "quantity": "100g", "kcal": 110 },
+            { "name": "Queso light", "quantity": "30g", "kcal": 75 },
+            { "name": "Mantequilla", "quantity": "5g", "kcal": 37 },
+            { "name": "Lechuga y tomate", "quantity": "50g", "kcal": 15 },
+            { "name": "Mostaza", "quantity": "1 cdta", "kcal": 13 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "name": "Yogur proteico",
+          "total_kcal": 150,
+          "items": [
+            { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "name": "Platano con almendras",
+          "total_kcal": 225,
+          "items": [
+            { "name": "Platano", "quantity": "1 mediano", "kcal": 105 },
+            { "name": "Almendras", "quantity": "20g", "kcal": 120 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "name": "Cena fuera",
+          "total_kcal": 600,
+          "source": "free",
+          "items": [
+            { "name": "Cena fuera", "quantity": "1 comida", "kcal": 600 }
+          ]
+        }
+      }
+    },
+    {
+      "date": "2026-05-31",
+      "weekday": "Sunday",
+      "notes": "Sin Factor — cena fuera",
+      "total_kcal": 1780,
+      "meals": {
+        "breakfast": {
+          "time": "09:00",
+          "name": "Avena con proteina",
+          "total_kcal": 355,
+          "items": [
+            { "name": "Avena", "quantity": "50g", "kcal": 185 },
+            { "name": "Proteina en polvo", "quantity": "25g", "kcal": 100 },
+            { "name": "Leche semidesnatada", "quantity": "150ml", "kcal": 70 }
+          ]
+        },
+        "lunch": {
+          "time": "12:00",
+          "name": "Wrap de pollo con verduras",
+          "total_kcal": 450,
+          "portable": true,
+          "items": [
+            { "name": "Wrap integral", "quantity": "1 grande", "kcal": 180 },
+            { "name": "Pollo a la plancha", "quantity": "100g", "kcal": 165 },
+            { "name": "Verduras mixtas", "quantity": "80g", "kcal": 35 },
+            { "name": "Salsa de yogur", "quantity": "2 cdas", "kcal": 40 },
+            { "name": "Mix de hojas verdes", "quantity": "30g", "kcal": 8 },
+            { "name": "Queso feta", "quantity": "15g", "kcal": 22 }
+          ]
+        },
+        "snack1": {
+          "time": "14:30",
+          "name": "Yogur proteico",
+          "total_kcal": 150,
+          "items": [
+            { "name": "Yogur proteico", "quantity": "1 vasito", "kcal": 150 }
+          ]
+        },
+        "snack2": {
+          "time": "17:30",
+          "name": "Platano con almendras",
+          "total_kcal": 225,
+          "items": [
+            { "name": "Platano", "quantity": "1 mediano", "kcal": 105 },
+            { "name": "Almendras", "quantity": "20g", "kcal": 120 }
+          ]
+        },
+        "dinner": {
+          "time": "20:00",
+          "name": "Cena fuera",
+          "total_kcal": 600,
+          "source": "free",
+          "items": [
+            { "name": "Cena fuera", "quantity": "1 comida", "kcal": 600 }
+          ]
+        }
+      }
+    }
+  ]
+}
