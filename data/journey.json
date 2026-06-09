@@ -231,6 +231,16 @@
       "week": 18,
       "tags": ["challenge", "social", "weight-up", "strategy", "exercise"],
       "photo": null
+    },
+    {
+      "date": "2026-06-09",
+      "type": "reflection",
+      "title": "Vuelta a la rutina — 107.1 kg después de varias semanas fuera",
+      "body": "Han sido varias semanas comiendo y celebrando fuera de casa, y se notaba: la semana pasada me pesé en 108.6 kg. Hoy, primera semana de vuelta al plan en serio, marco 107.1 kg — 1.5 kg menos en siete días. El cuerpo responde rápido cuando se vuelve al déficit, a las comidas planificadas y a los Factor entre semana. Esta semana también toca XKE el martes (cena en la oficina, sin Factor) y la oficina el viernes — los snacks portables ya están pensados. El mensaje es claro: las celebraciones son parte de la vida, pero la rutina es la que sostiene el progreso a largo plazo.",
+      "weight_kg": 107.1,
+      "week": 24,
+      "tags": ["reflection", "routine", "weight-down", "strategy", "win"],
+      "photo": null
     }
   ]
 }
