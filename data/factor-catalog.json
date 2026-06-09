@@ -46,11 +46,13 @@
   {
     "id": "gegrilde-kipfilet-aardappel-preipuree",
     "name": "Gegrilde kipfilet en aardappel-preipuree",
-    "kcal": 459,
-    "protein_g": 31.6,
-    "carbs_g": 32.9,
+    "kcal": 502,
+    "kcal_before_w24": 459,
+    "protein_g": 47.0,
+    "carbs_g": 33.0,
     "tags": ["Caloriebewust", "Eiwitrijk"],
     "description": "met geroosterde mais en courgette in een boter van kruiden en Parmezaanse kaas",
+    "notes": "Kcal changed from 459 to 502 in W24 (Factor recipe update — confirmed from box label, protein 31.6→47.0g)",
     "first_seen": "2026-02-03"
   },
   {
@@ -408,5 +410,23 @@
     "kcal": 628,
     "tags": ["Eiwitrijk"],
     "first_seen": "2026-06-02"
+  },
+  {
+    "id": "baja-stijl-zalm",
+    "name": "Baja-stijl zalm",
+    "kcal": 591,
+    "protein_g": 34.0,
+    "carbs_g": 7.1,
+    "tags": ["Eiwitrijk"],
+    "first_seen": "2026-06-09"
+  },
+  {
+    "id": "indiase-stijl-curry-met-kip",
+    "name": "Indiase-stijl curry met kip",
+    "kcal": 405,
+    "protein_g": 28.2,
+    "carbs_g": 27.5,
+    "tags": ["Caloriebewust", "Eiwitrijk"],
+    "first_seen": "2026-06-09"
   }
 ]
