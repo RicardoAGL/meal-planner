@@ -107,14 +107,15 @@
   {
     "id": "gegrilde-kipfilet-ratatouille",
     "name": "Gegrilde kipfilet en ratatouille",
-    "kcal": 459,
+    "kcal": 529,
+    "kcal_before_w27": 459,
     "kcal_before_w20": 439,
-    "protein_g": 31.0,
-    "carbs_g": 53.5,
+    "protein_g": 49,
+    "carbs_g": 34,
     "carbs_g_before_w20": 33.5,
     "tags": ["Caloriebewust", "Eiwitrijk", "Bron van vezels"],
     "description": "met mozzarella, aardappelpartjes en knoflooksaus",
-    "notes": "Kcal 439→459 in W20, carbs 33.5→53.5g per box label (recipe update, protein unchanged at 31.0g)",
+    "notes": "Kcal 439→459 in W20, carbs 33.5→53.5g per box label. Kcal 459→529 in W27 per box label (protein 31.0→49g, carbs 53.5→34g — recipe update)",
     "first_seen": "2026-02-16"
   },
   {
@@ -147,10 +148,12 @@
   {
     "id": "gegrilde-kip-kruiden",
     "name": "Gegrilde kip met kruiden",
-    "kcal": 546,
-    "protein_g": 31.8,
-    "carbs_g": 49.5,
+    "kcal": 596,
+    "kcal_before_w27": 546,
+    "protein_g": 36,
+    "carbs_g": 37,
     "tags": [],
+    "notes": "Kcal 546→596 in W27 per box label (protein 31.8→36g, carbs 49.5→37g — recipe update)",
     "first_seen": "2026-02-16"
   },
   {
@@ -428,5 +431,15 @@
     "carbs_g": 27.5,
     "tags": ["Caloriebewust", "Eiwitrijk"],
     "first_seen": "2026-06-09"
+  },
+  {
+    "id": "kip-tomatensaus-tunesisch",
+    "name": "Kip in Tomatensaus Tunesische stijl",
+    "kcal": 456,
+    "protein_g": 31.8,
+    "carbs_g": 34.0,
+    "category": "poultry",
+    "tags": [],
+    "first_seen": "2026-06-29"
   }
 ]
